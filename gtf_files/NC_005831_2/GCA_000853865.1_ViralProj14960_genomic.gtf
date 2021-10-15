@@ -1,0 +1,23 @@
+#gtf-version 2.2
+#!genome-build ViralProj14960
+#!genome-build-accession NCBI_Assembly:GCA_000853865.1
+AY567487.2	Genbank	CDS	287	12439	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; exception "ribosomal slippage"; gbkey "CDS"; note "translated via -1 ribosomal frameshift"; product "replicase polyprotein 1ab"; protein_id "AAS58176.2"; exon_number "1"; 
+AY567487.2	Genbank	CDS	12439	20472	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; exception "ribosomal slippage"; gbkey "CDS"; note "translated via -1 ribosomal frameshift"; product "replicase polyprotein 1ab"; protein_id "AAS58176.2"; exon_number "2"; 
+AY567487.2	Genbank	start_codon	287	289	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; exception "ribosomal slippage"; gbkey "CDS"; note "translated via -1 ribosomal frameshift"; product "replicase polyprotein 1ab"; protein_id "AAS58176.2"; exon_number "1"; 
+AY567487.2	Genbank	stop_codon	20473	20475	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; exception "ribosomal slippage"; gbkey "CDS"; note "translated via -1 ribosomal frameshift"; product "replicase polyprotein 1ab"; protein_id "AAS58176.2"; exon_number "2"; 
+AY567487.2	Genbank	CDS	20472	24539	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "spike protein"; protein_id "AAS58177.1"; exon_number "1"; 
+AY567487.2	Genbank	start_codon	20472	20474	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "spike protein"; protein_id "AAS58177.1"; exon_number "1"; 
+AY567487.2	Genbank	stop_codon	24540	24542	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "spike protein"; protein_id "AAS58177.1"; exon_number "1"; 
+AY567487.2	Genbank	CDS	24542	25216	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "protein 3"; protein_id "AAS58178.1"; exon_number "1"; 
+AY567487.2	Genbank	start_codon	24542	24544	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "protein 3"; protein_id "AAS58178.1"; exon_number "1"; 
+AY567487.2	Genbank	stop_codon	25217	25219	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "protein 3"; protein_id "AAS58178.1"; exon_number "1"; 
+AY567487.2	Genbank	CDS	25200	25430	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; note "small membrane protein"; product "envelope protein"; protein_id "AAS58179.1"; exon_number "1"; 
+AY567487.2	Genbank	start_codon	25200	25202	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; note "small membrane protein"; product "envelope protein"; protein_id "AAS58179.1"; exon_number "1"; 
+AY567487.2	Genbank	stop_codon	25431	25433	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; note "small membrane protein"; product "envelope protein"; protein_id "AAS58179.1"; exon_number "1"; 
+AY567487.2	Genbank	CDS	25442	26119	.	+	0	gene_id ""; transcript_id "unassigned_transcript_5"; gbkey "CDS"; product "membrane protein"; protein_id "AAS58180.1"; exon_number "1"; 
+AY567487.2	Genbank	start_codon	25442	25444	.	+	0	gene_id ""; transcript_id "unassigned_transcript_5"; gbkey "CDS"; product "membrane protein"; protein_id "AAS58180.1"; exon_number "1"; 
+AY567487.2	Genbank	stop_codon	26120	26122	.	+	0	gene_id ""; transcript_id "unassigned_transcript_5"; gbkey "CDS"; product "membrane protein"; protein_id "AAS58180.1"; exon_number "1"; 
+AY567487.2	Genbank	CDS	26133	27263	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; product "nucleocapsid protein"; protein_id "AAS58181.1"; exon_number "1"; 
+AY567487.2	Genbank	start_codon	26133	26135	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; product "nucleocapsid protein"; protein_id "AAS58181.1"; exon_number "1"; 
+AY567487.2	Genbank	stop_codon	27264	27266	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; product "nucleocapsid protein"; protein_id "AAS58181.1"; exon_number "1"; 
+###

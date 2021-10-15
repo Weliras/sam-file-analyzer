@@ -1,0 +1,32 @@
+#gtf-version 2.2
+#!genome-build ViralProj14028
+#!genome-build-accession NCBI_Assembly:GCF_000838505.1
+NC_001693.1	RefSeq	gene	102	530	.	+	.	gene_id "E6"; db_xref "GeneID:1403638"; gbkey "Gene"; gene "E6"; gene_biotype "protein_coding"; 
+NC_001693.1	RefSeq	CDS	102	527	.	+	0	gene_id "E6"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E6"; note "putative"; product "transforming protein E6"; protein_id "NP_043437.1"; 
+NC_001693.1	RefSeq	start_codon	102	104	.	+	0	gene_id "E6"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E6"; note "putative"; product "transforming protein E6"; protein_id "NP_043437.1"; 
+NC_001693.1	RefSeq	stop_codon	528	530	.	+	0	gene_id "E6"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E6"; note "putative"; product "transforming protein E6"; protein_id "NP_043437.1"; 
+NC_001693.1	RefSeq	gene	527	817	.	+	.	gene_id "E7"; db_xref "GeneID:1403639"; gbkey "Gene"; gene "E7"; gene_biotype "protein_coding"; 
+NC_001693.1	RefSeq	CDS	527	814	.	+	0	gene_id "E7"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E7"; note "putative"; product "transforming protein E7"; protein_id "NP_043438.1"; 
+NC_001693.1	RefSeq	start_codon	527	529	.	+	0	gene_id "E7"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E7"; note "putative"; product "transforming protein E7"; protein_id "NP_043438.1"; 
+NC_001693.1	RefSeq	stop_codon	815	817	.	+	0	gene_id "E7"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E7"; note "putative"; product "transforming protein E7"; protein_id "NP_043438.1"; 
+NC_001693.1	RefSeq	gene	804	2636	.	+	.	gene_id "E1"; db_xref "GeneID:1403640"; gbkey "Gene"; gene "E1"; gene_biotype "protein_coding"; 
+NC_001693.1	RefSeq	CDS	804	2633	.	+	0	gene_id "E1"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E1"; note "putative"; product "replication protein E1"; protein_id "NP_043439.1"; 
+NC_001693.1	RefSeq	start_codon	804	806	.	+	0	gene_id "E1"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E1"; note "putative"; product "replication protein E1"; protein_id "NP_043439.1"; 
+NC_001693.1	RefSeq	stop_codon	2634	2636	.	+	0	gene_id "E1"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E1"; note "putative"; product "replication protein E1"; protein_id "NP_043439.1"; 
+NC_001693.1	RefSeq	gene	2572	3786	.	+	.	gene_id "E2"; db_xref "GeneID:1403641"; gbkey "Gene"; gene "E2"; gene_biotype "protein_coding"; 
+NC_001693.1	RefSeq	CDS	2572	3783	.	+	0	gene_id "E2"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E2"; note "putative"; product "regulatory protein E2"; protein_id "NP_043440.1"; 
+NC_001693.1	RefSeq	start_codon	2572	2574	.	+	0	gene_id "E2"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E2"; note "putative"; product "regulatory protein E2"; protein_id "NP_043440.1"; 
+NC_001693.1	RefSeq	stop_codon	3784	3786	.	+	0	gene_id "E2"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E2"; note "putative"; product "regulatory protein E2"; protein_id "NP_043440.1"; 
+NC_001693.1	RefSeq	gene	2930	3553	.	+	.	gene_id "E4"; db_xref "GeneID:1403642"; gbkey "Gene"; gene "E4"; gene_biotype "protein_coding"; 
+NC_001693.1	RefSeq	CDS	2930	3550	.	+	0	gene_id "E4"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E4"; partial "true"; product "hypothetical protein"; protein_id "NP_043441.1"; 
+NC_001693.1	RefSeq	start_codon	2930	2932	.	+	0	gene_id "E4"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E4"; partial "true"; product "hypothetical protein"; protein_id "NP_043441.1"; 
+NC_001693.1	RefSeq	stop_codon	3551	3553	.	+	0	gene_id "E4"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "E4"; partial "true"; product "hypothetical protein"; protein_id "NP_043441.1"; 
+NC_001693.1	RefSeq	gene	3807	5384	.	+	.	gene_id "L2"; db_xref "GeneID:1403643"; gbkey "Gene"; gene "L2"; gene_biotype "protein_coding"; 
+NC_001693.1	RefSeq	CDS	3807	5381	.	+	0	gene_id "L2"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "L2"; note "putative"; product "minor capsid protein L2"; protein_id "NP_043442.1"; 
+NC_001693.1	RefSeq	start_codon	3807	3809	.	+	0	gene_id "L2"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "L2"; note "putative"; product "minor capsid protein L2"; protein_id "NP_043442.1"; 
+NC_001693.1	RefSeq	stop_codon	5382	5384	.	+	0	gene_id "L2"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "L2"; note "putative"; product "minor capsid protein L2"; protein_id "NP_043442.1"; 
+NC_001693.1	RefSeq	gene	5395	6921	.	+	.	gene_id "L1"; db_xref "GeneID:1403644"; gbkey "Gene"; gene "L1"; gene_biotype "protein_coding"; 
+NC_001693.1	RefSeq	CDS	5395	6918	.	+	0	gene_id "L1"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "L1"; note "putative"; product "major capsid protein L1"; protein_id "NP_043443.1"; 
+NC_001693.1	RefSeq	start_codon	5395	5397	.	+	0	gene_id "L1"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "L1"; note "putative"; product "major capsid protein L1"; protein_id "NP_043443.1"; 
+NC_001693.1	RefSeq	stop_codon	6919	6921	.	+	0	gene_id "L1"; transcript_id "unknown_transcript_1"; gbkey "CDS"; gene "L1"; note "putative"; product "major capsid protein L1"; protein_id "NP_043443.1"; 
+###

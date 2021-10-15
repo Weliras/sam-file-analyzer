@@ -1,0 +1,40 @@
+#gtf-version 2.2
+#!genome-build ASM317999v1
+#!genome-build-accession NCBI_Assembly:GCA_003179995.1
+M14119.1	Genbank	gene	102	554	.	+	.	gene_id "E6"; transcript_id ""; gbkey "Gene"; gene "E6"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	102	551	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E6"; note "102 is position of first start codon in ORF E6; putative"; product "transforming protein"; protein_id "AAA46927.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	102	104	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E6"; note "102 is position of first start codon in ORF E6; putative"; product "transforming protein"; protein_id "AAA46927.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	552	554	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E6"; note "102 is position of first start codon in ORF E6; putative"; product "transforming protein"; protein_id "AAA46927.1"; exon_number "1"; 
+M14119.1	Genbank	gene	530	826	.	+	.	gene_id "E7"; transcript_id ""; gbkey "Gene"; gene "E7"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	530	823	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "E7"; note "530 is position of first start codon in ORF E7; putative"; product "transforming protein"; protein_id "AAA46928.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	530	532	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "E7"; note "530 is position of first start codon in ORF E7; putative"; product "transforming protein"; protein_id "AAA46928.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	824	826	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "E7"; note "530 is position of first start codon in ORF E7; putative"; product "transforming protein"; protein_id "AAA46928.1"; exon_number "1"; 
+M14119.1	Genbank	gene	832	2781	.	+	.	gene_id "E1"; transcript_id ""; gbkey "Gene"; gene "E1"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	832	2778	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_3"; gbkey "CDS"; gene "E1"; note "832 is position of first start codon in ORF E1; putative"; product "replication protein"; protein_id "AAA46929.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	832	834	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_3"; gbkey "CDS"; gene "E1"; note "832 is position of first start codon in ORF E1; putative"; product "replication protein"; protein_id "AAA46929.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	2779	2781	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_3"; gbkey "CDS"; gene "E1"; note "832 is position of first start codon in ORF E1; putative"; product "replication protein"; protein_id "AAA46929.1"; exon_number "1"; 
+M14119.1	Genbank	gene	2723	3826	.	+	.	gene_id "E2"; transcript_id ""; gbkey "Gene"; gene "E2"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	2723	3823	.	+	0	gene_id "E2"; transcript_id "unassigned_transcript_4"; gbkey "CDS"; gene "E2"; note "2723 is position of first start codon in ORF E2; putative"; product "regulatory protein"; protein_id "AAA46930.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	2723	2725	.	+	0	gene_id "E2"; transcript_id "unassigned_transcript_4"; gbkey "CDS"; gene "E2"; note "2723 is position of first start codon in ORF E2; putative"; product "regulatory protein"; protein_id "AAA46930.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	3824	3826	.	+	0	gene_id "E2"; transcript_id "unassigned_transcript_4"; gbkey "CDS"; gene "E2"; note "2723 is position of first start codon in ORF E2; putative"; product "regulatory protein"; protein_id "AAA46930.1"; exon_number "1"; 
+M14119.1	Genbank	gene	3255	3581	.	+	.	gene_id "E4"; transcript_id ""; gbkey "Gene"; gene "E4"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	3255	3578	.	+	0	gene_id "E4"; transcript_id "unassigned_transcript_5"; gbkey "CDS"; gene "E4"; product "AAA46931.1"; protein_id "AAA46931.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	3255	3257	.	+	0	gene_id "E4"; transcript_id "unassigned_transcript_5"; gbkey "CDS"; gene "E4"; product "AAA46931.1"; protein_id "AAA46931.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	3579	3581	.	+	0	gene_id "E4"; transcript_id "unassigned_transcript_5"; gbkey "CDS"; gene "E4"; product "AAA46931.1"; protein_id "AAA46931.1"; exon_number "1"; 
+M14119.1	Genbank	gene	3871	4146	.	+	.	gene_id "E5A"; transcript_id ""; gbkey "Gene"; gene "E5A"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	3871	4143	.	+	0	gene_id "E5A"; transcript_id "unassigned_transcript_6"; gbkey "CDS"; gene "E5A"; product "AAA46932.1"; protein_id "AAA46932.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	3871	3873	.	+	0	gene_id "E5A"; transcript_id "unassigned_transcript_6"; gbkey "CDS"; gene "E5A"; product "AAA46932.1"; protein_id "AAA46932.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	4144	4146	.	+	0	gene_id "E5A"; transcript_id "unassigned_transcript_6"; gbkey "CDS"; gene "E5A"; product "AAA46932.1"; protein_id "AAA46932.1"; exon_number "1"; 
+M14119.1	Genbank	gene	4146	4370	.	+	.	gene_id "E5B"; transcript_id ""; gbkey "Gene"; gene "E5B"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	4146	4367	.	+	0	gene_id "E5B"; transcript_id "unassigned_transcript_7"; gbkey "CDS"; gene "E5B"; product "AAA46933.1"; protein_id "AAA46933.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	4146	4148	.	+	0	gene_id "E5B"; transcript_id "unassigned_transcript_7"; gbkey "CDS"; gene "E5B"; product "AAA46933.1"; protein_id "AAA46933.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	4368	4370	.	+	0	gene_id "E5B"; transcript_id "unassigned_transcript_7"; gbkey "CDS"; gene "E5B"; product "AAA46933.1"; protein_id "AAA46933.1"; exon_number "1"; 
+M14119.1	Genbank	gene	4417	5784	.	+	.	gene_id "L2"; transcript_id ""; gbkey "Gene"; gene "L2"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	4417	5781	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_8"; gbkey "CDS"; gene "L2"; note "4417 is position of first start codon in ORF L2; putative"; product "minor capsid protein"; protein_id "AAA46934.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	4417	4419	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_8"; gbkey "CDS"; gene "L2"; note "4417 is position of first start codon in ORF L2; putative"; product "minor capsid protein"; protein_id "AAA46934.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	5782	5784	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_8"; gbkey "CDS"; gene "L2"; note "4417 is position of first start codon in ORF L2; putative"; product "minor capsid protein"; protein_id "AAA46934.1"; exon_number "1"; 
+M14119.1	Genbank	gene	5771	7276	.	+	.	gene_id "L1"; transcript_id ""; gbkey "Gene"; gene "L1"; gene_biotype "protein_coding"; 
+M14119.1	Genbank	CDS	5771	7273	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_9"; gbkey "CDS"; gene "L1"; note "5771 is position of first start codon in ORF L1; putative"; product "major capsid protein"; protein_id "AAA46935.1"; exon_number "1"; 
+M14119.1	Genbank	start_codon	5771	5773	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_9"; gbkey "CDS"; gene "L1"; note "5771 is position of first start codon in ORF L1; putative"; product "major capsid protein"; protein_id "AAA46935.1"; exon_number "1"; 
+M14119.1	Genbank	stop_codon	7274	7276	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_9"; gbkey "CDS"; gene "L1"; note "5771 is position of first start codon in ORF L1; putative"; product "major capsid protein"; protein_id "AAA46935.1"; exon_number "1"; 
+###

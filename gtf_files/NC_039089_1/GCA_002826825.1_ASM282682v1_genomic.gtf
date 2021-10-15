@@ -1,0 +1,8 @@
+#gtf-version 2.2
+#!genome-build ASM282682v1
+#!genome-build-accession NCBI_Assembly:GCA_002826825.1
+AB040456.1	DDBJ	gene	834	2762	.	+	.	gene_id "E1"; transcript_id ""; gbkey "Gene"; gene "E1"; gene_biotype "protein_coding"; 
+AB040456.1	DDBJ	CDS	834	2759	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E1"; product "BAB20557.1"; protein_id "BAB20557.1"; exon_number "1"; 
+AB040456.1	DDBJ	start_codon	834	836	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E1"; product "BAB20557.1"; protein_id "BAB20557.1"; exon_number "1"; 
+AB040456.1	DDBJ	stop_codon	2760	2762	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E1"; product "BAB20557.1"; protein_id "BAB20557.1"; exon_number "1"; 
+###
