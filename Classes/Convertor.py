@@ -59,6 +59,8 @@ class Convertor:
                         gtf_line.load_from_line(line_split)
 
                         if gtf_line.feature == "transcript" or gtf_line.feature == "exon":
+                            gene.records.append(gtf_line)
+                            first_in_file = False
                             continue
                         # if prev_protein_id != "" and (prev_gene_id == "" or gtf_line.attributes["gene_id"] == "" ) and "protein_id" not in gtf_line.attributes.keys():
                         #    print()
