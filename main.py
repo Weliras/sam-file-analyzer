@@ -1,3 +1,5 @@
+import os
+
 from Classes.Virus import Virus
 from Classes.SamRecord import SamRecord
 from Classes.Convertor import Convertor
@@ -7,12 +9,18 @@ VIRUS_NAME = "http://homel.vsb.cz/~vas218/files/viruses/viral_id.csv"
 
 if __name__ == '__main__':
 
+    # Load gtf files
+    genes = Convertor.load_gtf_files()
+
     # Creating map of VirusSeq -> VirusName
     map = Convertor.get_map_of_id_to_name(VIRUS_NAME)
 
     # Load a file and mapping ids to names, list of Sequences
     # [VirusSeq, Count] -> [VirusName, Count] | VirusSeq : VirusName = N : 1
-    sam_records = Convertor.load_file(RNA_SAMPLE, map)
+    sam_records = Convertor.load_file(RNA_SAMPLE, map, genes)
+
+    # for sam_record in sam_records:
+    #    sam_record.virus.genes = [gene for gene in genes if gene.virus_id == sam_record.virus.virus_id]
 
     # check for same virus names but different virus ids
     # sam_records.append(SamRecord(Virus("NC_002023.1", "Influenza_A_virus")))
