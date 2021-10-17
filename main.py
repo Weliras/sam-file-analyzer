@@ -26,6 +26,7 @@ if __name__ == '__main__':
     # sam_records.append(SamRecord(Virus("NC_002023.1", "Influenza_A_virus")))
     # sam_records.append(SamRecord(Virus("NC_002021.1", "Influenza_A_virus")))
 
+
     # getting list [ Virus, count_of_all, count_of_amb ] by attribute of Sequence
     virus_with_count = Convertor.get_seqs_with_count_grouped_by(sam_records, "virus_name")
 
