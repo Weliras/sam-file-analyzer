@@ -18,3 +18,4 @@ Problems or questions
 - GTF files from NC_021541_1 to NC_021551.1 are same
 - !GTF file U21247.1 not found as assembly, only as Nucleotide
 - !GTF files gi|9626032|lcl|HPV2REF.1|, gi|397005|lcl|HPV3REF.1|, gi|333074|lcl|HPV8REF.1|, gi|396910|lcl|HPV12REF.1|, gi|60295|lcl|HPV13REF.1|, gi|396918|lcl|HPV14REF.1|, gi|333245|lcl|HPV39REF.1| not found as assembly
+- Runtime with assigning genes to viruses - 1m 10s
