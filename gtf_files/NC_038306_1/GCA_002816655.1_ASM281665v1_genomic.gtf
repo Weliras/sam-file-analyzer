@@ -1,7 +1,0 @@
-#gtf-version 2.2
-#!genome-build ASM281665v1
-#!genome-build-accession NCBI_Assembly:GCA_002816655.1
-AY421760.1	Genbank	CDS	743	7312	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; product "polyprotein"; protein_id "AAR38840.1"; exon_number "1"; 
-AY421760.1	Genbank	start_codon	743	745	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; product "polyprotein"; protein_id "AAR38840.1"; exon_number "1"; 
-AY421760.1	Genbank	stop_codon	7313	7315	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; product "polyprotein"; protein_id "AAR38840.1"; exon_number "1"; 
-###
