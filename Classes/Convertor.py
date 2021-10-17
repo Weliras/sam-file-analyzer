@@ -1,6 +1,7 @@
 import os
 import urllib.request
 import sys, traceback
+from copy import deepcopy
 
 from Classes.Gene import Gene, GTF_File_Line
 from Classes.Virus import Virus
@@ -41,11 +42,50 @@ class Convertor:
             gtf_file = gtf_file[0]
             try:
                 with open(os.path.join(dir, gtf_file), "r") as file:
-                    prev_line = ""
+                    prev_protein_id = ""
+                    prev_gene_id = ""
+                    first_in_file = True
                     gene = Gene(virus_id)
                     for line in file:
+
+                        if line == "###\n":                 # End of file, insert gene and delete
+                            genes.append(deepcopy(gene))
+                            del gene
                         if line.startswith("#"):
                             continue
+
+                        gtf_line = GTF_File_Line()
+                        line_split = line.split("\t")
+                        gtf_line.load_from_line(line_split)
+
+                        if gtf_line.feature == "transcript" or gtf_line.feature == "exon":
+                            continue
+                        # if prev_protein_id != "" and (prev_gene_id == "" or gtf_line.attributes["gene_id"] == "" ) and "protein_id" not in gtf_line.attributes.keys():
+                        #    print()
+                        #    print()
+
+                        if gtf_line.attributes["gene_id"] != "":
+                            if not first_in_file:
+                                if prev_gene_id != gtf_line.attributes["gene_id"]:
+                                    genes.append(deepcopy(gene))
+                                    del gene
+                                    gene = Gene(virus_id=virus_id)
+                        else:
+                            if not first_in_file:
+                                if prev_protein_id != gtf_line.attributes["protein_id"]:
+                                    genes.append(deepcopy(gene))
+                                    del gene
+                                    gene = Gene(virus_id=virus_id)
+
+                        # getattr(gene, gtf_line.feature).append(gtf_line)
+                        gene.records.append(gtf_line)
+                        first_in_file = False
+
+                        if "gene_id" in gtf_line.attributes.keys():
+                            prev_gene_id = gtf_line.attributes["gene_id"]
+                        if "protein_id" in gtf_line.attributes.keys():
+                            prev_protein_id = gtf_line.attributes["protein_id"]
+                        """    
                         if line.split("\t")[2] == "CDS":
                             if prev_line == "CDS" or prev_line == "start_codon":
                                 genes.append(Gene(virus_id=gene.virus_id, CDS=gene.CDS, start_codon=gene.start_codon, stop_codon=gene.stop_codon))
@@ -57,6 +97,7 @@ class Convertor:
                             gene.CDS = cds_line
 
                             prev_line = "CDS"
+                            prev_gene_id = cds_line.attributes["gene_id"]
                         elif line.split("\t")[2] == "start_codon":
 
                             start_codon_line = GTF_File_Line()
@@ -66,6 +107,7 @@ class Convertor:
                             gene.start_codon = start_codon_line
 
                             prev_line = "start_codon"
+                            prev_gene_id = start_codon_line.attributes["gene_id"]
                         elif line.split("\t")[2] == "stop_codon":
 
                             stop_codon_line = GTF_File_Line()
@@ -77,11 +119,13 @@ class Convertor:
                             genes.append(Gene(virus_id=gene.virus_id, CDS=gene.CDS, start_codon=gene.start_codon, stop_codon=gene.stop_codon))
 
                             prev_line = "stop_codon"
+                            prev_gene_id = stop_codon_line.attributes["gene_id"]
+                        """
             except Exception as e:
                 print(e)
+                print(virus_id)
                 traceback.print_exc(file=sys.stdout)
         return genes
-
 
     @staticmethod
     def load_file(url, map, genes):
@@ -108,8 +152,9 @@ class Convertor:
                                     g = [g for g in genes if g.virus_id == v[0]]
                                     ambiguous_viruses.append(Virus(virus_id=v[0], virus_name=map[v[0]], genes=g))
                     g = [g for g in genes if g.virus_id == line_split[2]]
-                    sam_records.append(SamRecord(virus=Virus(virus_id=line_split[2], virus_name=map[line_split[2]], genes=g),
-                                                 ambiguous_viruses=ambiguous_viruses))
+                    sam_records.append(
+                        SamRecord(virus=Virus(virus_id=line_split[2], virus_name=map[line_split[2]], genes=g),
+                                  ambiguous_viruses=ambiguous_viruses))
         except Exception as e:
             print(e)
             traceback.print_exc(file=sys.stdout)
@@ -141,4 +186,3 @@ class Convertor:
                     viruses_with_count[ind[0]][2] += 1
 
         return viruses_with_count
-
