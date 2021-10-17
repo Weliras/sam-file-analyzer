@@ -1,7 +1,0 @@
-#gtf-version 2.2
-#!genome-build ViralProj15428
-#!genome-build-accession NCBI_Assembly:GCA_000861825.2
-V01460.1	EMBL	CDS	736	1371	.	-	0	gene_id ""; transcript_id "unassigned_transcript_1"; db_xref "GOA:P03146"; db_xref "InterPro:IPR002006"; db_xref "UniProtKB/Swiss-Prot:P03146"; gbkey "CDS"; note "precursor"; product "CAA24706.1"; protein_id "CAA24706.1"; exon_number "1"; 
-V01460.1	EMBL	start_codon	1369	1371	.	-	0	gene_id ""; transcript_id "unassigned_transcript_1"; db_xref "GOA:P03146"; db_xref "InterPro:IPR002006"; db_xref "UniProtKB/Swiss-Prot:P03146"; gbkey "CDS"; note "precursor"; product "CAA24706.1"; protein_id "CAA24706.1"; exon_number "1"; 
-V01460.1	EMBL	stop_codon	733	735	.	-	0	gene_id ""; transcript_id "unassigned_transcript_1"; db_xref "GOA:P03146"; db_xref "InterPro:IPR002006"; db_xref "UniProtKB/Swiss-Prot:P03146"; gbkey "CDS"; note "precursor"; product "CAA24706.1"; protein_id "CAA24706.1"; exon_number "1"; 
-###
