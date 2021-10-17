@@ -1,0 +1,13 @@
+#gtf-version 2.2
+#!genome-build ViralMultiSegProj14929
+#!genome-build-accession NCBI_Assembly:GCA_000856085.1
+X55901.1	EMBL	CDS	38	6490	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; db_xref "GOA:P23456"; db_xref "InterPro:IPR007099"; db_xref "InterPro:IPR007322"; db_xref "InterPro:IPR016268"; db_xref "UniProtKB/Swiss-Prot:P23456"; gbkey "CDS"; product "putative polymerase"; protein_id "CAA39394.1"; exon_number "1"; 
+X55901.1	EMBL	start_codon	38	40	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; db_xref "GOA:P23456"; db_xref "InterPro:IPR007099"; db_xref "InterPro:IPR007322"; db_xref "InterPro:IPR016268"; db_xref "UniProtKB/Swiss-Prot:P23456"; gbkey "CDS"; product "putative polymerase"; protein_id "CAA39394.1"; exon_number "1"; 
+X55901.1	EMBL	stop_codon	6491	6493	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; db_xref "GOA:P23456"; db_xref "InterPro:IPR007099"; db_xref "InterPro:IPR007322"; db_xref "InterPro:IPR016268"; db_xref "UniProtKB/Swiss-Prot:P23456"; gbkey "CDS"; product "putative polymerase"; protein_id "CAA39394.1"; exon_number "1"; 
+M14627.1	Genbank	CDS	41	3445	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAA43836.1"; protein_id "AAA43836.1"; exon_number "1"; 
+M14627.1	Genbank	start_codon	41	43	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAA43836.1"; protein_id "AAA43836.1"; exon_number "1"; 
+M14627.1	Genbank	stop_codon	3446	3448	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAA43836.1"; protein_id "AAA43836.1"; exon_number "1"; 
+M14626.1	Genbank	CDS	37	1323	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "AAA43837.1"; protein_id "AAA43837.1"; exon_number "1"; 
+M14626.1	Genbank	start_codon	37	39	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "AAA43837.1"; protein_id "AAA43837.1"; exon_number "1"; 
+M14626.1	Genbank	stop_codon	1324	1326	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "AAA43837.1"; protein_id "AAA43837.1"; exon_number "1"; 
+###

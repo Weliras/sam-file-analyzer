@@ -1,0 +1,7 @@
+#gtf-version 2.2
+#!genome-build ViralProj15032
+#!genome-build-accession NCBI_Assembly:GCA_000856565.1
+D01075.1	DDBJ	CDS	1016	1600	.	-	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; note "HDAg"; product "delta antigen"; protein_id "BAA00874.1"; exon_number "1"; 
+D01075.1	DDBJ	start_codon	1598	1600	.	-	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; note "HDAg"; product "delta antigen"; protein_id "BAA00874.1"; exon_number "1"; 
+D01075.1	DDBJ	stop_codon	1013	1015	.	-	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; note "HDAg"; product "delta antigen"; protein_id "BAA00874.1"; exon_number "1"; 
+###

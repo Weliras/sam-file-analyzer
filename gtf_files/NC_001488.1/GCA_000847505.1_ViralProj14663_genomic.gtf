@@ -1,0 +1,22 @@
+#gtf-version 2.2
+#!genome-build ViralProj14663
+#!genome-build-accession NCBI_Assembly:GCA_000847505.1
+M10060.1	Genbank	transcript	316	8751	.	+	.	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "misc_RNA"; product "virion RNA"; transcript_biotype "transcript"; 
+M10060.1	Genbank	exon	316	8751	.	+	.	gene_id ""; transcript_id "unassigned_transcript_1"; product "virion RNA"; transcript_biotype "transcript"; exon_number "1"; 
+M10060.1	Genbank	CDS	807	2105	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAB59884.1"; protein_id "AAB59884.1"; exon_number "1"; 
+M10060.1	Genbank	start_codon	807	809	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAB59884.1"; protein_id "AAB59884.1"; exon_number "1"; 
+M10060.1	Genbank	stop_codon	2106	2108	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAB59884.1"; protein_id "AAB59884.1"; exon_number "1"; 
+M10060.1	Genbank	CDS	2239	5184	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; note "NH2-terminus uncertain"; partial "true"; product "pol polyprotein"; protein_id "AAB59885.1"; exon_number "1"; 
+M10060.1	Genbank	stop_codon	5185	5187	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; note "NH2-terminus uncertain"; partial "true"; product "pol polyprotein"; protein_id "AAB59885.1"; exon_number "1"; 
+M10060.1	Genbank	CDS	5121	5183	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; product "AAB59886.1"; protein_id "AAB59886.1"; exon_number "1"; 
+M10060.1	Genbank	CDS	7214	7660	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; product "AAB59886.1"; protein_id "AAB59886.1"; exon_number "2"; 
+M10060.1	Genbank	start_codon	5121	5123	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; product "AAB59886.1"; protein_id "AAB59886.1"; exon_number "1"; 
+M10060.1	Genbank	stop_codon	7661	7663	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; product "AAB59886.1"; protein_id "AAB59886.1"; exon_number "2"; 
+M10060.1	Genbank	CDS	5180	5183	.	+	0	gene_id ""; transcript_id "unassigned_transcript_5"; gbkey "CDS"; product "AAB59888.1"; protein_id "AAB59888.1"; exon_number "1"; 
+M10060.1	Genbank	CDS	7214	8202	.	+	2	gene_id ""; transcript_id "unassigned_transcript_5"; gbkey "CDS"; product "AAB59888.1"; protein_id "AAB59888.1"; exon_number "2"; 
+M10060.1	Genbank	start_codon	5180	5182	.	+	0	gene_id ""; transcript_id "unassigned_transcript_5"; gbkey "CDS"; product "AAB59888.1"; protein_id "AAB59888.1"; exon_number "1"; 
+M10060.1	Genbank	stop_codon	8203	8205	.	+	0	gene_id ""; transcript_id "unassigned_transcript_5"; gbkey "CDS"; product "AAB59888.1"; protein_id "AAB59888.1"; exon_number "2"; 
+M10060.1	Genbank	CDS	5180	6637	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; number "2"; product "AAB59887.1"; protein_id "AAB59887.1"; exon_number "1"; 
+M10060.1	Genbank	start_codon	5180	5182	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; number "2"; product "AAB59887.1"; protein_id "AAB59887.1"; exon_number "1"; 
+M10060.1	Genbank	stop_codon	6638	6640	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; number "2"; product "AAB59887.1"; protein_id "AAB59887.1"; exon_number "1"; 
+###

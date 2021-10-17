@@ -1,0 +1,32 @@
+#gtf-version 2.2
+#!genome-build ASM397232v1
+#!genome-build-accession NCBI_Assembly:GCA_003972325.1
+AY585228.1	Genbank	gene	210	21496	.	+	.	gene_id "orf1ab"; transcript_id ""; gbkey "Gene"; gene "orf1ab"; gene_biotype "protein_coding"; 
+AY585228.1	Genbank	CDS	210	13340	.	+	0	gene_id "orf1ab"; transcript_id "unassigned_transcript_1"; exception "ribosomal slippage"; gbkey "CDS"; gene "orf1ab"; note "translated via a -1 ribosomal frameshift; ORF 1a/1b"; product "Orf1ab"; protein_id "AAT84351.1"; exon_number "1"; 
+AY585228.1	Genbank	CDS	13340	21493	.	+	0	gene_id "orf1ab"; transcript_id "unassigned_transcript_1"; exception "ribosomal slippage"; gbkey "CDS"; gene "orf1ab"; note "translated via a -1 ribosomal frameshift; ORF 1a/1b"; product "Orf1ab"; protein_id "AAT84351.1"; exon_number "2"; 
+AY585228.1	Genbank	start_codon	210	212	.	+	0	gene_id "orf1ab"; transcript_id "unassigned_transcript_1"; exception "ribosomal slippage"; gbkey "CDS"; gene "orf1ab"; note "translated via a -1 ribosomal frameshift; ORF 1a/1b"; product "Orf1ab"; protein_id "AAT84351.1"; exon_number "1"; 
+AY585228.1	Genbank	stop_codon	21494	21496	.	+	0	gene_id "orf1ab"; transcript_id "unassigned_transcript_1"; exception "ribosomal slippage"; gbkey "CDS"; gene "orf1ab"; note "translated via a -1 ribosomal frameshift; ORF 1a/1b"; product "Orf1ab"; protein_id "AAT84351.1"; exon_number "2"; 
+AY585228.1	Genbank	gene	21506	22342	.	+	.	gene_id "ns2"; transcript_id ""; gbkey "Gene"; gene "ns2"; gene_biotype "protein_coding"; 
+AY585228.1	Genbank	CDS	21506	22339	.	+	0	gene_id "ns2"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "ns2"; note "non-structural protein"; product "ns2"; protein_id "AAT84352.1"; exon_number "1"; 
+AY585228.1	Genbank	start_codon	21506	21508	.	+	0	gene_id "ns2"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "ns2"; note "non-structural protein"; product "ns2"; protein_id "AAT84352.1"; exon_number "1"; 
+AY585228.1	Genbank	stop_codon	22340	22342	.	+	0	gene_id "ns2"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "ns2"; note "non-structural protein"; product "ns2"; protein_id "AAT84352.1"; exon_number "1"; 
+AY585228.1	Genbank	CDS	22354	23625	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "hemagglutinin-esterase"; protein_id "AAT84353.1"; exon_number "1"; 
+AY585228.1	Genbank	start_codon	22354	22356	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "hemagglutinin-esterase"; protein_id "AAT84353.1"; exon_number "1"; 
+AY585228.1	Genbank	stop_codon	23626	23628	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "hemagglutinin-esterase"; protein_id "AAT84353.1"; exon_number "1"; 
+AY585228.1	Genbank	CDS	23643	27701	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; product "spike surface glycoprotein"; protein_id "AAT84354.1"; exon_number "1"; 
+AY585228.1	Genbank	start_codon	23643	23645	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; product "spike surface glycoprotein"; protein_id "AAT84354.1"; exon_number "1"; 
+AY585228.1	Genbank	stop_codon	27702	27704	.	+	0	gene_id ""; transcript_id "unassigned_transcript_4"; gbkey "CDS"; product "spike surface glycoprotein"; protein_id "AAT84354.1"; exon_number "1"; 
+AY585228.1	Genbank	gene	27792	28121	.	+	.	gene_id "ns12.9"; transcript_id ""; gbkey "Gene"; gene "ns12.9"; gene_biotype "protein_coding"; 
+AY585228.1	Genbank	CDS	27792	28118	.	+	0	gene_id "ns12.9"; transcript_id "unassigned_transcript_5"; gbkey "CDS"; gene "ns12.9"; note "non-structural protein"; product "ns12.9"; protein_id "AAT84355.1"; exon_number "1"; 
+AY585228.1	Genbank	start_codon	27792	27794	.	+	0	gene_id "ns12.9"; transcript_id "unassigned_transcript_5"; gbkey "CDS"; gene "ns12.9"; note "non-structural protein"; product "ns12.9"; protein_id "AAT84355.1"; exon_number "1"; 
+AY585228.1	Genbank	stop_codon	28119	28121	.	+	0	gene_id "ns12.9"; transcript_id "unassigned_transcript_5"; gbkey "CDS"; gene "ns12.9"; note "non-structural protein"; product "ns12.9"; protein_id "AAT84355.1"; exon_number "1"; 
+AY585228.1	Genbank	CDS	28108	28359	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; product "envelope protein"; protein_id "AAT84356.1"; exon_number "1"; 
+AY585228.1	Genbank	start_codon	28108	28110	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; product "envelope protein"; protein_id "AAT84356.1"; exon_number "1"; 
+AY585228.1	Genbank	stop_codon	28360	28362	.	+	0	gene_id ""; transcript_id "unassigned_transcript_6"; gbkey "CDS"; product "envelope protein"; protein_id "AAT84356.1"; exon_number "1"; 
+AY585228.1	Genbank	CDS	28377	29066	.	+	0	gene_id ""; transcript_id "unassigned_transcript_7"; gbkey "CDS"; product "membrane protein"; protein_id "AAT84357.1"; exon_number "1"; 
+AY585228.1	Genbank	start_codon	28377	28379	.	+	0	gene_id ""; transcript_id "unassigned_transcript_7"; gbkey "CDS"; product "membrane protein"; protein_id "AAT84357.1"; exon_number "1"; 
+AY585228.1	Genbank	stop_codon	29067	29069	.	+	0	gene_id ""; transcript_id "unassigned_transcript_7"; gbkey "CDS"; product "membrane protein"; protein_id "AAT84357.1"; exon_number "1"; 
+AY585228.1	Genbank	CDS	29079	30422	.	+	0	gene_id ""; transcript_id "unassigned_transcript_8"; gbkey "CDS"; product "nucleocapsid protein"; protein_id "AAT84358.1"; exon_number "1"; 
+AY585228.1	Genbank	start_codon	29079	29081	.	+	0	gene_id ""; transcript_id "unassigned_transcript_8"; gbkey "CDS"; product "nucleocapsid protein"; protein_id "AAT84358.1"; exon_number "1"; 
+AY585228.1	Genbank	stop_codon	30423	30425	.	+	0	gene_id ""; transcript_id "unassigned_transcript_8"; gbkey "CDS"; product "nucleocapsid protein"; protein_id "AAT84358.1"; exon_number "1"; 
+###
