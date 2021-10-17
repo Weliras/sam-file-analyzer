@@ -5,7 +5,7 @@ TO-DO list
 - Getting output in format Virus, count - Done
 - Getting output in format Virus, count_of_all, count_of_amb - Done
 - Download GTF files - 90 % Done
-- Load GTF files to memory (new class, load files, check) - In progress
+- Load GTF files to memory (new class, load files, check) - Done
 - Look at gene position, count of inside/outside - Not Done
 
 Problems or questions 
