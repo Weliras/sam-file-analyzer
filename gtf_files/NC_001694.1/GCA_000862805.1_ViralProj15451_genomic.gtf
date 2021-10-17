@@ -1,0 +1,31 @@
+#gtf-version 2.2
+#!genome-build ViralProj15451
+#!genome-build-accession NCBI_Assembly:GCA_000862805.1
+U31793.1	Genbank	gene	102	542	.	+	.	gene_id "E6"; transcript_id ""; gbkey "Gene"; gene "E6"; gene_biotype "protein_coding"; 
+U31793.1	Genbank	CDS	102	539	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E6"; note "putative"; product "transforming protein E6"; protein_id "AAA79492.1"; exon_number "1"; 
+U31793.1	Genbank	start_codon	102	104	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E6"; note "putative"; product "transforming protein E6"; protein_id "AAA79492.1"; exon_number "1"; 
+U31793.1	Genbank	stop_codon	540	542	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; gbkey "CDS"; gene "E6"; note "putative"; product "transforming protein E6"; protein_id "AAA79492.1"; exon_number "1"; 
+U31793.1	Genbank	gene	518	805	.	+	.	gene_id "E7"; transcript_id ""; gbkey "Gene"; gene "E7"; gene_biotype "protein_coding"; 
+U31793.1	Genbank	CDS	518	802	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "E7"; note "putative"; product "transforming protein E7"; protein_id "AAA79493.1"; exon_number "1"; 
+U31793.1	Genbank	start_codon	518	520	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "E7"; note "putative"; product "transforming protein E7"; protein_id "AAA79493.1"; exon_number "1"; 
+U31793.1	Genbank	stop_codon	803	805	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_2"; gbkey "CDS"; gene "E7"; note "putative"; product "transforming protein E7"; protein_id "AAA79493.1"; exon_number "1"; 
+U31793.1	Genbank	gene	811	2769	.	+	.	gene_id "E1"; transcript_id ""; gbkey "Gene"; gene "E1"; gene_biotype "protein_coding"; 
+U31793.1	Genbank	CDS	811	2766	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_3"; gbkey "CDS"; gene "E1"; note "putative"; product "replication protein E1"; protein_id "AAA79494.1"; exon_number "1"; 
+U31793.1	Genbank	start_codon	811	813	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_3"; gbkey "CDS"; gene "E1"; note "putative"; product "replication protein E1"; protein_id "AAA79494.1"; exon_number "1"; 
+U31793.1	Genbank	stop_codon	2767	2769	.	+	0	gene_id "E1"; transcript_id "unassigned_transcript_3"; gbkey "CDS"; gene "E1"; note "putative"; product "replication protein E1"; protein_id "AAA79494.1"; exon_number "1"; 
+U31793.1	Genbank	gene	2705	3853	.	+	.	gene_id "E2"; transcript_id ""; gbkey "Gene"; gene "E2"; gene_biotype "protein_coding"; 
+U31793.1	Genbank	CDS	2705	3850	.	+	0	gene_id "E2"; transcript_id "unassigned_transcript_4"; gbkey "CDS"; gene "E2"; note "putative"; product "regulatory protein E2"; protein_id "AAA79495.1"; exon_number "1"; 
+U31793.1	Genbank	start_codon	2705	2707	.	+	0	gene_id "E2"; transcript_id "unassigned_transcript_4"; gbkey "CDS"; gene "E2"; note "putative"; product "regulatory protein E2"; protein_id "AAA79495.1"; exon_number "1"; 
+U31793.1	Genbank	stop_codon	3851	3853	.	+	0	gene_id "E2"; transcript_id "unassigned_transcript_4"; gbkey "CDS"; gene "E2"; note "putative"; product "regulatory protein E2"; protein_id "AAA79495.1"; exon_number "1"; 
+U31793.1	Genbank	gene	3294	3611	.	+	.	gene_id "E4"; transcript_id ""; gbkey "Gene"; gene "E4"; gene_biotype "protein_coding"; 
+U31793.1	Genbank	CDS	3294	3608	.	+	0	gene_id "E4"; transcript_id "unassigned_transcript_5"; gbkey "CDS"; gene "E4"; partial "true"; product "AAA79496.1"; protein_id "AAA79496.1"; exon_number "1"; 
+U31793.1	Genbank	stop_codon	3609	3611	.	+	0	gene_id "E4"; transcript_id "unassigned_transcript_5"; gbkey "CDS"; gene "E4"; partial "true"; product "AAA79496.1"; protein_id "AAA79496.1"; exon_number "1"; 
+U31793.1	Genbank	gene	4407	5786	.	+	.	gene_id "L2"; transcript_id ""; gbkey "Gene"; gene "L2"; gene_biotype "protein_coding"; 
+U31793.1	Genbank	CDS	4407	5783	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_6"; gbkey "CDS"; gene "L2"; note "putative"; product "minor capsid protein L2"; protein_id "AAA79497.1"; exon_number "1"; 
+U31793.1	Genbank	start_codon	4407	4409	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_6"; gbkey "CDS"; gene "L2"; note "putative"; product "minor capsid protein L2"; protein_id "AAA79497.1"; exon_number "1"; 
+U31793.1	Genbank	stop_codon	5784	5786	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_6"; gbkey "CDS"; gene "L2"; note "putative"; product "minor capsid protein L2"; protein_id "AAA79497.1"; exon_number "1"; 
+U31793.1	Genbank	gene	5764	7281	.	+	.	gene_id "L1"; transcript_id ""; gbkey "Gene"; gene "L1"; gene_biotype "protein_coding"; 
+U31793.1	Genbank	CDS	5764	7278	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_7"; gbkey "CDS"; gene "L1"; note "putative"; product "major capsid protein L1"; protein_id "AAA79498.1"; exon_number "1"; 
+U31793.1	Genbank	start_codon	5764	5766	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_7"; gbkey "CDS"; gene "L1"; note "putative"; product "major capsid protein L1"; protein_id "AAA79498.1"; exon_number "1"; 
+U31793.1	Genbank	stop_codon	7279	7281	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_7"; gbkey "CDS"; gene "L1"; note "putative"; product "major capsid protein L1"; protein_id "AAA79498.1"; exon_number "1"; 
+###

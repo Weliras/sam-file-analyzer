@@ -1,0 +1,7 @@
+#gtf-version 2.2
+#!genome-build ViralProj36615
+#!genome-build-accession NCBI_Assembly:GCA_000882815.1
+AY632535.2	Genbank	CDS	107	10363	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; product "polyprotein"; protein_id "AAV34151.1"; exon_number "1"; 
+AY632535.2	Genbank	start_codon	107	109	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; product "polyprotein"; protein_id "AAV34151.1"; exon_number "1"; 
+AY632535.2	Genbank	stop_codon	10364	10366	.	+	0	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "CDS"; product "polyprotein"; protein_id "AAV34151.1"; exon_number "1"; 
+###

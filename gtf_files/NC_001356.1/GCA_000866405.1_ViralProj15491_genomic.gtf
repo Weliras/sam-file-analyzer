@@ -1,0 +1,24 @@
+#gtf-version 2.2
+#!genome-build ViralProj15491
+#!genome-build-accession NCBI_Assembly:GCA_000866405.1
+V01116.1	EMBL	gene	104	526	.	+	.	gene_id "E6"; transcript_id ""; gbkey "Gene"; gene "E6"; gene_biotype "protein_coding"; 
+V01116.1	EMBL	CDS	104	523	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; db_xref "GOA:P06929"; db_xref "InterPro:IPR001334"; db_xref "UniProtKB/Swiss-Prot:P06929"; gbkey "CDS"; gene "E6"; product "E6 protein"; protein_id "CAA24314.1"; exon_number "1"; 
+V01116.1	EMBL	start_codon	104	106	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; db_xref "GOA:P06929"; db_xref "InterPro:IPR001334"; db_xref "UniProtKB/Swiss-Prot:P06929"; gbkey "CDS"; gene "E6"; product "E6 protein"; protein_id "CAA24314.1"; exon_number "1"; 
+V01116.1	EMBL	stop_codon	524	526	.	+	0	gene_id "E6"; transcript_id "unassigned_transcript_1"; db_xref "GOA:P06929"; db_xref "InterPro:IPR001334"; db_xref "UniProtKB/Swiss-Prot:P06929"; gbkey "CDS"; gene "E6"; product "E6 protein"; protein_id "CAA24314.1"; exon_number "1"; 
+V01116.1	EMBL	gene	165	356	.	+	.	gene_id "E8"; transcript_id ""; gbkey "Gene"; gene "E8"; gene_biotype "protein_coding"; 
+V01116.1	EMBL	CDS	165	353	.	+	0	gene_id "E8"; transcript_id "unassigned_transcript_2"; db_xref "UniProtKB/TrEMBL:Q84215"; gbkey "CDS"; gene "E8"; product "E8 protein"; protein_id "CAA24315.1"; exon_number "1"; 
+V01116.1	EMBL	start_codon	165	167	.	+	0	gene_id "E8"; transcript_id "unassigned_transcript_2"; db_xref "UniProtKB/TrEMBL:Q84215"; gbkey "CDS"; gene "E8"; product "E8 protein"; protein_id "CAA24315.1"; exon_number "1"; 
+V01116.1	EMBL	stop_codon	354	356	.	+	0	gene_id "E8"; transcript_id "unassigned_transcript_2"; db_xref "UniProtKB/TrEMBL:Q84215"; gbkey "CDS"; gene "E8"; product "E8 protein"; protein_id "CAA24315.1"; exon_number "1"; 
+V01116.1	EMBL	gene	529	810	.	+	.	gene_id "E7"; transcript_id ""; gbkey "Gene"; gene "E7"; gene_biotype "protein_coding"; 
+V01116.1	EMBL	CDS	529	807	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_3"; db_xref "GOA:P06465"; db_xref "InterPro:IPR000148"; db_xref "PDB:2B9D"; db_xref "UniProtKB/Swiss-Prot:P06465"; gbkey "CDS"; gene "E7"; product "E7 protein"; protein_id "CAA24316.1"; exon_number "1"; 
+V01116.1	EMBL	start_codon	529	531	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_3"; db_xref "GOA:P06465"; db_xref "InterPro:IPR000148"; db_xref "PDB:2B9D"; db_xref "UniProtKB/Swiss-Prot:P06465"; gbkey "CDS"; gene "E7"; product "E7 protein"; protein_id "CAA24316.1"; exon_number "1"; 
+V01116.1	EMBL	stop_codon	808	810	.	+	0	gene_id "E7"; transcript_id "unassigned_transcript_3"; db_xref "GOA:P06465"; db_xref "InterPro:IPR000148"; db_xref "PDB:2B9D"; db_xref "UniProtKB/Swiss-Prot:P06465"; gbkey "CDS"; gene "E7"; product "E7 protein"; protein_id "CAA24316.1"; exon_number "1"; 
+V01116.1	EMBL	gene	3897	5420	.	+	.	gene_id "L2"; transcript_id ""; gbkey "Gene"; gene "L2"; gene_biotype "protein_coding"; 
+V01116.1	EMBL	CDS	3897	5417	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_4"; db_xref "GOA:P03105"; db_xref "InterPro:IPR000784"; db_xref "UniProtKB/Swiss-Prot:P03105"; gbkey "CDS"; gene "L2"; product "minor capsid protein L2"; protein_id "CAA24317.1"; exon_number "1"; 
+V01116.1	EMBL	start_codon	3897	3899	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_4"; db_xref "GOA:P03105"; db_xref "InterPro:IPR000784"; db_xref "UniProtKB/Swiss-Prot:P03105"; gbkey "CDS"; gene "L2"; product "minor capsid protein L2"; protein_id "CAA24317.1"; exon_number "1"; 
+V01116.1	EMBL	stop_codon	5418	5420	.	+	0	gene_id "L2"; transcript_id "unassigned_transcript_4"; db_xref "GOA:P03105"; db_xref "InterPro:IPR000784"; db_xref "UniProtKB/Swiss-Prot:P03105"; gbkey "CDS"; gene "L2"; product "minor capsid protein L2"; protein_id "CAA24317.1"; exon_number "1"; 
+V01116.1	EMBL	gene	5413	6939	.	+	.	gene_id "L1"; transcript_id ""; gbkey "Gene"; gene "L1"; gene_biotype "protein_coding"; 
+V01116.1	EMBL	CDS	5413	6936	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_5"; db_xref "GOA:P03099"; db_xref "InterPro:IPR002210"; db_xref "InterPro:IPR011222"; db_xref "UniProtKB/Swiss-Prot:P03099"; gbkey "CDS"; gene "L1"; product "major capsid protein L1"; protein_id "CAA24318.1"; exon_number "1"; 
+V01116.1	EMBL	start_codon	5413	5415	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_5"; db_xref "GOA:P03099"; db_xref "InterPro:IPR002210"; db_xref "InterPro:IPR011222"; db_xref "UniProtKB/Swiss-Prot:P03099"; gbkey "CDS"; gene "L1"; product "major capsid protein L1"; protein_id "CAA24318.1"; exon_number "1"; 
+V01116.1	EMBL	stop_codon	6937	6939	.	+	0	gene_id "L1"; transcript_id "unassigned_transcript_5"; db_xref "GOA:P03099"; db_xref "InterPro:IPR002210"; db_xref "InterPro:IPR011222"; db_xref "UniProtKB/Swiss-Prot:P03099"; gbkey "CDS"; gene "L1"; product "major capsid protein L1"; protein_id "CAA24318.1"; exon_number "1"; 
+###

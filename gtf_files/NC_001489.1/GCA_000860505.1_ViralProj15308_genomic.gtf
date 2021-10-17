@@ -1,0 +1,12 @@
+#gtf-version 2.2
+#!genome-build ViralProj15308
+#!genome-build-accession NCBI_Assembly:GCA_000860505.1
+M14707.1	Genbank	transcript	1	7478	.	+	.	gene_id ""; transcript_id "unassigned_transcript_1"; gbkey "misc_RNA"; note "hepatitis A viral genome"; transcript_biotype "transcript"; 
+M14707.1	Genbank	exon	1	7478	.	+	.	gene_id ""; transcript_id "unassigned_transcript_1"; note "hepatitis A viral genome"; transcript_biotype "transcript"; exon_number "1"; 
+M14707.1	Genbank	CDS	735	7415	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAA45465.1"; protein_id "AAA45465.1"; exon_number "1"; 
+M14707.1	Genbank	start_codon	735	737	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAA45465.1"; protein_id "AAA45465.1"; exon_number "1"; 
+M14707.1	Genbank	stop_codon	7416	7418	.	+	0	gene_id ""; transcript_id "unassigned_transcript_2"; gbkey "CDS"; product "AAA45465.1"; protein_id "AAA45465.1"; exon_number "1"; 
+M14707.1	Genbank	CDS	741	7415	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "AAA45466.1"; protein_id "AAA45466.1"; exon_number "1"; 
+M14707.1	Genbank	start_codon	741	743	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "AAA45466.1"; protein_id "AAA45466.1"; exon_number "1"; 
+M14707.1	Genbank	stop_codon	7416	7418	.	+	0	gene_id ""; transcript_id "unassigned_transcript_3"; gbkey "CDS"; product "AAA45466.1"; protein_id "AAA45466.1"; exon_number "1"; 
+###
