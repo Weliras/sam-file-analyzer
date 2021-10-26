@@ -11,7 +11,7 @@ from Classes.SamRecord import SamRecord
 class Convertor:
 
     @staticmethod
-    def get_map_of_id_to_name(url):
+    def get_map_of_id_to_name(url:str) -> dict[str, str]:
         try:
             virusSeq_to_name_map = {}
             with urllib.request.urlopen(url) as file:
@@ -28,7 +28,45 @@ class Convertor:
         return virusSeq_to_name_map
 
     @staticmethod
-    def load_gtf_files():
+    def load_gtf_files_only_cds_gene() -> list[Gene]:
+        '''
+        Function returns only cds and gene lines from gtf files
+        :return: list of genes
+        '''
+        d = 'gtf_files'
+        folders = [os.path.join(d, o) for o in os.listdir(d) if os.path.isdir(os.path.join(d, o))]
+        genes = []
+        for dir in folders:
+            virus_id = dir.split("\\")[1].replace("-", "|")
+            gtf_file = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
+            if len(gtf_file) <= 0:
+                print(f"Gtf file for virus_id: {virus_id} was not found.")
+                continue
+            gtf_file = gtf_file[0]
+            try:
+                with open(os.path.join(dir, gtf_file), "r") as file:
+                    for line in file:
+                        if line.startswith("#"):
+                            continue
+
+                        gtf_line = GTF_File_Line()
+                        line_split = line.split("\t")
+                        gtf_line.load_from_line(line_split)
+
+                        if gtf_line.feature != "gene" and gtf_line.feature != "CDS":
+                            continue
+                        gene = Gene(virus_id)
+                        gene.records.append(deepcopy(gtf_line))
+                        genes.append(deepcopy(gene))
+
+                        del gene
+            except Exception as e:
+                print(e)
+                traceback.print_exc(file=sys.stdout)
+        return genes
+
+    @staticmethod
+    def load_gtf_files() -> list[Gene]:
         d = 'gtf_files'
         folders = [os.path.join(d, o) for o in os.listdir(d) if os.path.isdir(os.path.join(d, o))]
 
@@ -58,13 +96,11 @@ class Convertor:
                         line_split = line.split("\t")
                         gtf_line.load_from_line(line_split)
 
+                        # if feature is transcript or exon it just appends them, because these features doesnt have ids
                         if gtf_line.feature == "transcript" or gtf_line.feature == "exon":
                             gene.records.append(gtf_line)
                             first_in_file = False
                             continue
-                        # if prev_protein_id != "" and (prev_gene_id == "" or gtf_line.attributes["gene_id"] == "" ) and "protein_id" not in gtf_line.attributes.keys():
-                        #    print()
-                        #    print()
 
                         if gtf_line.attributes["gene_id"] != "":
                             if not first_in_file:
@@ -87,42 +123,7 @@ class Convertor:
                             prev_gene_id = gtf_line.attributes["gene_id"]
                         if "protein_id" in gtf_line.attributes.keys():
                             prev_protein_id = gtf_line.attributes["protein_id"]
-                        """    
-                        if line.split("\t")[2] == "CDS":
-                            if prev_line == "CDS" or prev_line == "start_codon":
-                                genes.append(Gene(virus_id=gene.virus_id, CDS=gene.CDS, start_codon=gene.start_codon, stop_codon=gene.stop_codon))
 
-                            cds_line = GTF_File_Line()
-                            line_split = line.split("\t")
-                            cds_line.load_from_line(line_split)
-
-                            gene.CDS = cds_line
-
-                            prev_line = "CDS"
-                            prev_gene_id = cds_line.attributes["gene_id"]
-                        elif line.split("\t")[2] == "start_codon":
-
-                            start_codon_line = GTF_File_Line()
-                            line_split = line.split("\t")
-                            start_codon_line.load_from_line(line_split)
-
-                            gene.start_codon = start_codon_line
-
-                            prev_line = "start_codon"
-                            prev_gene_id = start_codon_line.attributes["gene_id"]
-                        elif line.split("\t")[2] == "stop_codon":
-
-                            stop_codon_line = GTF_File_Line()
-                            line_split = line.split("\t")
-                            stop_codon_line.load_from_line(line_split)
-
-                            gene.stop_codon = stop_codon_line
-
-                            genes.append(Gene(virus_id=gene.virus_id, CDS=gene.CDS, start_codon=gene.start_codon, stop_codon=gene.stop_codon))
-
-                            prev_line = "stop_codon"
-                            prev_gene_id = stop_codon_line.attributes["gene_id"]
-                        """
             except Exception as e:
                 print(e)
                 print(virus_id)
@@ -130,13 +131,19 @@ class Convertor:
         return genes
 
     @staticmethod
-    def load_file(url, map, genes):
+    def load_file(url:str, map:dict[str, str], genes:list[Gene]) -> list[SamRecord]:
         """
+        Using dynamic programming to get runtime under 30 secs
+        :param genes: Loaded genes from GTF files
         :param url: Path to input SAM file
         :param map: Map of Virus id -> Virus Name
-        :return: list of SamRecords loaded from a file
+        :return: list of SamRecords loaded from a file. SamRecord->(Virus->Genes,AmbViruses->Genes)
         """
         try:
+            dynamic_programming = dict()
+            for virus_id in map.keys():
+                dynamic_programming[virus_id] = None
+
             with urllib.request.urlopen(url) as file:
                 sam_records = []
                 for line in file:
@@ -150,41 +157,99 @@ class Convertor:
                             for ambiguous_virus in ambiguous_viruses_column:
                                 if ambiguous_virus != "" and ambiguous_virus != "\n":
                                     v = ambiguous_virus.split(",")
+                                    if dynamic_programming[v[0]] is not None:
+                                        ambiguous_viruses.append(Virus(virus_id=v[0], virus_name=map[v[0]],
+                                                                       genes=dynamic_programming[v[0]]))
+                                        continue
                                     # genes to virus
                                     g = [g for g in genes if g.virus_id == v[0]]
                                     ambiguous_viruses.append(Virus(virus_id=v[0], virus_name=map[v[0]], genes=g))
+                                    dynamic_programming[v[0]] = g
+
+                    if dynamic_programming[line_split[2]] is not None:
+                        sam_records.append(
+                            SamRecord(virus=Virus(virus_id=line_split[2], virus_name=map[line_split[2]],
+                                                  genes=dynamic_programming[line_split[2]]),
+                                      ambiguous_viruses=ambiguous_viruses, pos=line_split[3], cigar=line_split[5], seq=line_split[9]))
+                        continue
                     g = [g for g in genes if g.virus_id == line_split[2]]
                     sam_records.append(
                         SamRecord(virus=Virus(virus_id=line_split[2], virus_name=map[line_split[2]], genes=g),
-                                  ambiguous_viruses=ambiguous_viruses))
+                                  ambiguous_viruses=ambiguous_viruses,  pos=line_split[3], cigar=line_split[5], seq=line_split[9]))
+                    dynamic_programming[line_split[2]] = g
         except Exception as e:
             print(e)
             traceback.print_exc(file=sys.stdout)
         return sam_records
 
     @staticmethod
-    def get_seqs_with_count_grouped_by(sam_records, attr):
+    def get_seqs_with_count_grouped_by(sam_records:list[SamRecord], attr:str, feature="CDS") -> list[Virus, int, int, int, int]:
         """
+        :param feature: "CDS" or "gene"
         :param sam_records: Loaded lines by method load_file()
         :param attr: Attribute of Virus class which is used to group viruses
         :return: list[Virus, count_of_all, count_of_amb], grouped by attr
         """
         viruses_with_count = []
         for sam_record in sam_records:
+
+            #if sam_record.virus.virus_name == "Human_papillomavirus_71":
+            #    print()
+            #    print()
+
+            count_of_genes_in_which_is_record = 0
+            count_of_genes_in_which_is_not_record = 0
+            for gene in sam_record.virus.genes:
+                for gene_record in gene.records:
+                    if gene_record.feature == feature:
+                        if gene_record.start - len(sam_record.SEQ) <= sam_record.POS < gene_record.end:
+                            count_of_genes_in_which_is_record += 1
+                        else:
+                            count_of_genes_in_which_is_not_record += 1
+
             if not any(s for s in viruses_with_count if getattr(s[0], attr) == getattr(sam_record.virus, attr)):
-                viruses_with_count.append([sam_record.virus, 1, 0])
+                tmp = [sam_record.virus, 1, 0, 0, 0]
+                if count_of_genes_in_which_is_record > 0:
+                    tmp[3] = 1
+                elif count_of_genes_in_which_is_not_record > 0:
+                    tmp[4] = 1
+                viruses_with_count.append(tmp)
             else:
                 ind = [viruses_with_count.index(item) for item in viruses_with_count if getattr(item[0], attr) ==
                        getattr(sam_record.virus, attr)]
+                if count_of_genes_in_which_is_record > 0:
+                    viruses_with_count[ind[0]][3] += 1          # Add count of IN
+                elif count_of_genes_in_which_is_not_record > 0:
+                    viruses_with_count[ind[0]][4] += 1          # Add count of OUT
                 viruses_with_count[ind[0]][1] += 1
 
+            # counting occurences of virus in other amb viruses
             for amb_virus in sam_record.ambiguous_viruses:
+
+                count_of_amb_genes_in_which_is_record = 0
+                count_of_amb_genes_in_which_is_not_record = 0
+                for gene in amb_virus.genes:
+                    for gene_record in gene.records:
+                        if gene_record.feature == feature:
+                            if gene_record.start - len(sam_record.SEQ) <= sam_record.POS < gene_record.end:
+                                count_of_amb_genes_in_which_is_record += 1
+                            else:
+                                count_of_amb_genes_in_which_is_not_record += 1
                 if not any(s for s in viruses_with_count if getattr(s[0], attr) == getattr(amb_virus, attr)):
-                    viruses_with_count.append([amb_virus, 1, 1])
+                    tmp = [amb_virus, 1, 1, 0, 0]
+                    if count_of_amb_genes_in_which_is_record > 0:
+                        tmp[3] = 1
+                    elif count_of_amb_genes_in_which_is_not_record > 0:
+                        tmp[4] = 1
+                    viruses_with_count.append(tmp)
                 else:
                     ind = [viruses_with_count.index(item) for item in viruses_with_count if getattr(item[0], attr) ==
                            getattr(amb_virus, attr)]
-                    viruses_with_count[ind[0]][1] += 1
-                    viruses_with_count[ind[0]][2] += 1
+                    viruses_with_count[ind[0]][1] += 1      # count of all
+                    viruses_with_count[ind[0]][2] += 1      # count of amb
+                    if count_of_amb_genes_in_which_is_record > 0:
+                        viruses_with_count[ind[0]][3] += 1      # count of amb IN
+                    elif count_of_amb_genes_in_which_is_not_record > 0:
+                        viruses_with_count[ind[0]][4] += 1      # count of amb OUT
 
         return viruses_with_count
