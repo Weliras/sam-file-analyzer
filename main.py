@@ -6,11 +6,13 @@ from Classes.Convertor import Convertor
 
 RNA_SAMPLE = "http://homel.vsb.cz/~vas218/files/viruses/viruses.filtered.sam"
 VIRUS_NAME = "http://homel.vsb.cz/~vas218/files/viruses/viral_id.csv"
+FEATURE_TO_GET_FROM_GTF = "cds"
+
 
 if __name__ == '__main__':
 
     # Load gtf files
-    genes = Convertor.load_gtf_files()
+    genes = Convertor.load_gtf_files_only_cds_gene()
 
     # Creating map of VirusSeq -> VirusName
     map = Convertor.get_map_of_id_to_name(VIRUS_NAME)
@@ -34,7 +36,7 @@ if __name__ == '__main__':
     virus_with_count.sort(key= lambda virus: virus[1], reverse=True)
 
     # Printing result VirusId\tVirusName\tCountOfAll\tCountOfAmb
-    print("virus_id\tvirus_name\tcount_of_all\tcount_of_amb\n")
+    print("virus_id\tvirus_name\tcount_of_all\tcount_of_amb\tcount_of_IN\tcount_of_OUT\n")
     for item in virus_with_count:
-        print(f"{item[0].virus_id}\t{item[0].virus_name}\t{item[1]}\t{item[2]}")
+        print(f"{item[0].virus_id}\t{item[0].virus_name}\t{item[1]}\t{item[2]}\t{item[3]}\t{item[4]}")
 
