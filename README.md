@@ -6,11 +6,12 @@ TO-DO list
 - Getting output in format Virus, count_of_all, count_of_amb - Done
 - Download GTF files - 90 % Done
 - Load GTF files to memory (new class, load files, check) - Done
-- Look at gene position, count of inside/outside - In progress
+- Look at gene position, count of inside/outside - Maybe done
+- Get percents of coverage - Not done
 
 Current state
 - Got in memory all sam records with info about mapped virus and other ambiquous viruses. Every virus has associated genes (by virus_id).
-- Getting output in format Virus, count_of_all, count_of_amb
+- Getting output in format Virus, count_of_all, count_of_amb, count_of_IN, count_of_OUT
 
 Problems or questions 
 - GTF files from NC_002016.1 to NC_002023.1 are same
@@ -22,10 +23,15 @@ Problems or questions
 - GTF files from NC_021541_1 to NC_021551.1 are same
 - !GTF file U21247.1 not found as assembly, only as Nucleotide
 - !GTF files gi|9626032|lcl|HPV2REF.1|, gi|397005|lcl|HPV3REF.1|, gi|333074|lcl|HPV8REF.1|, gi|396910|lcl|HPV12REF.1|, gi|60295|lcl|HPV13REF.1|, gi|396918|lcl|HPV14REF.1|, gi|333245|lcl|HPV39REF.1| not found as assembly
-- Problem with missing gene_id, used as unique id protein_id. Maybe good or no.
 - Problem when loading attributes which are delimited by ';' if semicolon is in value (...; note "Some words and; another words";... -> [..., 'note "Some words and', 'another words', ...]). Even when using csv.reader. Problem is that whole item isn't in " ", but only value ( key "value" -> to make it work -> "key value").
-- What about exon and transcript feature in GTF? No gene_id and protein_id. Now just adding them to the last known gene_id or protein_id
-
 
 Bugs
 - If any attribute while reading GTF has semicolon in value -> Value is wrong. 
+
+Changelist:
+27.10. 2021:
+- Runtime reduced from almost 2 mins to 25 secs by using dynamic programming when assigning genes to sam records.
+- Not loading whole gtf file, just gene and cds lines.
+- Added loading SEQ, CIGAR, POS from sam file to sam record.
+- Getting count_of_IN, count_of_OUT for CDS or GENE. But getting too many OUT, maybe error.
+- count getting by checking if POS from sam file is in <gene_start-78, gene_end) in atleast one gene associated with virus_id.
