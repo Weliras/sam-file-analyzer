@@ -1,6 +1,8 @@
+from __future__ import annotations
 import csv
+import sys
+import traceback
 from io import StringIO
-
 
 class GTF_File_Line:
     def __init__(self, seqname=None, source=None, feature=None, start=None, end=None, score=None, strand=None, frame=None,
@@ -18,7 +20,7 @@ class GTF_File_Line:
         self.frame = frame
         self.attributes = attributes        # ; delimited attributes
 
-    def load_from_line(self, line_split):
+    def load_from_line(self, line_split: [str]) -> None:
         self.seqname = line_split[0] if line_split[0] != "." else None
         self.source = line_split[1] if line_split[1] != "." else None
         self.feature = line_split[2] if line_split[2] != "." else None
@@ -47,10 +49,9 @@ class GTF_File_Line:
                 value = "".join(attr.lstrip().split(" ")[1:]).replace("\"", "")
                 self.attributes[key] = value
 
-
 class Gene:
     #def __init__(self, virus_id, GENE=None , CDS=[], start_codon=[], stop_codon=[], gene=[], transcript=[]):
-    def __init__(self, virus_id, records=[]):
+    def __init__(self, virus_id: str, records=[]):
         """if GENE != None:
             self.gene = GENE.gene.copy()
             self.CDS = GENE.CDS.copy()
@@ -67,8 +68,28 @@ class Gene:
         self.stop_codon = stop_codon
 
         """
+        if len(records) == 1:
+            self._record = records[0]
+        else:
+            self._record = None
         self.records = records
         self.virus_id = virus_id
+
+        self.coverage_array = dict()
+        self.length_of_gene = 0
+
+    @property
+    def record(self):
+        return self._record
+
+    @record.setter
+    def record(self, value: GTF_File_Line):
+        self._record = value
+        self.coverage_array.clear()
+        self.length_of_gene = self._record.end - self._record.start
+        for i in range(self._record.start, self._record.end):                # Including upper and not Including lower bound
+            self.coverage_array[i] = False
+
 
     def __del__(self):
         """self.gene.clear()
@@ -79,3 +100,79 @@ class Gene:
         self.virus_id = ""
         self.records.clear()
 
+    @staticmethod
+    def write_to_file_genes_with_percents(genes: [Gene], only_non_empty: bool = True) -> bool:
+        try:
+            with open("gene_coverage_output.txt", "w") as file:
+                for gene in genes:
+                    #size_of_gene = len(gene.coverage_array.values())  # Not including end
+                    size_of_gene = gene.length_of_gene
+                    #if size_of_gene <= 0:
+                    #    size_of_gene = 1
+                    count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
+                    if only_non_empty and count_of_covered > 0:
+                        file.write(
+                            f"Gene Id: {gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''}"
+                            f"\t Protein Id: {gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else ''}"
+                            f"\t Virus Id: {gene.virus_id}"
+                            f"\t Percentage of covered: {count_of_covered / size_of_gene * 100} %"
+                            f"\t Percentage of not covered: {(size_of_gene - count_of_covered) / size_of_gene * 100} %"
+                            f"\n")
+                    elif not only_non_empty:
+                        file.write(
+                            f"Gene Id: {gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''}"
+                            f"\t Protein Id: {gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else ''}"
+                            f"\t Virus Id: {gene.virus_id}"
+                            f"\t Percentage of covered: {count_of_covered / size_of_gene * 100} %"
+                            f"\t Percentage of not covered: {(size_of_gene - count_of_covered) / size_of_gene * 100} %"
+                            f"\n")
+
+            return True
+        except Exception as e:
+            print(e)
+            traceback.print_exc(file=sys.stdout)
+            return False
+
+    @staticmethod
+    def write_to_file_virus_with_percents(genes: [Gene]) -> bool:
+        try:
+            # [Virus_id, %, count]
+            result = []
+            for gene in genes:
+                if not any(s for s in result if s[0] == gene.virus_id):
+                    size_of_gene = gene.length_of_gene
+
+                    count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
+                    percentage_of_covered = count_of_covered / size_of_gene * 100
+
+                    tmp = [gene.virus_id, percentage_of_covered, size_of_gene]
+                    result.append(tmp)
+                else:
+                    ind = [result.index(item) for item in result if item[0] == gene.virus_id]
+
+                    # size of actual gene
+                    size_of_gene = gene.length_of_gene
+
+                    # count of already computed mapped genes
+                    count_of_already_covered = (result[ind[0]][1] / 100) * result[ind[0]][2]
+                    # count of covered pos of this gene
+                    count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
+
+                    # Percentage of all covered
+                    percentage_of_covered = (count_of_covered + count_of_already_covered) / \
+                                            (result[ind[0]][2] + size_of_gene)
+
+                    result[ind[0]][2] += size_of_gene
+                    result[ind[0]][1] = percentage_of_covered
+
+            with open("virus_coverage_output.txt", "w") as file:
+                for res in result:
+                    file.write(f"Virus Id: {res[0]}\t"
+                               f"Percentage of covered: {res[1]} %\t"
+                               f"From: {res[2]}\n")
+
+            return True
+        except Exception as e:
+            print(e)
+            traceback.print_exc(file=sys.stdout)
+            return False
