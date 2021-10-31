@@ -6,12 +6,13 @@ TO-DO list
 - Getting output in format Virus, count_of_all, count_of_amb - Done
 - Download GTF files - 90 % Done
 - Load GTF files to memory (new class, load files, check) - Done
-- Look at gene position, count of inside/outside - Maybe done
-- Get percents of coverage - Not done
+- Look at gene position, count of inside/outside - Done
+- Get percents of coverage - Done
+- Make code readible - Not done
 
 Current state
 - Got in memory all sam records with info about mapped virus and other ambiquous viruses. Every virus has associated genes (by virus_id).
-- Getting output in format Virus, count_of_all, count_of_amb, count_of_IN, count_of_OUT
+- Getting output in format Virus, count_of_all, count_of_amb, count_of_IN, count_of_OUT + Percentages of coverege in files
 
 Problems or questions 
 - GTF files from NC_002016.1 to NC_002023.1 are same
@@ -35,3 +36,8 @@ Changelist:
 - Added loading SEQ, CIGAR, POS from sam file to sam record.
 - Getting count_of_IN, count_of_OUT for CDS or GENE. But getting too many OUT, maybe error.
 - count getting by checking if POS from sam file is in <gene_start-78, gene_end) in atleast one gene associated with virus_id.
+31.10. 2021:
+- Modified class Gene (added length_of_gene, records -> record, coverage_array)
+- Added calculating % of gene which are covered in sam file. (Gene.write_to_file_genes_with_percents)
+- Added calculating % of gene grouped by virus_id. (Gene.write_to_file_virus_with_percents)
+- ? Include or not the end index
