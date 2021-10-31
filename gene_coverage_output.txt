@@ -1,0 +1,46 @@
+Gene Id: 	 Protein Id: DAA00623.1	 Virus Id: AC_000007.1	 Percentage of covered: 3.794308537194209 %	 Percentage of not covered: 96.20569146280579 %
+Gene Id: 	 Protein Id: DAA00610.1	 Virus Id: AC_000007.1	 Percentage of covered: 2.617981398553221 %	 Percentage of not covered: 97.38201860144677 %
+Gene Id: 	 Protein Id: DAA00616.1	 Virus Id: AC_000007.1	 Percentage of covered: 10.147058823529411 %	 Percentage of not covered: 89.8529411764706 %
+Gene Id: 	 Protein Id: DAA05338.1	 Virus Id: AC_000017.1	 Percentage of covered: 5.070046697798532 %	 Percentage of not covered: 94.92995330220147 %
+Gene Id: E6	 Protein Id: AAA46927.1	 Virus Id: M14119.1	 Percentage of covered: 11.58129175946548 %	 Percentage of not covered: 88.41870824053451 %
+Gene Id: E7	 Protein Id: AAA46928.1	 Virus Id: M14119.1	 Percentage of covered: 47.781569965870304 %	 Percentage of not covered: 52.218430034129696 %
+Gene Id: E1	 Protein Id: AAA46929.1	 Virus Id: M14119.1	 Percentage of covered: 23.895169578622816 %	 Percentage of not covered: 76.10483042137717 %
+Gene Id: E2	 Protein Id: AAA46930.1	 Virus Id: M14119.1	 Percentage of covered: 7.818181818181818 %	 Percentage of not covered: 92.18181818181819 %
+Gene Id: E4	 Protein Id: AAA46931.1	 Virus Id: M14119.1	 Percentage of covered: 4.024767801857585 %	 Percentage of not covered: 95.97523219814241 %
+Gene Id: L2	 Protein Id: AAA46934.1	 Virus Id: M14119.1	 Percentage of covered: 5.571847507331378 %	 Percentage of not covered: 94.42815249266863 %
+Gene Id: DR1	 Protein Id: AAD49614.1	 Virus Id: NC_000898.1	 Percentage of covered: 4.015865146256817 %	 Percentage of not covered: 95.98413485374319 %
+Gene Id: DR3	 Protein Id: AAD49618.1	 Virus Id: NC_000898.1	 Percentage of covered: 4.674457429048414 %	 Percentage of not covered: 95.32554257095158 %
+Gene Id: B1	 Protein Id: AAD49617.1	 Virus Id: NC_000898.1	 Percentage of covered: 15.756302521008402 %	 Percentage of not covered: 84.24369747899159 %
+Gene Id: U79	 Protein Id: AAD49671.1	 Virus Id: NC_000898.1	 Percentage of covered: 7.236842105263158 %	 Percentage of not covered: 92.76315789473685 %
+Gene Id: U84	 Protein Id: AAD49672.1	 Virus Id: NC_000898.1	 Percentage of covered: 7.7073170731707314 %	 Percentage of not covered: 92.29268292682927 %
+Gene Id: DR1_1	 Protein Id: AAD49682.1	 Virus Id: NC_000898.1	 Percentage of covered: 4.015865146256817 %	 Percentage of not covered: 95.98413485374319 %
+Gene Id: E6	 Protein Id: CAA25018.1	 Virus Id: NC_001355.1	 Percentage of covered: 100.0 %	 Percentage of not covered: 0.0 %
+Gene Id: E7	 Protein Id: CAA25019.1	 Virus Id: NC_001355.1	 Percentage of covered: 100.0 %	 Percentage of not covered: 0.0 %
+Gene Id: E1	 Protein Id: CAA25020.1	 Virus Id: NC_001355.1	 Percentage of covered: 100.0 %	 Percentage of not covered: 0.0 %
+Gene Id: E2	 Protein Id: CAA25021.1	 Virus Id: NC_001355.1	 Percentage of covered: 100.0 %	 Percentage of not covered: 0.0 %
+Gene Id: E4	 Protein Id: CAA25022.1	 Virus Id: NC_001355.1	 Percentage of covered: 100.0 %	 Percentage of not covered: 0.0 %
+Gene Id: E5a	 Protein Id: CAA25023.1	 Virus Id: NC_001355.1	 Percentage of covered: 100.0 %	 Percentage of not covered: 0.0 %
+Gene Id: E5b	 Protein Id: CAA25024.1	 Virus Id: NC_001355.1	 Percentage of covered: 98.6046511627907 %	 Percentage of not covered: 1.3953488372093024 %
+Gene Id: L2	 Protein Id: CAA25025.1	 Virus Id: NC_001355.1	 Percentage of covered: 82.41279069767442 %	 Percentage of not covered: 17.587209302325583 %
+Gene Id: L1	 Protein Id: CAA25026.1	 Virus Id: NC_001355.1	 Percentage of covered: 47.631754503002 %	 Percentage of not covered: 52.368245496998 %
+Gene Id: 	 Protein Id: CAA50160.1	 Virus Id: NC_001457.1	 Percentage of covered: 12.531120331950207 %	 Percentage of not covered: 87.4688796680498 %
+Gene Id: 	 Protein Id: CAA50161.1	 Virus Id: NC_001457.1	 Percentage of covered: 13.837638376383765 %	 Percentage of not covered: 86.16236162361623 %
+Gene Id: E2	 Protein Id: CAA52486.1	 Virus Id: NC_001596.1	 Percentage of covered: 5.788712011577424 %	 Percentage of not covered: 94.21128798842258 %
+Gene Id: MC001R	 Protein Id: AAC55129.1	 Virus Id: NC_001731.1	 Percentage of covered: 10.047846889952153 %	 Percentage of not covered: 89.95215311004785 %
+Gene Id: MC003L	 Protein Id: AAC55131.1	 Virus Id: NC_001731.1	 Percentage of covered: 8.620689655172415 %	 Percentage of not covered: 91.37931034482759 %
+Gene Id: MC006L	 Protein Id: AAC55134.1	 Virus Id: NC_001731.1	 Percentage of covered: 2.44457077885162 %	 Percentage of not covered: 97.55542922114839 %
+Gene Id: MC066L	 Protein Id: AAC55194.2	 Virus Id: NC_001731.1	 Percentage of covered: 39.30197268588771 %	 Percentage of not covered: 60.69802731411229 %
+Gene Id: UL52	 Protein Id: AEV91392.1	 Virus Id: NC_001798.2	 Percentage of covered: 2.752580544260244 %	 Percentage of not covered: 97.24741945573976 %
+Gene Id: RL2_1	 Protein Id: AEV91397.2	 Virus Id: NC_001798.2	 Percentage of covered: 4.350314825414997 %	 Percentage of not covered: 95.649685174585 %
+Gene Id: RS1	 Protein Id: AEV91399.1	 Virus Id: NC_001798.2	 Percentage of covered: 1.8972931950417402 %	 Percentage of not covered: 98.10270680495826 %
+Gene Id: UL36	 Protein Id: AEQ77067.1	 Virus Id: NC_001806.2	 Percentage of covered: 1.1469838572642312 %	 Percentage of not covered: 98.85301614273577 %
+Gene Id: 	 Protein Id: AAG48591.1	 Virus Id: NC_002645.1	 Percentage of covered: 1.2267931626727733 %	 Percentage of not covered: 98.77320683732724 %
+Gene Id: 	 Protein Id: AAG48590.1	 Virus Id: NC_002645.1	 Percentage of covered: 1.224090093030847 %	 Percentage of not covered: 98.77590990696915 %
+Gene Id: 	 Protein Id: AAB66324.1	 Virus Id: NC_004102.1	 Percentage of covered: 0.5646589902568644 %	 Percentage of not covered: 99.43534100974314 %
+Gene Id: orf1ab	 Protein Id: AAT84351.1	 Virus Id: NC_006213.1	 Percentage of covered: 1.1195734958111194 %	 Percentage of not covered: 98.88042650418888 %
+Gene Id: 	 Protein Id: AAT84354.1	 Virus Id: NC_006213.1	 Percentage of covered: 2.2671266633809757 %	 Percentage of not covered: 97.73287333661902 %
+Gene Id: 	 Protein Id: AAT84358.1	 Virus Id: NC_006213.1	 Percentage of covered: 6.180193596425912 %	 Percentage of not covered: 93.81980640357409 %
+Gene Id: ORF4	 Protein Id: ABD28848.1	 Virus Id: NC_009333.1	 Percentage of covered: 4.6088538508186785 %	 Percentage of not covered: 95.39114614918132 %
+Gene Id: unassigned_gene_5	 Protein Id: AAD46501.1	 Virus Id: NC_009333.1	 Percentage of covered: 3.603071470761961 %	 Percentage of not covered: 96.39692852923804 %
+Gene Id: orf1ab	 Protein Id: QHD43415.1	 Virus Id: NC_045512.2	 Percentage of covered: 1.1361914861384639 %	 Percentage of not covered: 98.86380851386154 %
+Gene Id: ORF6	 Protein Id: QHD43420.1	 Virus Id: NC_045512.2	 Percentage of covered: 50.54945054945055 %	 Percentage of not covered: 49.45054945054945 %
