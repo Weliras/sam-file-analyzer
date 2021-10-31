@@ -56,7 +56,8 @@ class Convertor:
                         if gtf_line.feature != "gene" and gtf_line.feature != "CDS":
                             continue
                         gene = Gene(virus_id)
-                        gene.records.append(deepcopy(gtf_line))
+                        gene.records.append(deepcopy(gtf_line))         # deprecated
+                        gene.record = deepcopy(gtf_line)
                         genes.append(deepcopy(gene))
 
                         del gene
@@ -131,7 +132,7 @@ class Convertor:
         return genes
 
     @staticmethod
-    def load_file(url:str, map:dict[str, str], genes:list[Gene]) -> list[SamRecord]:
+    def load_sam_files(url:str, map:dict[str, str], genes:list[Gene]) -> list[SamRecord]:
         """
         Using dynamic programming to get runtime under 30 secs
         :param genes: Loaded genes from GTF files
@@ -199,6 +200,7 @@ class Convertor:
 
             count_of_genes_in_which_is_record = 0
             count_of_genes_in_which_is_not_record = 0
+            """
             for gene in sam_record.virus.genes:
                 for gene_record in gene.records:
                     if gene_record.feature == feature:
@@ -206,7 +208,16 @@ class Convertor:
                             count_of_genes_in_which_is_record += 1
                         else:
                             count_of_genes_in_which_is_not_record += 1
-
+            """
+            for gene in sam_record.virus.genes:
+                if gene.record.feature == feature:
+                    if gene.record.start - len(sam_record.SEQ) <= sam_record.POS < gene.record.end:
+                        count_of_genes_in_which_is_record += 1
+                        for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
+                            if gene_pos in gene.coverage_array.keys():
+                                gene.coverage_array[gene_pos] = True
+                    else:
+                        count_of_genes_in_which_is_not_record += 1
             if not any(s for s in viruses_with_count if getattr(s[0], attr) == getattr(sam_record.virus, attr)):
                 tmp = [sam_record.virus, 1, 0, 0, 0]
                 if count_of_genes_in_which_is_record > 0:
@@ -223,11 +234,12 @@ class Convertor:
                     viruses_with_count[ind[0]][4] += 1          # Add count of OUT
                 viruses_with_count[ind[0]][1] += 1
 
+
             # counting occurences of virus in other amb viruses
             for amb_virus in sam_record.ambiguous_viruses:
-
                 count_of_amb_genes_in_which_is_record = 0
                 count_of_amb_genes_in_which_is_not_record = 0
+                """
                 for gene in amb_virus.genes:
                     for gene_record in gene.records:
                         if gene_record.feature == feature:
@@ -235,6 +247,16 @@ class Convertor:
                                 count_of_amb_genes_in_which_is_record += 1
                             else:
                                 count_of_amb_genes_in_which_is_not_record += 1
+                """
+                for gene in amb_virus.genes:
+                    if gene.record.feature == feature:
+                        if gene.record.start - len(sam_record.SEQ) <= sam_record.POS < gene.record.end:
+                            count_of_amb_genes_in_which_is_record += 1
+                            for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
+                                if gene_pos in gene.coverage_array.keys():
+                                    gene.coverage_array[gene_pos] = True
+                        else:
+                            count_of_amb_genes_in_which_is_not_record += 1
                 if not any(s for s in viruses_with_count if getattr(s[0], attr) == getattr(amb_virus, attr)):
                     tmp = [amb_virus, 1, 1, 0, 0]
                     if count_of_amb_genes_in_which_is_record > 0:
