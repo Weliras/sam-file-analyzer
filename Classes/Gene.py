@@ -101,7 +101,7 @@ class Gene:
         self.records.clear()
 
     @staticmethod
-    def write_to_file_genes_with_percents(genes: [Gene], only_non_empty: bool = True) -> bool:
+    def write_to_file_genes_with_percents(genes: [Gene], only_non_empty: bool = False) -> bool:
         try:
             with open("gene_coverage_output.txt", "w") as file:
                 for gene in genes:
@@ -117,6 +117,7 @@ class Gene:
                             f"\t Virus Id: {gene.virus_id}"
                             f"\t Percentage of covered: {count_of_covered / size_of_gene * 100} %"
                             f"\t Percentage of not covered: {(size_of_gene - count_of_covered) / size_of_gene * 100} %"
+                            f"\t From: {size_of_gene}"
                             f"\n")
                     elif not only_non_empty:
                         file.write(
@@ -125,6 +126,7 @@ class Gene:
                             f"\t Virus Id: {gene.virus_id}"
                             f"\t Percentage of covered: {count_of_covered / size_of_gene * 100} %"
                             f"\t Percentage of not covered: {(size_of_gene - count_of_covered) / size_of_gene * 100} %"
+                            f"\t From: {size_of_gene}"
                             f"\n")
 
             return True
@@ -139,11 +141,16 @@ class Gene:
             # [Virus_id, %, count]
             result = []
             for gene in genes:
+
+                #if gene.virus_id == "NC_001355.1":
+                #    print(end="")
+                #    print(end="")
+
                 if not any(s for s in result if s[0] == gene.virus_id):
                     size_of_gene = gene.length_of_gene
 
                     count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
-                    percentage_of_covered = count_of_covered / size_of_gene * 100
+                    percentage_of_covered = (count_of_covered / size_of_gene) * 100
 
                     tmp = [gene.virus_id, percentage_of_covered, size_of_gene]
                     result.append(tmp)
@@ -159,8 +166,7 @@ class Gene:
                     count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
 
                     # Percentage of all covered
-                    percentage_of_covered = (count_of_covered + count_of_already_covered) / \
-                                            (result[ind[0]][2] + size_of_gene)
+                    percentage_of_covered = (count_of_covered + count_of_already_covered) / (result[ind[0]][2] + size_of_gene) * 100
 
                     result[ind[0]][2] += size_of_gene
                     result[ind[0]][1] = percentage_of_covered
