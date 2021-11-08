@@ -189,7 +189,7 @@ class Convertor:
         :param feature: "CDS" or "gene"
         :param sam_records: Loaded lines by method load_file()
         :param attr: Attribute of Virus class which is used to group viruses
-        :return: list[Virus, count_of_all, count_of_amb], grouped by attr
+        :return: list[Virus, count_of_all, count_of_amb, count_of_mapped_id, count_of_mapped_out], grouped by attr
         """
         viruses_with_count = []
         for sam_record in sam_records:
@@ -212,10 +212,16 @@ class Convertor:
             for gene in sam_record.virus.genes:
                 if gene.record.feature == feature:
                     if gene.record.start - len(sam_record.SEQ) <= sam_record.POS < gene.record.end:
-                        count_of_genes_in_which_is_record += 1
-                        for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
-                            if gene_pos in gene.coverage_array.keys():
-                                gene.coverage_array[gene_pos] = True
+                        cigar_list = decode_cigar_string(sam_record.CIGAR)
+                        if any(ch == "M" for ch in cigar_list):
+                            count_of_genes_in_which_is_record += 1
+                            cigar_counter = 0
+                            for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
+                                if gene_pos in gene.coverage_array.keys() and cigar_list[cigar_counter] == "M":
+                                    gene.coverage_array[gene_pos] = True
+                                cigar_counter += 1
+                        else:
+                            count_of_genes_in_which_is_not_record += 1
                     else:
                         count_of_genes_in_which_is_not_record += 1
             if not any(s for s in viruses_with_count if getattr(s[0], attr) == getattr(sam_record.virus, attr)):
@@ -251,10 +257,16 @@ class Convertor:
                 for gene in amb_virus.genes:
                     if gene.record.feature == feature:
                         if gene.record.start - len(sam_record.SEQ) <= sam_record.POS < gene.record.end:
-                            count_of_amb_genes_in_which_is_record += 1
-                            for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
-                                if gene_pos in gene.coverage_array.keys():
-                                    gene.coverage_array[gene_pos] = True
+                            cigar_list = decode_cigar_string(sam_record.CIGAR)
+                            if any(ch == "M" for ch in cigar_list):
+                                count_of_amb_genes_in_which_is_record += 1
+                                cigar_counter = 0
+                                for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
+                                    if gene_pos in gene.coverage_array.keys() and cigar_list[cigar_counter] == "M":
+                                        gene.coverage_array[gene_pos] = True
+                                    cigar_counter += 1
+                            else:
+                                count_of_amb_genes_in_which_is_not_record += 1
                         else:
                             count_of_amb_genes_in_which_is_not_record += 1
                 if not any(s for s in viruses_with_count if getattr(s[0], attr) == getattr(amb_virus, attr)):
@@ -275,3 +287,24 @@ class Convertor:
                         viruses_with_count[ind[0]][4] += 1      # count of amb OUT
 
         return viruses_with_count
+
+
+def decode_cigar_string(cigar: str) -> [str]:
+    cigar_list = []
+    type_of_match = ""
+    count = ""
+    for ch in cigar:
+        if ch.isalpha():
+            type_of_match = ch
+
+            if count != "" and type_of_match != "":
+                for j in range(0, int(count)):
+                    cigar_list.append(type_of_match)
+
+                type_of_match = ""
+                count = ""
+
+        elif ch.isnumeric():
+            count = count + ch
+
+    return cigar_list
