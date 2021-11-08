@@ -4,12 +4,15 @@ from Classes.Gene import Gene
 from Classes.Virus import Virus
 from Classes.SamRecord import SamRecord
 from Classes.Convertor import Convertor
+from Classes.BlastApi import BlastApi
 
 RNA_SAMPLE = "http://homel.vsb.cz/~vas218/files/viruses/viruses.filtered.sam"
 VIRUS_NAME = "http://homel.vsb.cz/~vas218/files/viruses/viral_id.csv"
 FEATURE_TO_GET_FROM_GTF = "cds"
 
 if __name__ == '__main__':
+
+    #BlastApi.connect()
 
     # Load gtf files
     genes = Convertor.load_gtf_files_only_cds_gene()
@@ -32,7 +35,7 @@ if __name__ == '__main__':
     virus_with_count = Convertor.get_seqs_with_count_grouped_by(sam_records, "virus_name")
 
     # For each gene get % of mapped
-    Gene.write_to_file_genes_with_percents(genes=genes)
+    Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True)
 
     # For each virus get % of mapped
     Gene.write_to_file_virus_with_percents(genes=genes)
