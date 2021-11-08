@@ -41,3 +41,5 @@ Changelist:
 - Added calculating % of gene which are covered in sam file. (Gene.write_to_file_genes_with_percents)
 - Added calculating % of gene grouped by virus_id. (Gene.write_to_file_virus_with_percents)
 - ? Include or not the end index
+08.11. 2021:
+- Modified Convertor.get_seqs_with_count_grouped_by() so it takes in account cigar string and takes mapped nucleotids only if cigar operation is "M". ???
