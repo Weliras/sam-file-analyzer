@@ -30,16 +30,16 @@ Bugs
 - If any attribute while reading GTF has semicolon in value -> Value is wrong. 
 
 Changelist:
-27.10. 2021:
-- Runtime reduced from almost 2 mins to 25 secs by using dynamic programming when assigning genes to sam records.
-- Not loading whole gtf file, just gene and cds lines.
-- Added loading SEQ, CIGAR, POS from sam file to sam record.
-- Getting count_of_IN, count_of_OUT for CDS or GENE. But getting too many OUT, maybe error.
-- count getting by checking if POS from sam file is in <gene_start-78, gene_end) in atleast one gene associated with virus_id.
-31.10. 2021:
-- Modified class Gene (added length_of_gene, records -> record, coverage_array)
-- Added calculating % of gene which are covered in sam file. (Gene.write_to_file_genes_with_percents)
-- Added calculating % of gene grouped by virus_id. (Gene.write_to_file_virus_with_percents)
-- ? Include or not the end index
-08.11. 2021:
-- Modified Convertor.get_seqs_with_count_grouped_by() so it takes in account cigar string and takes mapped nucleotids only if cigar operation is "M". ???
+-27.10. 2021:
+  - Runtime reduced from almost 2 mins to 25 secs by using dynamic programming when assigning genes to sam records.
+  - Not loading whole gtf file, just gene and cds lines.
+  - Added loading SEQ, CIGAR, POS from sam file to sam record.
+  - Getting count_of_IN, count_of_OUT for CDS or GENE. But getting too many OUT, maybe error.
+  - count getting by checking if POS from sam file is in <gene_start-78, gene_end) in atleast one gene associated with virus_id.
+-31.10. 2021:
+  - Modified class Gene (added length_of_gene, records -> record, coverage_array)
+  - Added calculating % of gene which are covered in sam file. (Gene.write_to_file_genes_with_percents)
+  - Added calculating % of gene grouped by virus_id. (Gene.write_to_file_virus_with_percents)
+  - ? Include or not the end index. Now not including.
+-08.11. 2021:
+  - Modified Convertor.get_seqs_with_count_grouped_by() so it takes in account cigar string and takes mapped nucleotids only if cigar operation is "M". ???
