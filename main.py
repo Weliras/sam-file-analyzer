@@ -12,7 +12,7 @@ FEATURE_TO_GET_FROM_GTF = "cds"
 
 if __name__ == '__main__':
 
-    #BlastApi.connect()
+    BlastApi.send_query("blastn", "nt", "AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA")
 
     # Load gtf files
     genes = Convertor.load_gtf_files_only_cds_gene()
