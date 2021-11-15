@@ -1,0 +1,967 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+BLASTN 2.12.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: T3DUR9AZ01R
+
+
+Database: Nucleotide collection (nt)
+           76,140,253 sequences; 583,847,353,310 total letters
+Query= 
+Length=76
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+MK463919.1 Human papillomavirus type 11 isolate HPV11-gw-1108,...  133     2e-27  99%         
+MK463909.1 Human papillomavirus type 6 isolate HPV6-gw-0611, c...  133     2e-27  99%         
+MK463905.1 Human papillomavirus type 6 isolate HPV6-gw-0602, c...  133     2e-27  99%         
+MK313781.1 Human papillomavirus type 6 isolate ASCUS1/HPV6, co...  133     2e-27  99%         
+MK313779.1 Human papillomavirus type 6 isolate LSIL1/HPV6, com...  133     2e-27  99%         
+MK313778.1 Human papillomavirus type 6 isolate CAC1/HPV6, comp...  133     2e-27  99%         
+MK313777.1 Human papillomavirus type 6 isolate JO-RRP2/HPV6, c...  133     2e-27  99%         
+MK313776.1 Human papillomavirus type 6 isolate JO-RRP1/HPV6, c...  133     2e-27  99%         
+MK313775.1 Human papillomavirus type 6 isolate AO-RRP7/HPV6, c...  133     2e-27  99%         
+MK313774.1 Human papillomavirus type 6 isolate AO-RRP6/HPV6, c...  133     2e-27  99%         
+MK313773.1 Human papillomavirus type 6 isolate AO-RRP5/HPV6, c...  133     2e-27  99%         
+MK313772.1 Human papillomavirus type 6 isolate AO-RRP4/HPV6, c...  133     2e-27  99%         
+MK313771.1 Human papillomavirus type 6 isolate AO-RRP3/HPV6, c...  133     2e-27  99%         
+MK313770.1 Human papillomavirus type 6 isolate AO-RRP2/HPV6, c...  133     2e-27  99%         
+MK313769.1 Human papillomavirus type 6 isolate AO-RRP1/HPV6, c...  133     2e-27  99%         
+KX514427.1 Human papillomavirus type 6 isolate 116B, complete ...  133     2e-27  99%         
+KX514423.1 Human papillomavirus type 6 isolate 111B, complete ...  133     2e-27  99%         
+KU298876.1 Human papillomavirus type 6 isolate 103A.6, complet...  133     2e-27  99%         
+HG793938.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793937.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793936.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793935.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793934.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793933.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793932.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793931.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793930.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793929.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793928.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793927.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793926.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793925.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793924.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793922.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793921.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793920.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793918.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793917.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793916.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+HG793915.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
+MZ617452.1 Human papillomavirus type 6 isolate 2137, complete ...  133     2e-27  99%         
+MZ617451.1 Human papillomavirus type 6 isolate 1205, complete ...  133     2e-27  99%         
+MZ617450.1 Human papillomavirus type 6 isolate 1181, complete ...  133     2e-27  99%         
+MZ617449.1 Human papillomavirus type 6 isolate 0759, complete ...  133     2e-27  99%         
+MZ617448.1 Human papillomavirus type 6 isolate 0767, complete ...  133     2e-27  99%         
+MZ617447.1 Human papillomavirus type 6 isolate 0758, complete ...  133     2e-27  99%         
+MZ617446.1 Human papillomavirus type 6 isolate 0756, complete ...  133     2e-27  99%         
+MZ617445.1 Human papillomavirus type 6 isolate 0746, complete ...  133     2e-27  99%         
+MZ617444.1 Human papillomavirus type 6 isolate 0745, complete ...  133     2e-27  99%         
+MZ617443.1 Human papillomavirus type 6 isolate 0738, complete ...  133     2e-27  99%         
+MZ617442.1 Human papillomavirus type 6 isolate 0731, complete ...  133     2e-27  99%         
+MZ617441.1 Human papillomavirus type 6 isolate 1210, complete ...  133     2e-27  99%         
+MZ617440.1 Human papillomavirus type 6 isolate 1208, complete ...  133     2e-27  99%         
+MZ617439.1 Human papillomavirus type 6 isolate 1203, complete ...  133     2e-27  99%         
+MZ617438.1 Human papillomavirus type 6 isolate 1202, complete ...  133     2e-27  99%         
+MZ617437.1 Human papillomavirus type 6 isolate 1187, complete ...  133     2e-27  99%         
+MZ617436.1 Human papillomavirus type 6 isolate 1186, complete ...  133     2e-27  99%         
+MZ617435.1 Human papillomavirus type 6 isolate 1184, complete ...  133     2e-27  99%         
+MZ617434.1 Human papillomavirus type 6 isolate 0750, complete ...  133     2e-27  99%         
+MZ617433.1 Human papillomavirus type 6 isolate 0740, complete ...  133     2e-27  99%         
+MZ617432.1 Human papillomavirus type 6 isolate 0736, complete ...  133     2e-27  99%         
+MZ617431.1 Human papillomavirus type 6 isolate 3242, complete ...  133     2e-27  99%         
+MZ617430.1 Human papillomavirus type 6 isolate 3230, complete ...  133     2e-27  99%         
+MZ617429.1 Human papillomavirus type 6 isolate 2105, complete ...  133     2e-27  99%         
+MZ617428.1 Human papillomavirus type 6 isolate 2096, complete ...  133     2e-27  99%         
+MZ617427.1 Human papillomavirus type 6 isolate 2090, complete ...  133     2e-27  99%         
+MZ617426.1 Human papillomavirus type 6 isolate 1374, complete ...  133     2e-27  99%         
+MZ617425.1 Human papillomavirus type 6 isolate 1371, complete ...  133     2e-27  99%         
+MZ617424.1 Human papillomavirus type 6 isolate 1370, complete ...  133     2e-27  99%         
+MZ617423.1 Human papillomavirus type 6 isolate 1367, complete ...  133     2e-27  99%         
+MZ617422.1 Human papillomavirus type 6 isolate 1362, complete ...  133     2e-27  99%         
+MZ617421.1 Human papillomavirus type 6 isolate 1357, complete ...  133     2e-27  99%         
+MZ617420.1 Human papillomavirus type 6 isolate 1355, complete ...  133     2e-27  99%         
+MZ617419.1 Human papillomavirus type 6 isolate 1352, complete ...  133     2e-27  99%         
+MZ617418.1 Human papillomavirus type 6 isolate 1347, complete ...  133     2e-27  99%         
+MZ617417.1 Human papillomavirus type 6 isolate 1345, complete ...  133     2e-27  99%         
+MZ617416.1 Human papillomavirus type 6 isolate 1344, complete ...  133     2e-27  99%         
+MZ617415.1 Human papillomavirus type 6 isolate 1343, complete ...  133     2e-27  99%         
+MZ617414.1 Human papillomavirus type 6 isolate 1324, complete ...  133     2e-27  99%         
+MZ617413.1 Human papillomavirus type 6 isolate 1240, complete ...  133     2e-27  99%         
+MZ617412.1 Human papillomavirus type 6 isolate 1239, complete ...  133     2e-27  99%         
+MZ617411.1 Human papillomavirus type 6 isolate 1234, complete ...  133     2e-27  99%         
+MZ617410.1 Human papillomavirus type 6 isolate 1231, complete ...  133     2e-27  99%         
+MZ617409.1 Human papillomavirus type 6 isolate 1230, complete ...  133     2e-27  99%         
+MZ617408.1 Human papillomavirus type 6 isolate 1227, complete ...  133     2e-27  99%         
+MZ617407.1 Human papillomavirus type 6 isolate 1226, complete ...  133     2e-27  99%         
+MZ617406.1 Human papillomavirus type 6 isolate 1224, complete ...  133     2e-27  99%         
+MZ617405.1 Human papillomavirus type 6 isolate 1218, complete ...  133     2e-27  99%         
+MZ617404.1 Human papillomavirus type 6 isolate 1214, complete ...  133     2e-27  99%         
+MZ617403.1 Human papillomavirus type 6 isolate 1209, complete ...  133     2e-27  99%         
+MZ617402.1 Human papillomavirus type 6 isolate 0670, complete ...  133     2e-27  99%         
+MZ617401.1 Human papillomavirus type 6 isolate 0666, complete ...  133     2e-27  99%         
+MZ617400.1 Human papillomavirus type 6 isolate 3264, complete ...  133     2e-27  99%         
+MZ617399.1 Human papillomavirus type 6 isolate 0659, complete ...  133     2e-27  99%         
+MZ595661.1 Human papillomavirus type 6 isolate 7249, complete ...  133     2e-27  99%         
+MT783408.1 Human papillomavirus type 6 strain kyd-n0106, compl...  133     2e-27  99%         
+LR862033.1 Human papillomavirus type 6 isolate LNS7630141_HPV6...  133     2e-27  99%         
+LR861966.1 Human papillomavirus type 6 isolate LNS2013148_HPV6...  133     2e-27  99%         
+LR861898.1 Human papillomavirus type 6 isolate LNS4390133_HPV6...  133     2e-27  99%         
+LR861882.1 Human papillomavirus type 6 isolate LNS3785675_HPV6...  133     2e-27  99%         
+
+ALIGNMENTS
+>MK463919.1 Human papillomavirus type 11 isolate HPV11-gw-1108, complete 
+genome
+Length=7930
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MK463909.1 Human papillomavirus type 6 isolate HPV6-gw-0611, complete genome
+Length=7996
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MK463905.1 Human papillomavirus type 6 isolate HPV6-gw-0602, complete genome
+Length=8015
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MK313781.1 Human papillomavirus type 6 isolate ASCUS1/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>MK313779.1 Human papillomavirus type 6 isolate LSIL1/HPV6, complete genome
+ MK313780.1 Human papillomavirus type 6 isolate LP1/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>MK313778.1 Human papillomavirus type 6 isolate CAC1/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>MK313777.1 Human papillomavirus type 6 isolate JO-RRP2/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>MK313776.1 Human papillomavirus type 6 isolate JO-RRP1/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>MK313775.1 Human papillomavirus type 6 isolate AO-RRP7/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>MK313774.1 Human papillomavirus type 6 isolate AO-RRP6/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>MK313773.1 Human papillomavirus type 6 isolate AO-RRP5/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>MK313772.1 Human papillomavirus type 6 isolate AO-RRP4/HPV6, complete genome
+Length=7902
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  555  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  614
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  615  TAGTAGACAGCTCAGA  630
+
+
+>MK313771.1 Human papillomavirus type 6 isolate AO-RRP3/HPV6, complete genome
+Length=7902
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  555  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  614
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  615  TAGTAGACAGCTCAGA  630
+
+
+>MK313770.1 Human papillomavirus type 6 isolate AO-RRP2/HPV6, complete genome
+Length=7902
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  555  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  614
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  615  TAGTAGACAGCTCAGA  630
+
+
+>MK313769.1 Human papillomavirus type 6 isolate AO-RRP1/HPV6, complete genome
+Length=8012
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>KX514427.1 Human papillomavirus type 6 isolate 116B, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>KX514423.1 Human papillomavirus type 6 isolate 111B, complete genome
+Length=7990
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>KU298876.1 Human papillomavirus type 6 isolate 103A.6, complete genome
+ KU298877.1 Human papillomavirus type 6 isolate 103B.6, complete genome
+ KU298878.1 Human papillomavirus type 6 isolate 103C.6, complete genome
+Length=8016
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  616  TAGTAGACAGCTCAGA  631
+
+
+>HG793938.1 Human papillomavirus type 6 complete genome, isolate 130
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793937.1 Human papillomavirus type 6 complete genome, isolate 129
+Length=8010
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793936.1 Human papillomavirus type 6 complete genome, isolate 128
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793935.1 Human papillomavirus type 6 complete genome, isolate 127
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793934.1 Human papillomavirus type 6 complete genome, isolate 126
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793933.1 Human papillomavirus type 6 complete genome, isolate 125
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793932.1 Human papillomavirus type 6 complete genome, isolate 124
+Length=8010
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793931.1 Human papillomavirus type 6 complete genome, isolate 123
+Length=8011
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793930.1 Human papillomavirus type 6 complete genome, isolate 122
+Length=8010
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793929.1 Human papillomavirus type 6 complete genome, isolate 121
+Length=8010
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793928.1 Human papillomavirus type 6 complete genome, isolate 120
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793927.1 Human papillomavirus type 6 complete genome, isolate 119
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793926.1 Human papillomavirus type 6 complete genome, isolate 118
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793925.1 Human papillomavirus type 6 complete genome, isolate 117
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793924.1 Human papillomavirus type 6 complete genome, isolate 116
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793922.1 Human papillomavirus type 6 complete genome, isolate 114
+Length=7996
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793921.1 Human papillomavirus type 6 complete genome, isolate 113
+Length=8010
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793920.1 Human papillomavirus type 6 complete genome, isolate 112
+Length=8010
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793918.1 Human papillomavirus type 6 complete genome, isolate 110
+Length=8029
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793917.1 Human papillomavirus type 6 complete genome, isolate 109
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793916.1 Human papillomavirus type 6 complete genome, isolate 108
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>HG793915.1 Human papillomavirus type 6 complete genome, isolate 107
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617452.1 Human papillomavirus type 6 isolate 2137, complete genome
+Length=7994
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617451.1 Human papillomavirus type 6 isolate 1205, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617450.1 Human papillomavirus type 6 isolate 1181, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617449.1 Human papillomavirus type 6 isolate 0759, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617448.1 Human papillomavirus type 6 isolate 0767, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617447.1 Human papillomavirus type 6 isolate 0758, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617446.1 Human papillomavirus type 6 isolate 0756, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617445.1 Human papillomavirus type 6 isolate 0746, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617444.1 Human papillomavirus type 6 isolate 0745, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+>MZ617443.1 Human papillomavirus type 6 isolate 0738, complete genome
+Length=8031
+
+ Score = 133 bits (147),  Expect = 2e-27
+ Identities = 75/76 (99%), Gaps = 0/76 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
+
+Query  61   TAGTAGACAGCGCAGA  76
+            ||||||||||| ||||
+Sbjct  514  TAGTAGACAGCTCAGA  529
+
+
+  Database: Nucleotide collection (nt)
+    Posted date:  Nov 12, 2021  10:18 AM
+  Number of letters in database: 583,847,353,310
+  Number of sequences in database:  76,140,253
+
+Lambda      K        H
+   0.634    0.408    0.912 
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+Matrix: blastn matrix:2 -3
+Gap Penalties: Existence: 5, Extension: 2
+Number of Sequences: 76140253
+Number of Hits to DB: 2634276
+Number of extensions: 2206
+Number of successful extensions: 2206
+Number of sequences better than 10: 0
+Number of HSP's better than 10 without gapping: 0
+Number of HSP's gapped: 2206
+Number of HSP's successfully gapped: 0
+Length of query: 76
+Length of database: 583847353310
+Length adjustment: 36
+Effective length of query: 40
+Effective length of database: 581106304202
+Effective search space: 23244252168080
+Effective search space used: 23244252168080
+A: 0
+X1: 22 (20.1 bits)
+X2: 33 (29.8 bits)
+X3: 110 (99.2 bits)
+S1: 28 (26.5 bits)
+S2: 45 (41.9 bits)
+
+
