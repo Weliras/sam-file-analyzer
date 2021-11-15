@@ -43,3 +43,4 @@
   * ? Include or not the end index. Now not including.
 * 08.11. 2021:
   * Modified Convertor.get_seqs_with_count_grouped_by() so it takes in account cigar string and takes mapped nucleotids only if cigar operation is "M". ???
+  * Tried using Bio.Blast.NCBIWWW library with methode qblast(). Can return HTML, XML, Text, ASN.1. Accepts sequence ("AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA"), but it takes a very long time ( 5 - 10 minutes )
