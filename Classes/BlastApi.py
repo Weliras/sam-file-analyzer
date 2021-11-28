@@ -85,7 +85,7 @@ class BlastApi:
             # retrieve and display results
             url_base = "https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi"
             params.clear()
-            params = {"CMD": "Get", "FORMAT_TYPE": "Text", "RID": rid}
+            params = {"CMD": "Get", "FORMAT_TYPE": "XML", "RID": rid}
             result_request = requests.get(url=url_base, params=params)
             print(result_request.status_code)
 
