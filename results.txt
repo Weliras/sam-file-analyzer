@@ -1,967 +1,2842 @@
-<p><!--
-QBlastInfoBegin
-	Status=READY
-QBlastInfoEnd
---><p>
-<PRE>
-BLASTN 2.12.0+
-Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
-A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
-David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
-generation of protein database search programs", Nucleic
-Acids Res. 25:3389-3402.
-
-
-RID: T3DUR9AZ01R
-
-
-Database: Nucleotide collection (nt)
-           76,140,253 sequences; 583,847,353,310 total letters
-Query= 
-Length=76
-
-
-                                                                   Score     E     Max
-Sequences producing significant alignments:                       (Bits)  Value  Ident
-
-MK463919.1 Human papillomavirus type 11 isolate HPV11-gw-1108,...  133     2e-27  99%         
-MK463909.1 Human papillomavirus type 6 isolate HPV6-gw-0611, c...  133     2e-27  99%         
-MK463905.1 Human papillomavirus type 6 isolate HPV6-gw-0602, c...  133     2e-27  99%         
-MK313781.1 Human papillomavirus type 6 isolate ASCUS1/HPV6, co...  133     2e-27  99%         
-MK313779.1 Human papillomavirus type 6 isolate LSIL1/HPV6, com...  133     2e-27  99%         
-MK313778.1 Human papillomavirus type 6 isolate CAC1/HPV6, comp...  133     2e-27  99%         
-MK313777.1 Human papillomavirus type 6 isolate JO-RRP2/HPV6, c...  133     2e-27  99%         
-MK313776.1 Human papillomavirus type 6 isolate JO-RRP1/HPV6, c...  133     2e-27  99%         
-MK313775.1 Human papillomavirus type 6 isolate AO-RRP7/HPV6, c...  133     2e-27  99%         
-MK313774.1 Human papillomavirus type 6 isolate AO-RRP6/HPV6, c...  133     2e-27  99%         
-MK313773.1 Human papillomavirus type 6 isolate AO-RRP5/HPV6, c...  133     2e-27  99%         
-MK313772.1 Human papillomavirus type 6 isolate AO-RRP4/HPV6, c...  133     2e-27  99%         
-MK313771.1 Human papillomavirus type 6 isolate AO-RRP3/HPV6, c...  133     2e-27  99%         
-MK313770.1 Human papillomavirus type 6 isolate AO-RRP2/HPV6, c...  133     2e-27  99%         
-MK313769.1 Human papillomavirus type 6 isolate AO-RRP1/HPV6, c...  133     2e-27  99%         
-KX514427.1 Human papillomavirus type 6 isolate 116B, complete ...  133     2e-27  99%         
-KX514423.1 Human papillomavirus type 6 isolate 111B, complete ...  133     2e-27  99%         
-KU298876.1 Human papillomavirus type 6 isolate 103A.6, complet...  133     2e-27  99%         
-HG793938.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793937.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793936.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793935.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793934.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793933.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793932.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793931.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793930.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793929.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793928.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793927.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793926.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793925.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793924.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793922.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793921.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793920.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793918.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793917.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793916.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-HG793915.1 Human papillomavirus type 6 complete genome, isolat...  133     2e-27  99%         
-MZ617452.1 Human papillomavirus type 6 isolate 2137, complete ...  133     2e-27  99%         
-MZ617451.1 Human papillomavirus type 6 isolate 1205, complete ...  133     2e-27  99%         
-MZ617450.1 Human papillomavirus type 6 isolate 1181, complete ...  133     2e-27  99%         
-MZ617449.1 Human papillomavirus type 6 isolate 0759, complete ...  133     2e-27  99%         
-MZ617448.1 Human papillomavirus type 6 isolate 0767, complete ...  133     2e-27  99%         
-MZ617447.1 Human papillomavirus type 6 isolate 0758, complete ...  133     2e-27  99%         
-MZ617446.1 Human papillomavirus type 6 isolate 0756, complete ...  133     2e-27  99%         
-MZ617445.1 Human papillomavirus type 6 isolate 0746, complete ...  133     2e-27  99%         
-MZ617444.1 Human papillomavirus type 6 isolate 0745, complete ...  133     2e-27  99%         
-MZ617443.1 Human papillomavirus type 6 isolate 0738, complete ...  133     2e-27  99%         
-MZ617442.1 Human papillomavirus type 6 isolate 0731, complete ...  133     2e-27  99%         
-MZ617441.1 Human papillomavirus type 6 isolate 1210, complete ...  133     2e-27  99%         
-MZ617440.1 Human papillomavirus type 6 isolate 1208, complete ...  133     2e-27  99%         
-MZ617439.1 Human papillomavirus type 6 isolate 1203, complete ...  133     2e-27  99%         
-MZ617438.1 Human papillomavirus type 6 isolate 1202, complete ...  133     2e-27  99%         
-MZ617437.1 Human papillomavirus type 6 isolate 1187, complete ...  133     2e-27  99%         
-MZ617436.1 Human papillomavirus type 6 isolate 1186, complete ...  133     2e-27  99%         
-MZ617435.1 Human papillomavirus type 6 isolate 1184, complete ...  133     2e-27  99%         
-MZ617434.1 Human papillomavirus type 6 isolate 0750, complete ...  133     2e-27  99%         
-MZ617433.1 Human papillomavirus type 6 isolate 0740, complete ...  133     2e-27  99%         
-MZ617432.1 Human papillomavirus type 6 isolate 0736, complete ...  133     2e-27  99%         
-MZ617431.1 Human papillomavirus type 6 isolate 3242, complete ...  133     2e-27  99%         
-MZ617430.1 Human papillomavirus type 6 isolate 3230, complete ...  133     2e-27  99%         
-MZ617429.1 Human papillomavirus type 6 isolate 2105, complete ...  133     2e-27  99%         
-MZ617428.1 Human papillomavirus type 6 isolate 2096, complete ...  133     2e-27  99%         
-MZ617427.1 Human papillomavirus type 6 isolate 2090, complete ...  133     2e-27  99%         
-MZ617426.1 Human papillomavirus type 6 isolate 1374, complete ...  133     2e-27  99%         
-MZ617425.1 Human papillomavirus type 6 isolate 1371, complete ...  133     2e-27  99%         
-MZ617424.1 Human papillomavirus type 6 isolate 1370, complete ...  133     2e-27  99%         
-MZ617423.1 Human papillomavirus type 6 isolate 1367, complete ...  133     2e-27  99%         
-MZ617422.1 Human papillomavirus type 6 isolate 1362, complete ...  133     2e-27  99%         
-MZ617421.1 Human papillomavirus type 6 isolate 1357, complete ...  133     2e-27  99%         
-MZ617420.1 Human papillomavirus type 6 isolate 1355, complete ...  133     2e-27  99%         
-MZ617419.1 Human papillomavirus type 6 isolate 1352, complete ...  133     2e-27  99%         
-MZ617418.1 Human papillomavirus type 6 isolate 1347, complete ...  133     2e-27  99%         
-MZ617417.1 Human papillomavirus type 6 isolate 1345, complete ...  133     2e-27  99%         
-MZ617416.1 Human papillomavirus type 6 isolate 1344, complete ...  133     2e-27  99%         
-MZ617415.1 Human papillomavirus type 6 isolate 1343, complete ...  133     2e-27  99%         
-MZ617414.1 Human papillomavirus type 6 isolate 1324, complete ...  133     2e-27  99%         
-MZ617413.1 Human papillomavirus type 6 isolate 1240, complete ...  133     2e-27  99%         
-MZ617412.1 Human papillomavirus type 6 isolate 1239, complete ...  133     2e-27  99%         
-MZ617411.1 Human papillomavirus type 6 isolate 1234, complete ...  133     2e-27  99%         
-MZ617410.1 Human papillomavirus type 6 isolate 1231, complete ...  133     2e-27  99%         
-MZ617409.1 Human papillomavirus type 6 isolate 1230, complete ...  133     2e-27  99%         
-MZ617408.1 Human papillomavirus type 6 isolate 1227, complete ...  133     2e-27  99%         
-MZ617407.1 Human papillomavirus type 6 isolate 1226, complete ...  133     2e-27  99%         
-MZ617406.1 Human papillomavirus type 6 isolate 1224, complete ...  133     2e-27  99%         
-MZ617405.1 Human papillomavirus type 6 isolate 1218, complete ...  133     2e-27  99%         
-MZ617404.1 Human papillomavirus type 6 isolate 1214, complete ...  133     2e-27  99%         
-MZ617403.1 Human papillomavirus type 6 isolate 1209, complete ...  133     2e-27  99%         
-MZ617402.1 Human papillomavirus type 6 isolate 0670, complete ...  133     2e-27  99%         
-MZ617401.1 Human papillomavirus type 6 isolate 0666, complete ...  133     2e-27  99%         
-MZ617400.1 Human papillomavirus type 6 isolate 3264, complete ...  133     2e-27  99%         
-MZ617399.1 Human papillomavirus type 6 isolate 0659, complete ...  133     2e-27  99%         
-MZ595661.1 Human papillomavirus type 6 isolate 7249, complete ...  133     2e-27  99%         
-MT783408.1 Human papillomavirus type 6 strain kyd-n0106, compl...  133     2e-27  99%         
-LR862033.1 Human papillomavirus type 6 isolate LNS7630141_HPV6...  133     2e-27  99%         
-LR861966.1 Human papillomavirus type 6 isolate LNS2013148_HPV6...  133     2e-27  99%         
-LR861898.1 Human papillomavirus type 6 isolate LNS4390133_HPV6...  133     2e-27  99%         
-LR861882.1 Human papillomavirus type 6 isolate LNS3785675_HPV6...  133     2e-27  99%         
-
-ALIGNMENTS
->MK463919.1 Human papillomavirus type 11 isolate HPV11-gw-1108, complete 
-genome
-Length=7930
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MK463909.1 Human papillomavirus type 6 isolate HPV6-gw-0611, complete genome
-Length=7996
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MK463905.1 Human papillomavirus type 6 isolate HPV6-gw-0602, complete genome
-Length=8015
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MK313781.1 Human papillomavirus type 6 isolate ASCUS1/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->MK313779.1 Human papillomavirus type 6 isolate LSIL1/HPV6, complete genome
- MK313780.1 Human papillomavirus type 6 isolate LP1/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->MK313778.1 Human papillomavirus type 6 isolate CAC1/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->MK313777.1 Human papillomavirus type 6 isolate JO-RRP2/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->MK313776.1 Human papillomavirus type 6 isolate JO-RRP1/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->MK313775.1 Human papillomavirus type 6 isolate AO-RRP7/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->MK313774.1 Human papillomavirus type 6 isolate AO-RRP6/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->MK313773.1 Human papillomavirus type 6 isolate AO-RRP5/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->MK313772.1 Human papillomavirus type 6 isolate AO-RRP4/HPV6, complete genome
-Length=7902
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  555  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  614
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  615  TAGTAGACAGCTCAGA  630
-
-
->MK313771.1 Human papillomavirus type 6 isolate AO-RRP3/HPV6, complete genome
-Length=7902
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  555  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  614
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  615  TAGTAGACAGCTCAGA  630
-
-
->MK313770.1 Human papillomavirus type 6 isolate AO-RRP2/HPV6, complete genome
-Length=7902
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  555  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  614
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  615  TAGTAGACAGCTCAGA  630
-
-
->MK313769.1 Human papillomavirus type 6 isolate AO-RRP1/HPV6, complete genome
-Length=8012
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->KX514427.1 Human papillomavirus type 6 isolate 116B, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->KX514423.1 Human papillomavirus type 6 isolate 111B, complete genome
-Length=7990
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->KU298876.1 Human papillomavirus type 6 isolate 103A.6, complete genome
- KU298877.1 Human papillomavirus type 6 isolate 103B.6, complete genome
- KU298878.1 Human papillomavirus type 6 isolate 103C.6, complete genome
-Length=8016
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  556  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  615
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  616  TAGTAGACAGCTCAGA  631
-
-
->HG793938.1 Human papillomavirus type 6 complete genome, isolate 130
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793937.1 Human papillomavirus type 6 complete genome, isolate 129
-Length=8010
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793936.1 Human papillomavirus type 6 complete genome, isolate 128
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793935.1 Human papillomavirus type 6 complete genome, isolate 127
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793934.1 Human papillomavirus type 6 complete genome, isolate 126
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793933.1 Human papillomavirus type 6 complete genome, isolate 125
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793932.1 Human papillomavirus type 6 complete genome, isolate 124
-Length=8010
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793931.1 Human papillomavirus type 6 complete genome, isolate 123
-Length=8011
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793930.1 Human papillomavirus type 6 complete genome, isolate 122
-Length=8010
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793929.1 Human papillomavirus type 6 complete genome, isolate 121
-Length=8010
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793928.1 Human papillomavirus type 6 complete genome, isolate 120
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793927.1 Human papillomavirus type 6 complete genome, isolate 119
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793926.1 Human papillomavirus type 6 complete genome, isolate 118
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793925.1 Human papillomavirus type 6 complete genome, isolate 117
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793924.1 Human papillomavirus type 6 complete genome, isolate 116
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793922.1 Human papillomavirus type 6 complete genome, isolate 114
-Length=7996
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793921.1 Human papillomavirus type 6 complete genome, isolate 113
-Length=8010
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793920.1 Human papillomavirus type 6 complete genome, isolate 112
-Length=8010
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793918.1 Human papillomavirus type 6 complete genome, isolate 110
-Length=8029
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793917.1 Human papillomavirus type 6 complete genome, isolate 109
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793916.1 Human papillomavirus type 6 complete genome, isolate 108
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->HG793915.1 Human papillomavirus type 6 complete genome, isolate 107
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617452.1 Human papillomavirus type 6 isolate 2137, complete genome
-Length=7994
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617451.1 Human papillomavirus type 6 isolate 1205, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617450.1 Human papillomavirus type 6 isolate 1181, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617449.1 Human papillomavirus type 6 isolate 0759, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617448.1 Human papillomavirus type 6 isolate 0767, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617447.1 Human papillomavirus type 6 isolate 0758, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617446.1 Human papillomavirus type 6 isolate 0756, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617445.1 Human papillomavirus type 6 isolate 0746, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617444.1 Human papillomavirus type 6 isolate 0745, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
->MZ617443.1 Human papillomavirus type 6 isolate 0738, complete genome
-Length=8031
-
- Score = 133 bits (147),  Expect = 2e-27
- Identities = 75/76 (99%), Gaps = 0/76 (0%)
- Strand=Plus/Plus
-
-Query  1    AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  454  AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAAT  513
-
-Query  61   TAGTAGACAGCGCAGA  76
-            ||||||||||| ||||
-Sbjct  514  TAGTAGACAGCTCAGA  529
-
-
-  Database: Nucleotide collection (nt)
-    Posted date:  Nov 12, 2021  10:18 AM
-  Number of letters in database: 583,847,353,310
-  Number of sequences in database:  76,140,253
-
-Lambda      K        H
-   0.634    0.408    0.912 
-Gapped
-Lambda      K        H
-   0.625    0.410    0.780 
-Matrix: blastn matrix:2 -3
-Gap Penalties: Existence: 5, Extension: 2
-Number of Sequences: 76140253
-Number of Hits to DB: 2634276
-Number of extensions: 2206
-Number of successful extensions: 2206
-Number of sequences better than 10: 0
-Number of HSP's better than 10 without gapping: 0
-Number of HSP's gapped: 2206
-Number of HSP's successfully gapped: 0
-Length of query: 76
-Length of database: 583847353310
-Length adjustment: 36
-Effective length of query: 40
-Effective length of database: 581106304202
-Effective search space: 23244252168080
-Effective search space used: 23244252168080
-A: 0
-X1: 22 (20.1 bits)
-X2: 33 (29.8 bits)
-X3: 110 (99.2 bits)
-S1: 28 (26.5 bits)
-S2: 45 (41.9 bits)
-
-
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastn</BlastOutput_program>
+  <BlastOutput_version>BLASTN 2.12.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>nt</BlastOutput_db>
+  <BlastOutput_query-ID>Query_43015</BlastOutput_query-ID>
+  <BlastOutput_query-def>No definition line</BlastOutput_query-def>
+  <BlastOutput_query-len>76</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_sc-match>2</Parameters_sc-match>
+      <Parameters_sc-mismatch>-3</Parameters_sc-mismatch>
+      <Parameters_gap-open>5</Parameters_gap-open>
+      <Parameters_gap-extend>2</Parameters_gap-extend>
+      <Parameters_filter>L;m;</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_43015</Iteration_query-ID>
+  <Iteration_query-def>No definition line</Iteration_query-def>
+  <Iteration_query-len>76</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|1725328835|gb|MK463919.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 11 isolate HPV11-gw-1108, complete genome</Hit_def>
+  <Hit_accession>MK463919</Hit_accession>
+  <Hit_len>7930</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|1725328743|gb|MK463909.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate HPV6-gw-0611, complete genome</Hit_def>
+  <Hit_accession>MK463909</Hit_accession>
+  <Hit_len>7996</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|1725328703|gb|MK463905.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate HPV6-gw-0602, complete genome</Hit_def>
+  <Hit_accession>MK463905</Hit_accession>
+  <Hit_len>8015</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|1694830316|gb|MK313781.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate ASCUS1/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313781</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|1694830292|gb|MK313779.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate LSIL1/HPV6, complete genome &gt;gi|1694830304|gb|MK313780.1| Human papillomavirus type 6 isolate LP1/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313779</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|1694830280|gb|MK313778.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate CAC1/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313778</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|1694830268|gb|MK313777.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate JO-RRP2/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313777</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|1694830256|gb|MK313776.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate JO-RRP1/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313776</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|1694830244|gb|MK313775.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate AO-RRP7/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313775</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|1694830232|gb|MK313774.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate AO-RRP6/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313774</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|1694830220|gb|MK313773.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate AO-RRP5/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313773</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|1694830208|gb|MK313772.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate AO-RRP4/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313772</Hit_accession>
+  <Hit_len>7902</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>555</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|1694830196|gb|MK313771.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate AO-RRP3/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313771</Hit_accession>
+  <Hit_len>7902</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>555</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|1694830184|gb|MK313770.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate AO-RRP2/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313770</Hit_accession>
+  <Hit_len>7902</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>555</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|1694830172|gb|MK313769.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate AO-RRP1/HPV6, complete genome</Hit_def>
+  <Hit_accession>MK313769</Hit_accession>
+  <Hit_len>8012</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|1191444277|gb|KX514427.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 116B, complete genome</Hit_def>
+  <Hit_accession>KX514427</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|1191444240|gb|KX514423.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 111B, complete genome</Hit_def>
+  <Hit_accession>KX514423</Hit_accession>
+  <Hit_len>7990</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|966752045|gb|KU298876.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 103A.6, complete genome &gt;gi|966752055|gb|KU298877.1| Human papillomavirus type 6 isolate 103B.6, complete genome &gt;gi|966752065|gb|KU298878.1| Human papillomavirus type 6 isolate 103C.6, complete genome</Hit_def>
+  <Hit_accession>KU298876</Hit_accession>
+  <Hit_len>8016</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|575073856|emb|HG793938.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 130</Hit_def>
+  <Hit_accession>HG793938</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|575073846|emb|HG793937.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 129</Hit_def>
+  <Hit_accession>HG793937</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|575073836|emb|HG793936.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 128</Hit_def>
+  <Hit_accession>HG793936</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|575073826|emb|HG793935.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 127</Hit_def>
+  <Hit_accession>HG793935</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|575073816|emb|HG793934.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 126</Hit_def>
+  <Hit_accession>HG793934</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|575073806|emb|HG793933.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 125</Hit_def>
+  <Hit_accession>HG793933</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|575073796|emb|HG793932.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 124</Hit_def>
+  <Hit_accession>HG793932</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|575073786|emb|HG793931.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 123</Hit_def>
+  <Hit_accession>HG793931</Hit_accession>
+  <Hit_len>8011</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|575073776|emb|HG793930.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 122</Hit_def>
+  <Hit_accession>HG793930</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|575073766|emb|HG793929.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 121</Hit_def>
+  <Hit_accession>HG793929</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|575073756|emb|HG793928.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 120</Hit_def>
+  <Hit_accession>HG793928</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|575073746|emb|HG793927.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 119</Hit_def>
+  <Hit_accession>HG793927</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|575073736|emb|HG793926.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 118</Hit_def>
+  <Hit_accession>HG793926</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|575073726|emb|HG793925.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 117</Hit_def>
+  <Hit_accession>HG793925</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|575073716|emb|HG793924.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 116</Hit_def>
+  <Hit_accession>HG793924</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|575073696|emb|HG793922.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 114</Hit_def>
+  <Hit_accession>HG793922</Hit_accession>
+  <Hit_len>7996</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|575073686|emb|HG793921.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 113</Hit_def>
+  <Hit_accession>HG793921</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|575073676|emb|HG793920.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 112</Hit_def>
+  <Hit_accession>HG793920</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|575073656|emb|HG793918.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 110</Hit_def>
+  <Hit_accession>HG793918</Hit_accession>
+  <Hit_len>8029</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>gi|575073646|emb|HG793917.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 109</Hit_def>
+  <Hit_accession>HG793917</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>gi|575073636|emb|HG793916.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 108</Hit_def>
+  <Hit_accession>HG793916</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>gi|575073626|emb|HG793915.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 complete genome, isolate 107</Hit_def>
+  <Hit_accession>HG793915</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>gi|2072436986|gb|MZ617452.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 2137, complete genome</Hit_def>
+  <Hit_accession>MZ617452</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>gi|2072436976|gb|MZ617451.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1205, complete genome</Hit_def>
+  <Hit_accession>MZ617451</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>gi|2072436966|gb|MZ617450.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1181, complete genome</Hit_def>
+  <Hit_accession>MZ617450</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>gi|2072436956|gb|MZ617449.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0759, complete genome</Hit_def>
+  <Hit_accession>MZ617449</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>gi|2072436946|gb|MZ617448.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0767, complete genome</Hit_def>
+  <Hit_accession>MZ617448</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>gi|2072436936|gb|MZ617447.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0758, complete genome</Hit_def>
+  <Hit_accession>MZ617447</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>gi|2072436926|gb|MZ617446.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0756, complete genome</Hit_def>
+  <Hit_accession>MZ617446</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>gi|2072436916|gb|MZ617445.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0746, complete genome</Hit_def>
+  <Hit_accession>MZ617445</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>gi|2072436906|gb|MZ617444.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0745, complete genome</Hit_def>
+  <Hit_accession>MZ617444</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>gi|2072436896|gb|MZ617443.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0738, complete genome</Hit_def>
+  <Hit_accession>MZ617443</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>51</Hit_num>
+  <Hit_id>gi|2072436886|gb|MZ617442.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0731, complete genome</Hit_def>
+  <Hit_accession>MZ617442</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>52</Hit_num>
+  <Hit_id>gi|2072436876|gb|MZ617441.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1210, complete genome</Hit_def>
+  <Hit_accession>MZ617441</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>53</Hit_num>
+  <Hit_id>gi|2072436866|gb|MZ617440.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1208, complete genome</Hit_def>
+  <Hit_accession>MZ617440</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>54</Hit_num>
+  <Hit_id>gi|2072436856|gb|MZ617439.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1203, complete genome</Hit_def>
+  <Hit_accession>MZ617439</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>55</Hit_num>
+  <Hit_id>gi|2072436846|gb|MZ617438.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1202, complete genome</Hit_def>
+  <Hit_accession>MZ617438</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>56</Hit_num>
+  <Hit_id>gi|2072436836|gb|MZ617437.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1187, complete genome</Hit_def>
+  <Hit_accession>MZ617437</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>57</Hit_num>
+  <Hit_id>gi|2072436826|gb|MZ617436.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1186, complete genome</Hit_def>
+  <Hit_accession>MZ617436</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>58</Hit_num>
+  <Hit_id>gi|2072436816|gb|MZ617435.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1184, complete genome</Hit_def>
+  <Hit_accession>MZ617435</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>59</Hit_num>
+  <Hit_id>gi|2072436806|gb|MZ617434.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0750, complete genome</Hit_def>
+  <Hit_accession>MZ617434</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>60</Hit_num>
+  <Hit_id>gi|2072436796|gb|MZ617433.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0740, complete genome</Hit_def>
+  <Hit_accession>MZ617433</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>61</Hit_num>
+  <Hit_id>gi|2072436786|gb|MZ617432.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0736, complete genome</Hit_def>
+  <Hit_accession>MZ617432</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>62</Hit_num>
+  <Hit_id>gi|2072436776|gb|MZ617431.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 3242, complete genome</Hit_def>
+  <Hit_accession>MZ617431</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>63</Hit_num>
+  <Hit_id>gi|2072436766|gb|MZ617430.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 3230, complete genome</Hit_def>
+  <Hit_accession>MZ617430</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>64</Hit_num>
+  <Hit_id>gi|2072436756|gb|MZ617429.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 2105, complete genome</Hit_def>
+  <Hit_accession>MZ617429</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>65</Hit_num>
+  <Hit_id>gi|2072436746|gb|MZ617428.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 2096, complete genome</Hit_def>
+  <Hit_accession>MZ617428</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>66</Hit_num>
+  <Hit_id>gi|2072436736|gb|MZ617427.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 2090, complete genome</Hit_def>
+  <Hit_accession>MZ617427</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>67</Hit_num>
+  <Hit_id>gi|2072436726|gb|MZ617426.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1374, complete genome</Hit_def>
+  <Hit_accession>MZ617426</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>68</Hit_num>
+  <Hit_id>gi|2072436716|gb|MZ617425.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1371, complete genome</Hit_def>
+  <Hit_accession>MZ617425</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>69</Hit_num>
+  <Hit_id>gi|2072436706|gb|MZ617424.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1370, complete genome</Hit_def>
+  <Hit_accession>MZ617424</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>70</Hit_num>
+  <Hit_id>gi|2072436696|gb|MZ617423.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1367, complete genome</Hit_def>
+  <Hit_accession>MZ617423</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>71</Hit_num>
+  <Hit_id>gi|2072436686|gb|MZ617422.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1362, complete genome</Hit_def>
+  <Hit_accession>MZ617422</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>72</Hit_num>
+  <Hit_id>gi|2072436676|gb|MZ617421.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1357, complete genome</Hit_def>
+  <Hit_accession>MZ617421</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>73</Hit_num>
+  <Hit_id>gi|2072436666|gb|MZ617420.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1355, complete genome</Hit_def>
+  <Hit_accession>MZ617420</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>74</Hit_num>
+  <Hit_id>gi|2072436656|gb|MZ617419.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1352, complete genome</Hit_def>
+  <Hit_accession>MZ617419</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>75</Hit_num>
+  <Hit_id>gi|2072436646|gb|MZ617418.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1347, complete genome</Hit_def>
+  <Hit_accession>MZ617418</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>76</Hit_num>
+  <Hit_id>gi|2072436636|gb|MZ617417.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1345, complete genome</Hit_def>
+  <Hit_accession>MZ617417</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>77</Hit_num>
+  <Hit_id>gi|2072436626|gb|MZ617416.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1344, complete genome</Hit_def>
+  <Hit_accession>MZ617416</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>78</Hit_num>
+  <Hit_id>gi|2072436616|gb|MZ617415.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1343, complete genome</Hit_def>
+  <Hit_accession>MZ617415</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>79</Hit_num>
+  <Hit_id>gi|2072436606|gb|MZ617414.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1324, complete genome</Hit_def>
+  <Hit_accession>MZ617414</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>80</Hit_num>
+  <Hit_id>gi|2072436596|gb|MZ617413.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1240, complete genome</Hit_def>
+  <Hit_accession>MZ617413</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>81</Hit_num>
+  <Hit_id>gi|2072436586|gb|MZ617412.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1239, complete genome</Hit_def>
+  <Hit_accession>MZ617412</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>82</Hit_num>
+  <Hit_id>gi|2072436576|gb|MZ617411.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1234, complete genome</Hit_def>
+  <Hit_accession>MZ617411</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>83</Hit_num>
+  <Hit_id>gi|2072436566|gb|MZ617410.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1231, complete genome</Hit_def>
+  <Hit_accession>MZ617410</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>84</Hit_num>
+  <Hit_id>gi|2072436556|gb|MZ617409.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1230, complete genome</Hit_def>
+  <Hit_accession>MZ617409</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>85</Hit_num>
+  <Hit_id>gi|2072436546|gb|MZ617408.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1227, complete genome</Hit_def>
+  <Hit_accession>MZ617408</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>86</Hit_num>
+  <Hit_id>gi|2072436536|gb|MZ617407.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1226, complete genome</Hit_def>
+  <Hit_accession>MZ617407</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>87</Hit_num>
+  <Hit_id>gi|2072436526|gb|MZ617406.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1224, complete genome</Hit_def>
+  <Hit_accession>MZ617406</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>88</Hit_num>
+  <Hit_id>gi|2072436516|gb|MZ617405.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1218, complete genome</Hit_def>
+  <Hit_accession>MZ617405</Hit_accession>
+  <Hit_len>8027</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>89</Hit_num>
+  <Hit_id>gi|2072436506|gb|MZ617404.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1214, complete genome</Hit_def>
+  <Hit_accession>MZ617404</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>90</Hit_num>
+  <Hit_id>gi|2072436496|gb|MZ617403.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 1209, complete genome</Hit_def>
+  <Hit_accession>MZ617403</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>91</Hit_num>
+  <Hit_id>gi|2072436486|gb|MZ617402.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0670, complete genome</Hit_def>
+  <Hit_accession>MZ617402</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>92</Hit_num>
+  <Hit_id>gi|2072436476|gb|MZ617401.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0666, complete genome</Hit_def>
+  <Hit_accession>MZ617401</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>93</Hit_num>
+  <Hit_id>gi|2072436466|gb|MZ617400.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 3264, complete genome</Hit_def>
+  <Hit_accession>MZ617400</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>94</Hit_num>
+  <Hit_id>gi|2072436456|gb|MZ617399.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 0659, complete genome</Hit_def>
+  <Hit_accession>MZ617399</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>95</Hit_num>
+  <Hit_id>gi|2072436119|gb|MZ595661.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate 7249, complete genome</Hit_def>
+  <Hit_accession>MZ595661</Hit_accession>
+  <Hit_len>7994</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>454</Hsp_hit-from>
+      <Hsp_hit-to>529</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>96</Hit_num>
+  <Hit_id>gi|1914219046|gb|MT783408.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 strain kyd-n0106, complete genome</Hit_def>
+  <Hit_accession>MT783408</Hit_accession>
+  <Hit_len>7997</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>97</Hit_num>
+  <Hit_id>gi|1898670923|emb|LR862033.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate LNS7630141_HPV6, complete genome</Hit_def>
+  <Hit_accession>LR862033</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>98</Hit_num>
+  <Hit_id>gi|1898670439|emb|LR861966.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate LNS2013148_HPV6, complete genome</Hit_def>
+  <Hit_accession>LR861966</Hit_accession>
+  <Hit_len>8031</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>99</Hit_num>
+  <Hit_id>gi|1898669876|emb|LR861898.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate LNS4390133_HPV6, complete genome</Hit_def>
+  <Hit_accession>LR861898</Hit_accession>
+  <Hit_len>8010</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>100</Hit_num>
+  <Hit_id>gi|1898669745|emb|LR861882.1|</Hit_id>
+  <Hit_def>Human papillomavirus type 6 isolate LNS3785675_HPV6, complete genome</Hit_def>
+  <Hit_accession>LR861882</Hit_accession>
+  <Hit_len>8032</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.834</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>2.28235e-27</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>556</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA</Hsp_qseq>
+      <Hsp_hseq>AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCTCAGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>76506064</Statistics_db-num>
+      <Statistics_db-len>595555659591</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.41</Statistics_kappa>
+      <Statistics_lambda>0.625</Statistics_lambda>
+      <Statistics_entropy>0.78</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
