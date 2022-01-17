@@ -183,6 +183,7 @@ class Convertor:
             traceback.print_exc(file=sys.stdout)
         return sam_records
 
+
     @staticmethod
     def get_seqs_with_count_grouped_by(sam_records:list[SamRecord], attr:str, feature="CDS") -> list[Virus, int, int, int, int]:
         """
@@ -198,32 +199,20 @@ class Convertor:
             #    print()
             #    print()
 
+            calc_longest_repeating_subsequence(sam_record.SEQ)
+
             count_of_genes_in_which_is_record = 0
             count_of_genes_in_which_is_not_record = 0
-            """
-            for gene in sam_record.virus.genes:
-                for gene_record in gene.records:
-                    if gene_record.feature == feature:
-                        if gene_record.start - len(sam_record.SEQ) <= sam_record.POS < gene_record.end:
-                            count_of_genes_in_which_is_record += 1
-                        else:
-                            count_of_genes_in_which_is_not_record += 1
-            """
+
+            # Decoding CIGAR string and computing count of nucleotides which were mapped in and out.
             for gene in sam_record.virus.genes:
                 if gene.record.feature == feature:
-                    if gene.record.start - len(sam_record.SEQ) <= sam_record.POS < gene.record.end:
-                        cigar_list = decode_cigar_string(sam_record.CIGAR)
-                        if any(ch == "M" for ch in cigar_list):
-                            count_of_genes_in_which_is_record += 1
-                            cigar_counter = 0
-                            for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
-                                if gene_pos in gene.coverage_array.keys() and cigar_list[cigar_counter] == "M":
-                                    gene.coverage_array[gene_pos] = True
-                                cigar_counter += 1
-                        else:
-                            count_of_genes_in_which_is_not_record += 1
-                    else:
-                        count_of_genes_in_which_is_not_record += 1
+                    count_of_genes_in_which_is_record, count_of_genes_in_which_is_not_record = \
+                        calc_coverage_array_for_gene(count_of_genes_in_which_is_record,
+                                                              count_of_genes_in_which_is_not_record, gene=gene,
+                                                              sam_record=sam_record, attr=attr)
+
+            # New Virus found and grouping
             if not any(s for s in viruses_with_count if getattr(s[0], attr) == getattr(sam_record.virus, attr)):
                 tmp = [sam_record.virus, 1, 0, 0, 0]
                 if count_of_genes_in_which_is_record > 0:
@@ -231,6 +220,7 @@ class Convertor:
                 elif count_of_genes_in_which_is_not_record > 0:
                     tmp[4] = 1
                 viruses_with_count.append(tmp)
+            # Virus with this ID already added
             else:
                 ind = [viruses_with_count.index(item) for item in viruses_with_count if getattr(item[0], attr) ==
                        getattr(sam_record.virus, attr)]
@@ -245,30 +235,15 @@ class Convertor:
             for amb_virus in sam_record.ambiguous_viruses:
                 count_of_amb_genes_in_which_is_record = 0
                 count_of_amb_genes_in_which_is_not_record = 0
-                """
-                for gene in amb_virus.genes:
-                    for gene_record in gene.records:
-                        if gene_record.feature == feature:
-                            if gene_record.start - len(sam_record.SEQ) <= sam_record.POS < gene_record.end:
-                                count_of_amb_genes_in_which_is_record += 1
-                            else:
-                                count_of_amb_genes_in_which_is_not_record += 1
-                """
+
+                # Calculating coverage array of amb viruses.
                 for gene in amb_virus.genes:
                     if gene.record.feature == feature:
-                        if gene.record.start - len(sam_record.SEQ) <= sam_record.POS < gene.record.end:
-                            cigar_list = decode_cigar_string(sam_record.CIGAR)
-                            if any(ch == "M" for ch in cigar_list):
-                                count_of_amb_genes_in_which_is_record += 1
-                                cigar_counter = 0
-                                for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
-                                    if gene_pos in gene.coverage_array.keys() and cigar_list[cigar_counter] == "M":
-                                        gene.coverage_array[gene_pos] = True
-                                    cigar_counter += 1
-                            else:
-                                count_of_amb_genes_in_which_is_not_record += 1
-                        else:
-                            count_of_amb_genes_in_which_is_not_record += 1
+                        count_of_amb_genes_in_which_is_record, count_of_amb_genes_in_which_is_not_record =\
+                            calc_coverage_array_for_gene(count_of_amb_genes_in_which_is_record
+                                                                   , count_of_amb_genes_in_which_is_not_record,
+                                                                   gene=gene, attr=attr, sam_record=sam_record)
+
                 if not any(s for s in viruses_with_count if getattr(s[0], attr) == getattr(amb_virus, attr)):
                     tmp = [amb_virus, 1, 1, 0, 0]
                     if count_of_amb_genes_in_which_is_record > 0:
@@ -308,3 +283,90 @@ def decode_cigar_string(cigar: str) -> [str]:
             count = count + ch
 
     return cigar_list
+
+
+def calc_coverage_array_for_gene(count_of_genes_in_which_is_record:int, count_of_genes_in_which_is_not_record:int, gene:Gene, sam_record:SamRecord, attr:str):
+    if gene.record.start - len(sam_record.SEQ) <= sam_record.POS < gene.record.end:
+        cigar_list = decode_cigar_string(sam_record.CIGAR)
+        if any(ch == "M" for ch in cigar_list):
+            count_of_genes_in_which_is_record += 1
+            cigar_counter = 0
+            for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
+                if gene_pos in gene.coverage_array.keys() and cigar_list[cigar_counter] == "M":
+                    gene.coverage_array[gene_pos] = True
+                cigar_counter += 1
+        else:
+            count_of_genes_in_which_is_not_record += 1
+    else:
+        count_of_genes_in_which_is_not_record += 1
+
+    return count_of_genes_in_which_is_record, count_of_genes_in_which_is_not_record
+
+def calc_longest_repeating_subsequence(sequence:str):
+    # lookup[i][j] stores the length of LRS of substring `X[0…i-1]` and `X[0…j-1]`
+    lookup = [[0 for x in range(len(sequence) + 1)] for y in range(len(sequence) + 1)]
+
+    # fill lookup table
+    LRSLength(sequence, lookup)
+
+    # find the longest repeating subsequence
+    print(LRS(sequence, len(sequence), len(sequence), lookup), LRSLengthOLD(sequence))
+    return True
+
+
+# Function to find LRS of substrings `X[0…m-1]`, `X[0…n-1]`
+def LRS(X, m, n, lookup):
+    # if the end of either sequence is reached,
+    # return an empty string
+    if m == 0 or n == 0:
+        return ''
+
+    # if characters at index `m` and `n` matches and the index are different
+    if X[m - 1] == X[n - 1] and m != n:
+        return LRS(X, m - 1, n - 1, lookup) + X[m - 1]
+    else:
+        # otherwise, if characters at index `m` and `n` don't match
+        if lookup[m - 1][n] > lookup[m][n - 1]:
+            return LRS(X, m - 1, n, lookup)
+        else:
+            return LRS(X, m, n - 1, lookup)
+
+
+# Function to fill the lookup table by finding the length of LRS
+# of substring `X[0…n-1]`
+def LRSLength(X, lookup):
+    # Fill the lookup table in a bottom-up manner.
+    # The first row and first column of the lookup table are already 0.
+    for i in range(1, len(X) + 1):
+        for j in range(1, len(X) + 1):
+            # if characters at index `i` and `j` matches
+            # and the index are different
+            if X[i - 1] == X[j - 1] and i != j:
+                lookup[i][j] = lookup[i - 1][j - 1] + 1
+            # otherwise, if characters at index `i` and `j` are different
+            else:
+                lookup[i][j] = max(lookup[i - 1][j], lookup[i][j - 1])
+
+
+def LRSLengthOLD(X):
+    n = len(X)
+
+    # lookup table stores solution to already computed subproblems;
+    # i.e., lookup[i][j] stores the length of LRS of substring
+    # `X[0…i-1]` and `X[0…j-1]`
+    lookup = [[0 for x in range(n + 1)] for y in range((n + 1))]
+
+    # fill the lookup table in a bottom-up manner
+    for i in range(1, n + 1):
+
+        for j in range(1, n + 1):
+            # if characters at index `i` and `j` matches
+            # and the index are different
+            if X[i - 1] == X[j - 1] and i != j:
+                lookup[i][j] = lookup[i - 1][j - 1] + 1
+            # otherwise, if characters at index `i` and `j` are different
+            else:
+                lookup[i][j] = max(lookup[i - 1][j], lookup[i][j - 1])
+
+    # LRS will be the last entry in the lookup table
+    return lookup[n][n]

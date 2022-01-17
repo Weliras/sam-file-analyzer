@@ -12,7 +12,7 @@ FEATURE_TO_GET_FROM_GTF = "cds"
 
 if __name__ == '__main__':
 
-    BlastApi.send_query("blastn", "nt", "AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA")
+    #BlastApi.send_query("blastn", "nt", "AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA")
 
     # Load gtf files
     genes = Convertor.load_gtf_files_only_cds_gene()
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True)
 
     # For each virus get % of mapped
-    Gene.write_to_file_virus_with_percents(genes=genes)
+    Gene.write_to_file_virus_with_percents(genes=genes, only_non_empty=True)
 
     # sort it by count desc
     virus_with_count.sort(key=lambda virus: virus[1], reverse=True)

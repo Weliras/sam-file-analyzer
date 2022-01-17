@@ -101,9 +101,9 @@ class Gene:
         self.records.clear()
 
     @staticmethod
-    def write_to_file_genes_with_percents(genes: [Gene], only_non_empty: bool = False) -> bool:
+    def write_to_file_genes_with_percents(genes: [Gene], only_non_empty: bool = False, filename: str = "gene_coverage_output.txt") -> bool:
         try:
-            with open("gene_coverage_output.txt", "w") as file:
+            with open(filename, "w") as file:
                 for gene in genes:
                     #size_of_gene = len(gene.coverage_array.values())  # Not including end
                     size_of_gene = gene.length_of_gene
@@ -136,7 +136,7 @@ class Gene:
             return False
 
     @staticmethod
-    def write_to_file_virus_with_percents(genes: [Gene]) -> bool:
+    def write_to_file_virus_with_percents(genes: [Gene], only_non_empty: bool = False, filename: str = "virus_coverage_output.txt") -> bool:
         try:
             # [Virus_id, %, count]
             result = []
@@ -146,32 +146,31 @@ class Gene:
                 #    print(end="")
                 #    print(end="")
 
-                if not any(s for s in result if s[0] == gene.virus_id):
-                    size_of_gene = gene.length_of_gene
+                # count of covered pos of this gene
+                count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
+                if only_non_empty and count_of_covered > 0:
+                    if not any(s for s in result if s[0] == gene.virus_id):
+                        size_of_gene = gene.length_of_gene
+                        percentage_of_covered = (count_of_covered / size_of_gene) * 100
 
-                    count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
-                    percentage_of_covered = (count_of_covered / size_of_gene) * 100
+                        tmp = [gene.virus_id, percentage_of_covered, size_of_gene]
+                        result.append(tmp)
+                    else:
+                        ind = [result.index(item) for item in result if item[0] == gene.virus_id]
 
-                    tmp = [gene.virus_id, percentage_of_covered, size_of_gene]
-                    result.append(tmp)
-                else:
-                    ind = [result.index(item) for item in result if item[0] == gene.virus_id]
+                        # size of actual gene
+                        size_of_gene = gene.length_of_gene
 
-                    # size of actual gene
-                    size_of_gene = gene.length_of_gene
+                        # count of already computed mapped genes
+                        count_of_already_covered = (result[ind[0]][1] / 100) * result[ind[0]][2]
 
-                    # count of already computed mapped genes
-                    count_of_already_covered = (result[ind[0]][1] / 100) * result[ind[0]][2]
-                    # count of covered pos of this gene
-                    count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
+                        # Percentage of all covered
+                        percentage_of_covered = (count_of_covered + count_of_already_covered) / (result[ind[0]][2] + size_of_gene) * 100
 
-                    # Percentage of all covered
-                    percentage_of_covered = (count_of_covered + count_of_already_covered) / (result[ind[0]][2] + size_of_gene) * 100
+                        result[ind[0]][2] += size_of_gene
+                        result[ind[0]][1] = percentage_of_covered
 
-                    result[ind[0]][2] += size_of_gene
-                    result[ind[0]][1] = percentage_of_covered
-
-            with open("virus_coverage_output.txt", "w") as file:
+            with open(filename, "w") as file:
                 for res in result:
                     file.write(f"Virus Id: {res[0]}\t"
                                f"Percentage of covered: {res[1]} %\t"
