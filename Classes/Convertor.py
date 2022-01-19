@@ -199,7 +199,9 @@ class Convertor:
             #    print()
             #    print()
 
-            calc_longest_repeating_subsequence(sam_record.SEQ)
+            # Filtering based on repeating nucleotides
+            if not calc_longest_repeating_subsequence(sam_record.SEQ, 0.30):
+                pass
 
             count_of_genes_in_which_is_record = 0
             count_of_genes_in_which_is_not_record = 0
@@ -302,71 +304,58 @@ def calc_coverage_array_for_gene(count_of_genes_in_which_is_record:int, count_of
 
     return count_of_genes_in_which_is_record, count_of_genes_in_which_is_not_record
 
-def calc_longest_repeating_subsequence(sequence:str):
-    # lookup[i][j] stores the length of LRS of substring `X[0…i-1]` and `X[0…j-1]`
-    lookup = [[0 for x in range(len(sequence) + 1)] for y in range(len(sequence) + 1)]
+def calc_longest_repeating_subsequence(sequence:str, max_percent_limit:float) -> bool:
+    res, length, count = LRS(sequence)
+    total_repeated_nucleotides_percent = (length * count) / len(sequence)
 
-    # fill lookup table
-    LRSLength(sequence, lookup)
-
-    # find the longest repeating subsequence
-    print(LRS(sequence, len(sequence), len(sequence), lookup), LRSLengthOLD(sequence))
-    return True
-
-
-# Function to find LRS of substrings `X[0…m-1]`, `X[0…n-1]`
-def LRS(X, m, n, lookup):
-    # if the end of either sequence is reached,
-    # return an empty string
-    if m == 0 or n == 0:
-        return ''
-
-    # if characters at index `m` and `n` matches and the index are different
-    if X[m - 1] == X[n - 1] and m != n:
-        return LRS(X, m - 1, n - 1, lookup) + X[m - 1]
+    #print(sequence, res, length, count, f"{total_repeated_nucleotides_percent} %")
+    if total_repeated_nucleotides_percent <= max_percent_limit:
+        return True
     else:
-        # otherwise, if characters at index `m` and `n` don't match
-        if lookup[m - 1][n] > lookup[m][n - 1]:
-            return LRS(X, m - 1, n, lookup)
-        else:
-            return LRS(X, m, n - 1, lookup)
+        return False
 
 
-# Function to fill the lookup table by finding the length of LRS
-# of substring `X[0…n-1]`
-def LRSLength(X, lookup):
-    # Fill the lookup table in a bottom-up manner.
-    # The first row and first column of the lookup table are already 0.
-    for i in range(1, len(X) + 1):
-        for j in range(1, len(X) + 1):
-            # if characters at index `i` and `j` matches
-            # and the index are different
-            if X[i - 1] == X[j - 1] and i != j:
-                lookup[i][j] = lookup[i - 1][j - 1] + 1
-            # otherwise, if characters at index `i` and `j` are different
-            else:
-                lookup[i][j] = max(lookup[i - 1][j], lookup[i][j - 1])
+def LRS(sequence:str, max_size:int) -> (str, int, int):
+    str = sequence
+    n = len(str)
+    LCSRe = [[0 for x in range(n + 1)] for y in range(n + 1)]
 
+    res = ""  # To store result
+    res_length = 0  # To store length of result
 
-def LRSLengthOLD(X):
-    n = len(X)
-
-    # lookup table stores solution to already computed subproblems;
-    # i.e., lookup[i][j] stores the length of LRS of substring
-    # `X[0…i-1]` and `X[0…j-1]`
-    lookup = [[0 for x in range(n + 1)] for y in range((n + 1))]
-
-    # fill the lookup table in a bottom-up manner
+    # building table in bottom-up manner
+    index = 0
     for i in range(1, n + 1):
+        for j in range(i + 1, n + 1):
 
-        for j in range(1, n + 1):
-            # if characters at index `i` and `j` matches
-            # and the index are different
-            if X[i - 1] == X[j - 1] and i != j:
-                lookup[i][j] = lookup[i - 1][j - 1] + 1
-            # otherwise, if characters at index `i` and `j` are different
+            # (j-i) > LCSRe[i-1][j-1] to remove
+            # overlapping
+            if (str[i - 1] == str[j - 1] and LCSRe[i - 1][j - 1] < (j - i)):
+
+                LCSRe[i][j] = LCSRe[i - 1][j - 1] + 1
+                # updating maximum length of the
+                # substring and updating the finishing
+                # index of the suffix
+                if (LCSRe[i][j] > res_length) and LCSRe[i][j] <= 3:
+                    res_length = LCSRe[i][j]
+                    index = max(i, index)
+
+
             else:
-                lookup[i][j] = max(lookup[i - 1][j], lookup[i][j - 1])
+                LCSRe[i][j] = 0
 
-    # LRS will be the last entry in the lookup table
-    return lookup[n][n]
+    # If we have non-empty result, then insert
+    # all characters from first character to
+    # last character of string
+    if (res_length > 0):
+        for i in range(index - res_length + 1, index + 1):
+            res = res + str[i - 1]
+
+    results = 0
+    sub_len = len(res)
+    for i in range(len(str)):
+        if str[i:i + sub_len] == res:
+            results += 1
+
+    return res, len(res), str.count(res)
+
