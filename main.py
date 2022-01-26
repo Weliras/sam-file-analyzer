@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # sam_records.append(SamRecord(Virus("NC_002021.1", "Influenza_A_virus")))
 
     # getting list [ Virus, count_of_all, count_of_amb ] by attribute of Sequence
-    virus_with_count = Convertor.get_seqs_with_count_grouped_by(sam_records, "virus_name")
+    virus_with_count, sam_records_long_ends_starts = Convertor.get_seqs_with_count_grouped_by(sam_records, "virus_name")
 
     # For each gene get % of mapped
     Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True)

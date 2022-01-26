@@ -185,7 +185,7 @@ class Convertor:
 
 
     @staticmethod
-    def get_seqs_with_count_grouped_by(sam_records:list[SamRecord], attr:str, feature="CDS") -> list[Virus, int, int, int, int]:
+    def get_seqs_with_count_grouped_by(sam_records:list[SamRecord], attr:str, feature="CDS") -> (list[Virus, int, int, int, int], list[SamRecord]):
         """
         :param feature: "CDS" or "gene"
         :param sam_records: Loaded lines by method load_file()
@@ -193,6 +193,7 @@ class Convertor:
         :return: list[Virus, count_of_all, count_of_amb, count_of_mapped_id, count_of_mapped_out], grouped by attr
         """
         viruses_with_count = []
+        sam_records_long_ends_starts = []
         for sam_record in sam_records:
 
             #if sam_record.virus.virus_name == "Human_papillomavirus_71":
@@ -200,8 +201,11 @@ class Convertor:
             #    print()
 
             # Filtering based on repeating nucleotides
-            if not calc_longest_repeating_subsequence(sam_record.SEQ, 0.30):
-                pass
+            # if not calc_longest_repeating_subsequence(sam_record.SEQ, 0.30):
+            #    pass
+
+            # Founding seq with T^n / A^n / C^n / G^n on start or end.
+            calc_long_ends_starts(sam_record, sam_records_long_ends_starts)
 
             count_of_genes_in_which_is_record = 0
             count_of_genes_in_which_is_not_record = 0
@@ -263,7 +267,7 @@ class Convertor:
                     elif count_of_amb_genes_in_which_is_not_record > 0:
                         viruses_with_count[ind[0]][4] += 1      # count of amb OUT
 
-        return viruses_with_count
+        return viruses_with_count, sam_records_long_ends_starts
 
 
 def decode_cigar_string(cigar: str) -> [str]:
@@ -303,6 +307,21 @@ def calc_coverage_array_for_gene(count_of_genes_in_which_is_record:int, count_of
         count_of_genes_in_which_is_not_record += 1
 
     return count_of_genes_in_which_is_record, count_of_genes_in_which_is_not_record
+
+
+def calc_long_ends_starts(sam_record:SamRecord, list_of_found: [SamRecord], n: int = 10) -> bool:
+    A = "".join(["A" for i in range(0, n)])
+    C = "".join(["C" for i in range(0, n)])
+    G = "".join(["G" for i in range(0, n)])
+    T = "".join(["T" for i in range(0, n)])
+    possibilities = (A, C, G, T)
+    if sam_record.SEQ.startswith(possibilities) or sam_record.SEQ.endswith(possibilities):
+        list_of_found.append(sam_record)
+        return True
+    else:
+        return False
+
+
 
 def calc_longest_repeating_subsequence(sequence:str, max_percent_limit:float) -> bool:
     res, length, count = LRS(sequence)
