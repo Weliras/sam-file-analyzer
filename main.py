@@ -15,7 +15,7 @@ if __name__ == '__main__':
     #BlastApi.send_query("blastn", "nt", "AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA")
 
     # Load gtf files
-    genes = Convertor.load_gtf_files_only_cds_gene()
+    genes = Convertor.load_gtf_files_only_cds_or_gene(feature="CDS")
 
     # Creating map of VirusSeq -> VirusName
     map = Convertor.get_map_of_id_to_name(VIRUS_NAME)
@@ -32,7 +32,12 @@ if __name__ == '__main__':
     # sam_records.append(SamRecord(Virus("NC_002021.1", "Influenza_A_virus")))
 
     # getting list [ Virus, count_of_all, count_of_amb ] by attribute of Sequence
-    virus_with_count, sam_records_long_ends_starts = Convertor.get_seqs_with_count_grouped_by(sam_records, "virus_name")
+    # Basic filtering
+    virus_with_count, sam_records_long_ends_starts, mapped_records, not_mapped_records = Convertor.get_seqs_with_count_grouped_by(sam_records, "virus_name")
+
+    # Take best candidates for Blast
+    candidates = Convertor.choose_best_candidates_for_blast(not_mapped_records, filter_repeating=False,
+                                                            filter_acgt_probability=False, filter_acgt_probability_from_fasta=True)
 
     # For each gene get % of mapped
     Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True)

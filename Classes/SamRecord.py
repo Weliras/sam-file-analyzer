@@ -19,3 +19,5 @@ class SamRecord:
         self.virus = virus          # Virus id, Virus name, ...
         self.ambiguous_viruses = ambiguous_viruses  # List of Amb. Viruses
 
+        self.mapped = False
+
