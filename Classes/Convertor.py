@@ -6,14 +6,15 @@ from copy import deepcopy
 from Classes.Gene import Gene, GTF_File_Line
 from Classes.Virus import Virus
 from Classes.SamRecord import SamRecord
+from Classes.FastaFile import FastaFile
 
 
 class Convertor:
 
     @staticmethod
     def get_map_of_id_to_name(url:str) -> dict[str, str]:
+        virusSeq_to_name_map = {}
         try:
-            virusSeq_to_name_map = {}
             with urllib.request.urlopen(url) as file:
                 for line in file:
                     decoded_line = line.decode("utf-8")
@@ -28,19 +29,57 @@ class Convertor:
         return virusSeq_to_name_map
 
     @staticmethod
-    def load_gtf_files_only_cds_or_gene(feature: str = "CDS") -> list[Gene]:
+    def load_fasta_files() -> list[FastaFile]:
+        fasta_files = []
+        directory = "fasta_genomes_files"
+
+        folders = [os.path.join(directory, o) for o in os.listdir(directory) if os.path.isdir(os.path.join(directory, o))]
+        for dir in folders:
+            virus_name = dir.split("\\")[1]
+            fasta_file = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
+            if len(fasta_file) <= 0:
+                print(f"Fasta file for virus_name: {virus_name} was not found.")
+                continue
+            fasta_file = fasta_file[0]
+
+            virus_id = str()
+            sequence = str()
+            nucleotides_probability_fasta = {"A": 0.0, "C": 0.0, "G": 0.0, "T": 0.0}
+            total_nucleotides_count = 0
+            try:
+                with open(os.path.join(dir, fasta_file), "r") as file:
+                    for line in file:
+                        if line.startswith(">"):
+                            virus_id = line.split()[0][1:]
+                        else:
+                            stripped_line = line.strip()
+                            total_nucleotides_count += len(stripped_line)
+                            sequence += stripped_line
+            except Exception as e:
+                print(e)
+                traceback.print_exc(file=sys.stdout)
+
+            for nucleotide in nucleotides_probability_fasta.keys():
+                nucleotides_probability_fasta[nucleotide] = sequence.count(nucleotide) / total_nucleotides_count
+            fasta_files.append(FastaFile(virus_id, virus_name, sequence, nucleotides_probability_fasta))
+        return fasta_files
+
+    @staticmethod
+    def load_gtf_files_only_cds_or_gene(feature: str = "CDS") -> (list[Gene], list[str]):
         '''
         Function returns only cds and gene lines from gtf files
-        :return: list of genes
+        :return: list of genes and list of virus ids witch no gtf files
         '''
         d = 'gtf_files'
         folders = [os.path.join(d, o) for o in os.listdir(d) if os.path.isdir(os.path.join(d, o))]
         genes = []
+        viruse_ids_with_no_gtf = []
         for dir in folders:
             virus_id = dir.split("\\")[1].replace("-", "|")
             gtf_file = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
             if len(gtf_file) <= 0:
                 print(f"Gtf file for virus_id: {virus_id} was not found.")
+                viruse_ids_with_no_gtf.append(virus_id)
                 continue
             gtf_file = gtf_file[0]
             try:
@@ -66,7 +105,7 @@ class Convertor:
             except Exception as e:
                 print(e)
                 traceback.print_exc(file=sys.stdout)
-        return genes
+        return genes, viruse_ids_with_no_gtf
 
     @staticmethod
     def load_gtf_files() -> list[Gene]:
@@ -185,7 +224,11 @@ class Convertor:
             traceback.print_exc(file=sys.stdout)
         return sam_records
 
-
+    @staticmethod
+    def filter_records_with_missing_gtf(sam_records: list[SamRecord], viruse_ids_with_no_gtf: list[str]) -> (list[SamRecord], list[SamRecord]):
+        missing_gtf = [rec for rec in sam_records if rec.virus.virus_id in viruse_ids_with_no_gtf]
+        not_missing_gtf = [rec for rec in sam_records if rec.virus.virus_id not in viruse_ids_with_no_gtf]
+        return not_missing_gtf, missing_gtf
     @staticmethod
     def get_seqs_with_count_grouped_by(sam_records:list[SamRecord], attr:str, feature="CDS", find_long_ends_starts:bool = False,
                                        max_len_of_end_start:int = 10) -> (list[Virus, int, int, int, int], list[SamRecord]):
@@ -310,6 +353,11 @@ class Convertor:
         :return: list of candidates
         """
 
+        # Load fasta files
+        fasta_files = None
+        if filter_acgt_probability_from_fasta:
+            fasta_files = Convertor.load_fasta_files()
+
         count_of_filtered_out = 0
         candidates = []
         for sam_record in sam_records_not_mapped:
@@ -325,9 +373,11 @@ class Convertor:
                 continue
 
             # Filtering based on ACGT probability from similar fasta files.
-            if filter_acgt_probability_from_fasta and not filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record, deviation_for_filtering_probability_from_fasta):
-                count_of_filtered_out += 1
-                continue
+            if filter_acgt_probability_from_fasta:
+                result, similar_virus_id = filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record, fasta_files,deviation_for_filtering_probability_from_fasta)
+                if not result:
+                    count_of_filtered_out += 1
+                    continue
 
             # Filtering based on repeating nucleotides
             if filter_repeating and not calc_longest_repeating_subsequence(sam_record.SEQ, max_percent_limit, max_repeating_size):
@@ -438,7 +488,11 @@ def filter_seq_with_different_probability_of_nucleotides(sam_record: SamRecord, 
         return True
     return False
 
-def filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record: SamRecord, deviation: float= 0.05):
+def filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record: SamRecord, fasta_files: list[FastaFile],
+                                                                    deviation: float= 0.05) -> (bool, list[str]):
+    if fasta_files is None:
+        print("ERROR: FASTA files are missing.")
+        return False
 
     # probability of nucleotides in sam_record
     nucleotides_probability_sam_record = {"A": 0.0, "C": 0.0, "G": 0.0, "T": 0.0}
@@ -447,42 +501,23 @@ def filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record: 
         count = sam_record.SEQ.count(nucleotide)
         nucleotides_probability_sam_record[nucleotide] = count / len_of_seq
 
+    # probability of each fasta file
+    similar_viruses_id = []
+    for fasta_file in fasta_files:
+        nucleotides_probability_fasta = fasta_file.nucleotides_probability
+        good = True
+        for nucleotide in nucleotides_probability_fasta:
+            if nucleotides_probability_fasta[nucleotide] - deviation <= nucleotides_probability_sam_record[nucleotide] <= nucleotides_probability_fasta[nucleotide]:
+                good = True
+            else:
+                good = False
+        if good:
+            similar_viruses_id.append(fasta_file.virus_id)
 
-    # going through each fasta file for finding similar virus
-    directory = "fasta_genomes_files"
-
-    folders = [os.path.join(directory, o) for o in os.listdir(directory) if os.path.isdir(os.path.join(directory, o))]
-    for dir in folders:
-        virus_name = dir.split("\\")[1]
-        fasta_file = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
-        if len(fasta_file) <= 0:
-            print(f"Gtf file for virus_name: {virus_name} was not found.")
-            continue
-        fasta_file = fasta_file[0]
-
-        nucleotides_probability_fasta = {"A": 0.0, "C": 0.0, "G": 0.0, "T": 0.0}
-        virus_id = str()
-        try:
-            with open(os.path.join(dir, fasta_file), "r") as file:
-                total_nucleotides_count = 0
-                nucleotides_count = {"A": 0, "C": 0, "G": 0, "T": 0}
-                for line in file:
-                    if line.startswith(">"):
-                        virus_id = line.split()[0][1:]
-                    else:
-                        stripped_line = line.strip()
-                        total_nucleotides_count += len(stripped_line)
-                        for nucleotide in nucleotides_count:
-                            nucleotides_count[nucleotide] += stripped_line.count(nucleotide)
-        except Exception as e:
-            print(e)
-            traceback.print_exc(file=sys.stdout)
-
-        for nucleotide in nucleotides_count.keys():
-            nucleotides_probability_fasta[nucleotide] = nucleotides_count[nucleotide] / total_nucleotides_count
-        a = 5
-
-    return True
+    if len(similar_viruses_id) > 0:
+        return True, similar_viruses_id
+    else:
+        return False, similar_viruses_id
 
 
 

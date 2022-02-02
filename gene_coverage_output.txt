@@ -1,7 +1,6 @@
 Gene Id: 	 Protein Id: DAA00623.1	 Virus Id: AC_000007.1	 Percentage of covered: 1.4977533699450822 %	 Percentage of not covered: 98.50224663005491 %	 From: 2003
 Gene Id: 	 Protein Id: DAA00610.1	 Virus Id: AC_000007.1	 Percentage of covered: 1.619014812263176 %	 Percentage of not covered: 98.38098518773683 %	 From: 2903
 Gene Id: 	 Protein Id: DAA00616.1	 Virus Id: AC_000007.1	 Percentage of covered: 4.411764705882353 %	 Percentage of not covered: 95.58823529411765 %	 From: 680
-Gene Id: 	 Protein Id: DAA05338.1	 Virus Id: AC_000017.1	 Percentage of covered: 4.803202134756504 %	 Percentage of not covered: 95.1967978652435 %	 From: 1499
 Gene Id: E6	 Protein Id: AAA46927.1	 Virus Id: M14119.1	 Percentage of covered: 11.58129175946548 %	 Percentage of not covered: 88.41870824053451 %	 From: 449
 Gene Id: E7	 Protein Id: AAA46928.1	 Virus Id: M14119.1	 Percentage of covered: 47.781569965870304 %	 Percentage of not covered: 52.218430034129696 %	 From: 293
 Gene Id: E1	 Protein Id: AAA46929.1	 Virus Id: M14119.1	 Percentage of covered: 23.227132579650565 %	 Percentage of not covered: 76.77286742034943 %	 From: 1946

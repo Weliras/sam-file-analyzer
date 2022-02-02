@@ -1,5 +1,4 @@
 Virus Id: AC_000007.1	Percentage of covered: 1.9155030433225921 %	From: 5586
-Virus Id: AC_000017.1	Percentage of covered: 4.803202134756504 %	From: 1499
 Virus Id: M14119.1	Percentage of covered: 14.958904109589044 %	From: 5475
 Virus Id: NC_000898.1	Percentage of covered: 4.492918769330946 %	From: 6143
 Virus Id: NC_001355.1	Percentage of covered: 85.76012835940634 %	From: 7479
