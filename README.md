@@ -52,3 +52,4 @@
   * Added option for getting list of SAM records (both mapped and not mapped) which contain A^n or C^n or G^n or T^n on start or end. Parameter n can change user.
   * Added 3 options to filter not mapped SAM records (Repeating substrings, Equal probability of Nucleotides (0.25 - deviation <= P(A,C,G,T) <= 0.25 + deviation), Checking if sam_record has similar Nucleotides probabilities like any virus from fasta files )
   * Zatím projdu celý soubor fasta a z něho celého počítám pravděpodobnosti. Možná lepší použít CDS/gene z gtf a počítat přímo z těch pozic????  
+  * Added numerical summary (count of filtered, count of mapped, count of total, ...)
