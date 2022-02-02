@@ -44,3 +44,11 @@
 * 08.11. 2021:
   * Modified Convertor.get_seqs_with_count_grouped_by() so it takes in account cigar string and takes mapped nucleotids only if cigar operation is "M". ???
   * Tried using Bio.Blast.NCBIWWW library with methode qblast(). Can return HTML, XML, Text, ASN.1. Accepts sequence ("AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA"), but it takes a very long time ( 5 - 10 minutes )
+* 02.02. 2022:
+  * Added filtering for all SAM records, which excludes records containing "N"
+  * Added filtering for all SAM records, which excludes records without their gtf files
+  * Added partition of SAM records to Mapped records and not mapped records
+  * Virus and Genes coverage is calculating only for Mapped records.
+  * Added option for getting list of SAM records (both mapped and not mapped) which contain A^n or C^n or G^n or T^n on start or end. Parameter n can change user.
+  * Added 3 options to filter not mapped SAM records (Repeating substrings, Equal probability of Nucleotides (0.25 - deviation <= P(A,C,G,T) <= 0.25 + deviation), Checking if sam_record has similar Nucleotides probabilities like any virus from fasta files )
+  * Zatím projdu celý soubor fasta a z něho celého počítám pravděpodobnosti. Možná lepší použít CDS/gene z gtf a počítat přímo z těch pozic????  
