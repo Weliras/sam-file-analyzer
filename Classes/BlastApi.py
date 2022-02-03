@@ -1,32 +1,53 @@
+import threading
 
 import requests
 import time
 import re
 from Bio.Blast.NCBIWWW import qblast
 
+from Classes.BlastResult import BlastResult
+from Classes.SamRecord import SamRecord
+
+
+blast_results = []
+
+states = ["NO_HIT", "UNKNOWN", "FAILED", "UNEXPECTED", "SUCCESS"]
 
 class BlastApi:
     @staticmethod
-    def send_query(program: str, database: str, seq: str) -> bool:
+    def send_multiple_queries(program: str, database:str, sam_records: list[SamRecord]):
+        blast_results.clear()
+        threads = []
+
+        start = time.time()
+        for no, sam_record in enumerate(sam_records):
+            t = threading.Thread(target=BlastApi.send_query, args=(program, database, sam_record, no,))
+            threads.append(t)
+            t.start()
+        for t in threads:
+            t.join()
+
+        end = time.time()
+        print(f"Time of Blast Api work: {end - start}")
+        return blast_results
+    @staticmethod
+    def send_query(program: str, database: str, sam_record: SamRecord, no: int) -> bool:
         """
         Methode which connects to blast.api and saves results from queried seq. to a file.
+        :param no: number of record.
         :param program: blastn, blastp, blastx, tblastn, tblastx
         :param database: nr, cdd, nt, ...
-        :param seq: sequence of nucleotids ACGT
+        :param sam_record: Record that contain sequence of nucleotids ACGT
         :return: True/False if the query retrieved some hits or not
         """
         try:
-            program = "blastn"
-            database = "nt"
-            seq = "AGGATATTGTATTAGACCTGCAACCTCCAGACCCTGTAGGGTTACATTGCTATGAGCAATTAGTAGACAGCGCAGA"
-            sequence_data = open("blast_example.fasta").read()
-
+            seq = sam_record.SEQ
             url_base = "https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi"
-            params = {"CMD" : "Put", "PROGRAM" : "blastn", "DATABASE" : "nt", "QUERY" : seq}
+            params = {"CMD": "Put", "PROGRAM": program, "DATABASE": database, "QUERY": seq}
             headers = {'Content-type': 'application/x-www-form-urlencoded'}
             query_request = requests.post(url=url_base, headers=headers, params=params)
 
-            print(query_request.status_code)
+            print(f"[Record no. {no}.]:{query_request.status_code}")
 
             # parse out the estimated time to completion
             index_rtoe = query_request.content.index(str.encode("RTOE ="))
@@ -49,54 +70,62 @@ class BlastApi:
                 params.clear()
                 params = {"CMD" : "Get", "FORMAT_OBJECT" : "SearchInfo", "RID" : rid}
                 result_ready_request = requests.get(url=url_base, params=params)
-                print(result_ready_request.status_code)
+                print(f"[Record no. {no}.]:{result_ready_request.status_code}")
 
                 index_status = result_ready_request.content.index(str.encode("Status="))
                 status = result_ready_request.content[index_status:].decode().split("\n")[0].split("=")[1].lstrip()
 
                 if status == "WAITING":
-                    print("Searching...")
+                    print(f"[Record no. {no}.]: Searching...")
                     continue
                 elif status == "FAILED":
                     end = time.time()
-                    print(f"Time of search: {end - start}")
-                    raise SystemError(f"Search {rid} failed; please report to blast-help\\@ncbi.nlm.nih.gov.")
+                    print(f"[Record no. {no}.]: FAILED. Time of search: {end - start}")
+                    blast_results.append(BlastResult(sam_record, "FAILED", rid, no, None))
+                    raise SystemError(f"[Record no. {no}.]: Search {rid} failed; please report to blast-help\\@ncbi.nlm.nih.gov.")
                 elif status == "UNKNOWN":
                     end = time.time()
-                    print(f"Time of search: {end - start}")
-                    raise SystemError(f"Search {rid} expired.")
+                    print(f"[Record no. {no}.]: UNKNOWN. Time of search: {end - start}")
+                    blast_results.append(BlastResult(sam_record, "UNKNOWN", rid, no, None))
+                    raise SystemError(f"[Record no. {no}.]: Search {rid} expired.")
                 elif status == "READY":
                     end = time.time()
-                    print(f"Time of search: {end-start}")
+                    print(f"[Record no. {no}.]: READY. Time of search: {end-start}")
 
                     index_hits = result_ready_request.content.index(str.encode("ThereAreHits="))
                     there_are_hits = result_ready_request.content[index_hits:].decode().split("\n")[0].split("=")[1].lstrip()
                     if there_are_hits == "yes":
-                        print("Search is complete, retrieving results...")
+                        print(f"[Record no. {no}.]: Search is complete, retrieving results...")
                         break
                     else:
-                        print("No hits found.")
+                        print(f"[Record no. {no}.]: No hits found.")
+                        blast_results.append(BlastResult(sam_record, "NO_HITS", rid, no, None))
                         return False
                 else:
                     end = time.time()
-                    print(f"Time of search: {end - start}")
-                    raise SystemError("Something unexpected happened during search. Please try it later.")
+                    print(f"[Record no. {no}.]: UNEXPECTED. Time of search: {end - start}")
+                    blast_results.append(BlastResult(sam_record, "UNEXPECTED", rid, no, None))
+                    raise SystemError(f"[Record no. {no}.]: Something unexpected happened during search. Please try it later.")
 
             # retrieve and display results
             url_base = "https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi"
             params.clear()
             params = {"CMD": "Get", "FORMAT_TYPE": "XML", "RID": rid}
             result_request = requests.get(url=url_base, params=params)
-            print(result_request.status_code)
+            print(f"[Record no. {no}.]:{result_request.status_code}")
 
-            with open('results.txt', 'w') as save_file:
-                save_file.write(result_request.content.decode())
+            blast_results.append(BlastResult(sam_record, "SUCCESS", rid, no, result_request.content.decode()))
+
+            #with open(f'results_{rid}.txt', 'w') as save_file:
+            #    save_file.write(result_request.content.decode())
 
             return True
 
         except Exception as e:
             print(f"Oops, something bad happened : {repr(e)}")
             return False
+
+
 
 
 
