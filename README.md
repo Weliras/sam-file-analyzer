@@ -55,3 +55,4 @@
   * Added numerical summary (count of filtered, count of mapped, count of total, ...)
 * 04. 02. 2022:
   * Added option to use blast api for best 10 candidates. Using threads for making requests and getting results.  
+  * Co s vystupem??
