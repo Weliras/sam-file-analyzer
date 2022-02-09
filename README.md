@@ -56,3 +56,6 @@
 * 04.02. 2022:
   * Added option to use blast api for best 10 candidates. Using threads for making requests and getting results.  
   * Co s vystupem??
+* 09.02. 2022:
+  * Updated filtering option - "Checking if sam_record has similar Nucleotides probabilities like any virus from fasta files", checks only in areas (start - end) described by gtf files and the records CDS xor gene
+  * U některých SAM souborů problém, že chybí gtf soubour, nebo chybí záznamy CDS xor gene... -> ignorování.
