@@ -3,6 +3,7 @@ import urllib.request
 import sys, traceback
 from copy import deepcopy
 
+from Classes.BlastResult import BlastResult
 from Classes.Gene import Gene, GTF_File_Line
 from Classes.Virus import Virus
 from Classes.SamRecord import SamRecord
@@ -561,6 +562,7 @@ def filter_seq_with_n(sam_record: SamRecord) -> bool:
         return False
 
     return True
+
 
 
 def calc_longest_repeating_subsequence(sequence:str, max_percent_limit:float, max_size:int) -> bool:

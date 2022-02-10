@@ -1,4 +1,7 @@
+import sys
 import threading
+import traceback
+import xml.etree.ElementTree as ET
 
 import requests
 import time
@@ -15,13 +18,17 @@ states = ["NO_HIT", "UNKNOWN", "FAILED", "UNEXPECTED", "SUCCESS"]
 
 class BlastApi:
     @staticmethod
-    def send_multiple_queries(program: str, database:str, sam_records: list[SamRecord]):
+    def send_multiple_queries(program: str, database:str, sam_records: list[SamRecord], time_limit: int):
         blast_results.clear()
+
+        if len(sam_records) <= 0:
+            return []
+
         threads = []
 
         start = time.time()
         for no, sam_record in enumerate(sam_records):
-            t = threading.Thread(target=BlastApi.send_query, args=(program, database, sam_record, no,))
+            t = threading.Thread(target=BlastApi.send_query, args=(program, database, sam_record, no, time_limit))
             threads.append(t)
             t.start()
         for t in threads:
@@ -31,7 +38,7 @@ class BlastApi:
         print(f"Time of Blast Api work: {end - start}")
         return blast_results
     @staticmethod
-    def send_query(program: str, database: str, sam_record: SamRecord, no: int) -> bool:
+    def send_query(program: str, database: str, sam_record: SamRecord, no: int, time_limit: int) -> bool:
         """
         Methode which connects to blast.api and saves results from queried seq. to a file.
         :param no: number of record.
@@ -60,6 +67,7 @@ class BlastApi:
             start = time.time()
 
             # wait for search to complete
+            print(f"[Record no. {no}.]: Time to search {rtoe}")
             time.sleep(rtoe)
 
             # poll for results
@@ -78,6 +86,19 @@ class BlastApi:
 
                 if status == "WAITING":
                     print(f"[Record no. {no}.]: Searching...")
+                    spent_time = time.time()
+                    # check if not waiting too long
+                    if spent_time - start >= time_limit:
+                        print(f"[Record no. {no}.]: TIME_LIMIT_EXCEEDED. Time of search: {spent_time - start}")
+                        blast_results.append(BlastResult(sam_record, "TIME_LIMIT_EXCEEDED", rid, no, None))
+
+                        url_base = "https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi"
+                        params.clear()
+                        params = {"CMD": "Delete", "RID": rid}
+                        result_ready_request = requests.get(url=url_base, params=params)
+
+                        raise SystemError(
+                            f"[Record no. {no}.]: Search {rid} took to long and was terminated")
                     continue
                 elif status == "FAILED":
                     end = time.time()
@@ -126,8 +147,38 @@ class BlastApi:
             print(f"Oops, something bad happened : {repr(e)}")
             return False
 
+    @staticmethod
+    def analyze_results_from_blast(blast_result_list: list[BlastResult]):
 
+        found_viruses_with_count = {}
 
+        try:
+            for res in blast_result_list:
+                if res.status_of_result == "SUCCESS":
+                    tree = ET.ElementTree(ET.fromstring(res.result))
+                    #tree = ET.parse(source="results_ZSSM6429016.txt")
+                    root = tree.getroot()
+                    iterations = root.find("BlastOutput_iterations").findall("Iteration")
+                    for iteration in iterations:
+                        iteration_hits = iteration.findall("Iteration_hits")
+                        for iteration_hit in iteration_hits:
+                            hits = iteration_hit.findall("Hit")
+                            for hit in hits:
+                                hit_def = hit.find("Hit_def")
+                                if hit_def.text in found_viruses_with_count.keys():
+                                    found_viruses_with_count[hit_def.text] += 1
+                                else:
+                                    found_viruses_with_count[hit_def.text] = 1
+
+            interesting_results = []
+            for hit_def, count in found_viruses_with_count.items():
+                if count > 1:
+                    interesting_results.append(hit_def)
+            return interesting_results
+        except Exception as e:
+            print(e)
+            traceback.print_exc(file=sys.stdout)
+            return []
 
 
 

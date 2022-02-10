@@ -50,8 +50,8 @@ if __name__ == '__main__':
 
     # Take best candidates for Blast
     candidates = Convertor.choose_best_candidates_for_blast(not_mapped_records,
-                                                            filter_repeating=True,
-                                                            filter_acgt_probability=True,
+                                                            filter_repeating=False,
+                                                            filter_acgt_probability=False,
                                                             filter_acgt_probability_from_fasta=True,
                                                             gtf_files=genes,
                                                             feature="CDS")
@@ -59,6 +59,9 @@ if __name__ == '__main__':
     count_of_filtered_out_candidates = len(not_mapped_records) - len(candidates)
 
     best_candidates = candidates[:10]
+
+    # Fill in 10 candidates
+    """
     if len(best_candidates) < 10:
         l = len(best_candidates)
         not_mapped_without_best_candidates = not_mapped_records.copy()
@@ -67,9 +70,12 @@ if __name__ == '__main__':
 
         #best_candidates.append(not_mapped_without_best_candidates[:10-l])
         best_candidates += not_mapped_without_best_candidates[:10-l]
+    """
 
-    blast_results = BlastApi.send_multiple_queries("blastn", "nt", best_candidates)
-    #BlastApi.send_query("blastn", "nt", candidates[:10])
+    blast_results = BlastApi.send_multiple_queries("blastn", "nt", best_candidates, 20 * 60)
+
+
+    BlastApi.analyze_results_from_blast(blast_results)
 
     # For each gene get % of mapped
     Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True)
