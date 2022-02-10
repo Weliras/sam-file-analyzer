@@ -62,3 +62,4 @@
   * Updated work with api -> asking api about state every 60 seconds to comply with usage guidelines and avoid being blocked.
 * 10.02. 2022:
   * Added time limit for queris on Blast api + After the time limit, program drops the query on api.
+  * getting list of interesting results from results from blast api
