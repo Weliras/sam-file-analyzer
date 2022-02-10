@@ -59,3 +59,4 @@
 * 09.02. 2022:
   * Updated filtering option - "Checking if sam_record has similar Nucleotides probabilities like any virus from fasta files", checks only in areas (start - end) described by gtf files and the records CDS xor gene
   * U některých SAM souborů problém, že chybí gtf soubour, nebo chybí záznamy CDS xor gene... -> ignorování.
+  * Updated work with api -> asking api about state every 60 seconds to comply with usage guidelines and avoid being blocked.
