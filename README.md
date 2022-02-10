@@ -53,3 +53,9 @@
   * Added 3 options to filter not mapped SAM records (Repeating substrings, Equal probability of Nucleotides (0.25 - deviation <= P(A,C,G,T) <= 0.25 + deviation), Checking if sam_record has similar Nucleotides probabilities like any virus from fasta files )
   * Zatím projdu celý soubor fasta a z něho celého počítám pravděpodobnosti. Možná lepší použít CDS/gene z gtf a počítat přímo z těch pozic????  
   * Added numerical summary (count of filtered, count of mapped, count of total, ...)
+* 04.02. 2022:
+  * Added option to use blast api for best 10 candidates. Using threads for making requests and getting results.  
+  * Co s vystupem??
+* 09.02. 2022:
+  * Updated filtering option - "Checking if sam_record has similar Nucleotides probabilities like any virus from fasta files", checks only in areas (start - end) described by gtf files and the records CDS xor gene
+  * U některých SAM souborů problém, že chybí gtf soubour, nebo chybí záznamy CDS xor gene... -> ignorování.
