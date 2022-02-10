@@ -29,7 +29,16 @@ class Convertor:
         return virusSeq_to_name_map
 
     @staticmethod
-    def load_fasta_files() -> list[FastaFile]:
+    def load_fasta_files(gtf_files: list[Gene], feature: str = "CDS") -> list[FastaFile]:
+
+        # GTF File preformat
+        virus_id_to_gtf = dict()
+        for gtf_file in gtf_files:
+            if gtf_file.virus_id not in virus_id_to_gtf.keys():
+                virus_id_to_gtf[gtf_file.virus_id] = []
+            virus_id_to_gtf[gtf_file.virus_id].append(gtf_file)
+
+
         fasta_files = []
         directory = "fasta_genomes_files"
 
@@ -45,22 +54,41 @@ class Convertor:
             virus_id = str()
             sequence = str()
             nucleotides_probability_fasta = {"A": 0.0, "C": 0.0, "G": 0.0, "T": 0.0}
+            nucleotides_counts_fasta = {"A": 0, "C": 0, "G": 0, "T": 0}
             total_nucleotides_count = 0
+
+            # reading fasta file, getting virus_id, sequence.
             try:
                 with open(os.path.join(dir, fasta_file), "r") as file:
                     for line in file:
                         if line.startswith(">"):
-                            virus_id = line.split()[0][1:]
+                            virus_id = line.split()[0][1:].replace("|", "-")
                         else:
                             stripped_line = line.strip()
-                            total_nucleotides_count += len(stripped_line)
+                            #total_nucleotides_count += len(stripped_line)
                             sequence += stripped_line
             except Exception as e:
                 print(e)
                 traceback.print_exc(file=sys.stdout)
 
+            # Check for viruses that doesnt have gtf files or have but dont have records with feature CDS xor GENE
+            if virus_id not in virus_id_to_gtf.keys():
+                continue
+
+            # Computing count of all nucleotides in seq by gtf end, start
+            total_nucleotides_count_in_range_by_gtf = 0
+            for gene in virus_id_to_gtf[virus_id]:
+                if gene.record.feature == feature:
+                    total_nucleotides_count_in_range_by_gtf += len(sequence[gene.record.start:gene.record.end])
+
+            # Computing count of each nucleotide for all genes and then calculating probability
             for nucleotide in nucleotides_probability_fasta.keys():
-                nucleotides_probability_fasta[nucleotide] = sequence.count(nucleotide) / total_nucleotides_count
+                for gene in virus_id_to_gtf[virus_id]:
+                    if gene.record.feature == feature:
+                        nucleotides_counts_fasta[nucleotide] += sequence[gene.record.start:gene.record.end].count(nucleotide)
+                        #nucleotides_probability_fasta[nucleotide] = sequence[gene.record.start:gene.record.end].count(nucleotide)
+                        #nucleotides_probability_fasta[nucleotide] = sequence.count(nucleotide) / total_nucleotides_count
+                nucleotides_probability_fasta[nucleotide] = nucleotides_counts_fasta[nucleotide] / total_nucleotides_count_in_range_by_gtf
             fasta_files.append(FastaFile(virus_id, virus_name, sequence, nucleotides_probability_fasta))
         return fasta_files
 
@@ -342,9 +370,10 @@ class Convertor:
         return viruses_with_count, sam_records_long_ends_starts, sam_records_mapped_in, sam_records_mapped_out
 
     @staticmethod
-    def choose_best_candidates_for_blast(sam_records_not_mapped: [SamRecord], filter_repeating: bool = False,
+    def choose_best_candidates_for_blast(sam_records_not_mapped: list[SamRecord], filter_repeating: bool = False,
                                          max_percent_limit: float = 0.30, max_repeating_size: int = 3, filter_acgt_probability: bool = False,
                                          deviation_for_filtering_probability: float = 0.05, filter_acgt_probability_from_fasta: bool = False,
+                                         gtf_files: list[Gene] = None, feature: str = None,
                                          deviation_for_filtering_probability_from_fasta: float = 0.05):
         """
         :param filter_repeating: Filter repeating seqs or not. If true -> calculations will take more time
@@ -356,7 +385,7 @@ class Convertor:
         # Load fasta files
         fasta_files = None
         if filter_acgt_probability_from_fasta:
-            fasta_files = Convertor.load_fasta_files()
+            fasta_files = Convertor.load_fasta_files(gtf_files, feature)
 
         count_of_filtered_out = 0
         candidates = []
@@ -374,7 +403,7 @@ class Convertor:
 
             # Filtering based on ACGT probability from similar fasta files.
             if filter_acgt_probability_from_fasta:
-                result, similar_virus_id = filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record, fasta_files,deviation_for_filtering_probability_from_fasta)
+                result, similar_virus_id = filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record, fasta_files, deviation_for_filtering_probability_from_fasta)
                 if not result:
                     count_of_filtered_out += 1
                     continue
@@ -500,6 +529,8 @@ def filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record: 
     for nucleotide in nucleotides_probability_sam_record.keys():
         count = sam_record.SEQ.count(nucleotide)
         nucleotides_probability_sam_record[nucleotide] = count / len_of_seq
+
+
 
     # probability of each fasta file
     similar_viruses_id = []

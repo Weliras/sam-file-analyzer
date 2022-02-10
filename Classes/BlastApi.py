@@ -64,16 +64,17 @@ class BlastApi:
 
             # poll for results
             while True:
-                time.sleep(5)
+                time.sleep(60)
 
                 url_base = "https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi"
                 params.clear()
                 params = {"CMD" : "Get", "FORMAT_OBJECT" : "SearchInfo", "RID" : rid}
                 result_ready_request = requests.get(url=url_base, params=params)
-                print(f"[Record no. {no}.]:{result_ready_request.status_code}")
+
 
                 index_status = result_ready_request.content.index(str.encode("Status="))
                 status = result_ready_request.content[index_status:].decode().split("\n")[0].split("=")[1].lstrip()
+                print(f"[Record no. {no}.]:{result_ready_request.status_code}, status: {status}")
 
                 if status == "WAITING":
                     print(f"[Record no. {no}.]: Searching...")

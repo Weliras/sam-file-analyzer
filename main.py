@@ -42,16 +42,19 @@ if __name__ == '__main__':
     # getting list [ Virus, count_of_all, count_of_amb ] by attribute of Sequence
     # Basic filtering
     count_of_sam_records_before_n_filter = len(sam_records)
-    virus_with_count, sam_records_long_ends_starts, mapped_records, not_mapped_records = Convertor.get_seqs_with_count_grouped_by(sam_records, "virus_name")
+    virus_with_count, sam_records_long_ends_starts, mapped_records, not_mapped_records =\
+        Convertor.get_seqs_with_count_grouped_by(sam_records, "virus_name")
 
     count_of_mapped_records = len(mapped_records)
     count_of_not_mapped_records = len(not_mapped_records)
 
     # Take best candidates for Blast
     candidates = Convertor.choose_best_candidates_for_blast(not_mapped_records,
-                                                            filter_repeating=False,
+                                                            filter_repeating=True,
                                                             filter_acgt_probability=True,
-                                                            filter_acgt_probability_from_fasta=False)
+                                                            filter_acgt_probability_from_fasta=True,
+                                                            gtf_files=genes,
+                                                            feature="CDS")
     count_of_candidates = len(candidates)
     count_of_filtered_out_candidates = len(not_mapped_records) - len(candidates)
 
@@ -62,7 +65,8 @@ if __name__ == '__main__':
         for c in best_candidates:
             not_mapped_without_best_candidates.remove(c)
 
-        best_candidates.append(not_mapped_without_best_candidates[:10-l])
+        #best_candidates.append(not_mapped_without_best_candidates[:10-l])
+        best_candidates += not_mapped_without_best_candidates[:10-l]
 
     blast_results = BlastApi.send_multiple_queries("blastn", "nt", best_candidates)
     #BlastApi.send_query("blastn", "nt", candidates[:10])
