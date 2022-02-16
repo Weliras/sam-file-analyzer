@@ -1,9 +1,10 @@
 import os
 
+from Classes.DataForHTMLOutput import DataForHTMLOutput
 from Classes.Gene import Gene
 from Classes.Virus import Virus
 from Classes.SamRecord import SamRecord
-from Classes.Convertor import Convertor
+from Classes.Convertor import Convertor, create_html_output
 from Classes.BlastApi import BlastApi
 
 RNA_SAMPLE = "http://homel.vsb.cz/~vas218/files/viruses/viruses.filtered.sam"
@@ -72,16 +73,17 @@ if __name__ == '__main__':
         best_candidates += not_mapped_without_best_candidates[:10-l]
     """
 
-    blast_results = BlastApi.send_multiple_queries("blastn", "nt", best_candidates, 20 * 60)
+    blast_results = []
+    #blast_results = BlastApi.send_multiple_queries("blastn", "nt", best_candidates, 20 * 60)
 
 
-    BlastApi.analyze_results_from_blast(blast_results)
+    interesting_results_from_api = BlastApi.analyze_results_from_blast(blast_results)
 
     # For each gene get % of mapped
-    Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True)
+    genes_with_coverage = Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True)
 
     # For each virus get % of mapped
-    Gene.write_to_file_virus_with_percents(genes=genes, only_non_empty=True)
+    virus_with_coverage = Gene.write_to_file_virus_with_percents(genes=genes, only_non_empty=True)
 
     # sort it by count desc
     virus_with_count.sort(key=lambda virus: virus[1], reverse=True)
@@ -99,3 +101,12 @@ if __name__ == '__main__':
     print(f"Count of not Mapped in SAM records = {count_of_not_mapped_records}")
     print(f"Count of Candidate SAM records for Blast api = {count_of_candidates}")
     print(f"Count of filtrered out Candidate SAM records for Blast api = {count_of_filtered_out_candidates}")
+
+    datas = DataForHTMLOutput(viruses_with_counts=virus_with_count, virus_coverage=virus_with_coverage, genes_coverage=genes_with_coverage,
+                              interesting_results_from_api=interesting_results_from_api, total_count_of_sam_records=total_count_of_sam_records,
+                              count_of_sam_records_filtered_out_with_n=count_of_sam_records_before_n_filter - (count_of_mapped_records + count_of_not_mapped_records),
+                              count_of_candidates_for_blast=count_of_candidates, count_of_filtered_out_candidates=count_of_filtered_out_candidates,
+                              count_of_mapped_in_sam_records=count_of_mapped_records, count_of_sam_records_with_no_gtf=count_of_sam_records_with_no_gtf,
+                              sam_records_long_ends_starts= sam_records_long_ends_starts, map_virus_id_name=map)
+
+    create_html_output(datas)
