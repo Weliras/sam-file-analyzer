@@ -2,12 +2,16 @@ import os
 import urllib.request
 import sys, traceback
 from copy import deepcopy
+import dominate
+
 
 from Classes.BlastResult import BlastResult
+from Classes.DataForHTMLOutput import DataForHTMLOutput
 from Classes.Gene import Gene, GTF_File_Line
 from Classes.Virus import Virus
 from Classes.SamRecord import SamRecord
 from Classes.FastaFile import FastaFile
+from dominate.tags import *
 
 
 class Convertor:
@@ -631,3 +635,69 @@ def LRS(sequence:str, max_size:int) -> (str, int, int):
 
     return res, len(res), str.count(res)
 
+
+def create_html_output(data: DataForHTMLOutput):
+    doc = dominate.document(title='SAM file analyzer output')
+
+    with doc.head:
+        #link(rel='stylesheet', href='style.css')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3", crossorigin="anonymous" )
+        #script(type='text/javascript', src='script.js')
+
+    with doc.body:
+
+        with ul(_class="nav nav-tabs"):
+            menu_link = li(_class="active nav-link").add(a("Virus coverage", href="#VirusCoverage", _class="nav-link"))
+            menu_link["data-toggle"] = "tab"
+
+            menu_link = li(_class="nav-link").add(a("Gene coverage", href="#GeneCoverage", _class="nav-link"))
+            menu_link["data-toggle"] = "tab"
+
+        with div(_class="tab-content"):
+            with div(id='VirusCoverage', _class="tab-pane active").add(table(_class="table")):
+                with thead():
+                    header = tr()
+                    header.add(th("#", _class="col"))
+                    header.add(th("Virus ID", _class="col"))
+                    header.add(th("Virus name", _class="col"))
+                    header.add(th("Percentage of covered", _class="col"))
+                    header.add(th("Total count of nucleotides (covered+not covered)", _class="col"))
+                with tbody():
+                    for i, c_v in enumerate(data.virus_coverage):
+                        row = tr()
+                        row.add(th(i+1, scope="row"))
+                        row.add(td(c_v[0]))
+                        row.add(td(data.map_virus_id_name[c_v[0]]))
+                        row.add(td(round(c_v[1], 2)))
+                        row.add(td(c_v[2]))
+            with div(id='GeneCoverage', _class="tab-pane").add(table(_class="table")):
+                with thead():
+                    header = tr()
+                    header.add(th("#", _class="col"))
+                    header.add(th("Gene ID", _class="col"))
+                    header.add(th("Protein ID", _class="col"))
+                    header.add(th("Virus ID", _class="col"))
+                    header.add(th("Virus name", _class="col"))
+                    header.add(th("Percentage of covered", _class="col"))
+                    header.add(th("Total count of nucleotides (covered+not covered)", _class="col"))
+                with tbody():
+                    c = 0
+                    for virus_id, genes in data.genes_coverage.items():
+                        for gene in genes:
+                            c += 1
+                            row = tr()
+                            row.add(th(c, scope="row"))
+                            row.add(td(gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''))
+                            row.add(td(gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else ''))
+                            row.add(td(virus_id))
+                            row.add(td(data.map_virus_id_name[virus_id]))
+                            row.add(td(gene.covered_percents))
+                            row.add(td(gene.length_of_gene))
+
+        #script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
+
+
+    with open('output.html', 'w') as f:
+        f.write(doc.render())
