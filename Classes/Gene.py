@@ -3,6 +3,8 @@ import csv
 import sys
 import traceback
 from io import StringIO
+from itertools import groupby
+
 
 class GTF_File_Line:
     def __init__(self, seqname=None, source=None, feature=None, start=None, end=None, score=None, strand=None, frame=None,
@@ -78,6 +80,8 @@ class Gene:
         self.coverage_array = dict()
         self.length_of_gene = 0
 
+        self.covered_percents = 0
+
     @property
     def record(self):
         return self._record
@@ -101,8 +105,10 @@ class Gene:
         self.records.clear()
 
     @staticmethod
-    def write_to_file_genes_with_percents(genes: [Gene], only_non_empty: bool = False, filename: str = "gene_coverage_output.txt") -> bool:
+    def write_to_file_genes_with_percents(genes: [Gene], only_non_empty: bool = False,
+                                          filename: str = "gene_coverage_output.txt") -> dict[str, list[Gene]]:
         try:
+            result = []
             with open(filename, "w") as file:
                 for gene in genes:
                     #size_of_gene = len(gene.coverage_array.values())  # Not including end
@@ -119,6 +125,8 @@ class Gene:
                             f"\t Percentage of not covered: {(size_of_gene - count_of_covered) / size_of_gene * 100} %"
                             f"\t From: {size_of_gene}"
                             f"\n")
+                        result.append(gene)
+                        gene.covered_percents = count_of_covered / size_of_gene * 100
                     elif not only_non_empty:
                         file.write(
                             f"Gene Id: {gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''}"
@@ -128,15 +136,29 @@ class Gene:
                             f"\t Percentage of not covered: {(size_of_gene - count_of_covered) / size_of_gene * 100} %"
                             f"\t From: {size_of_gene}"
                             f"\n")
+                        gene.covered_percents = count_of_covered / size_of_gene * 100
+                        result.append(gene)
 
-            return True
+            # Sort by percents and group by virus id
+            result.sort(key=lambda gene: (gene.covered_percents,), reverse=True)
+
+            result = [(item, [j for j in group]) for (item, group) in groupby(result, lambda gene: gene.virus_id)]
+            result2 = {}
+            for v_id, genes in result:
+                if v_id in result2.keys():
+                    result2[v_id] += genes
+                else:
+                    result2[v_id] = genes
+            return result2
+
         except Exception as e:
             print(e)
             traceback.print_exc(file=sys.stdout)
-            return False
+            return {}
 
     @staticmethod
-    def write_to_file_virus_with_percents(genes: [Gene], only_non_empty: bool = False, filename: str = "virus_coverage_output.txt") -> bool:
+    def write_to_file_virus_with_percents(genes: [Gene], only_non_empty: bool = False,
+                                          filename: str = "virus_coverage_output.txt") -> list[list[int, float, int]]:
         try:
             # [Virus_id, %, count]
             result = []
@@ -170,14 +192,17 @@ class Gene:
                         result[ind[0]][2] += size_of_gene
                         result[ind[0]][1] = percentage_of_covered
 
+            result.sort(key=lambda virus: virus[1], reverse=True)
+
             with open(filename, "w") as file:
                 for res in result:
                     file.write(f"Virus Id: {res[0]}\t"
                                f"Percentage of covered: {res[1]} %\t"
                                f"From: {res[2]}\n")
 
-            return True
+            # [gene.virus_id, percentage_of_covered, size_of_gene]
+            return result
         except Exception as e:
             print(e)
             traceback.print_exc(file=sys.stdout)
-            return False
+            return []
