@@ -63,3 +63,6 @@
 * 10.02. 2022:
   * Added time limit for queris on Blast api + After the time limit, program drops the query on api.
   * getting list of interesting results from results from blast api
+* 16.02. 2022:
+  * Modified result outputs from some functions
+  * Main HTML output file was made. Contains Virus coverage table, Gene coverage table 
