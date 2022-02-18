@@ -3,6 +3,7 @@ import csv
 import sys
 import traceback
 from io import StringIO
+import json
 from itertools import groupby
 
 
@@ -105,8 +106,8 @@ class Gene:
         self.records.clear()
 
     @staticmethod
-    def write_to_file_genes_with_percents(genes: [Gene], only_non_empty: bool = False,
-                                          filename: str = "gene_coverage_output.txt") -> dict[str, list[Gene]]:
+    def write_to_file_genes_with_percents(genes: [Gene], map: dict[str, str], only_non_empty: bool = False,
+                                          filename: str = "json/genes_coverage_output.json") -> dict[str, list[Gene]]:
         try:
             result = []
             with open(filename, "w") as file:
@@ -117,6 +118,7 @@ class Gene:
                     #    size_of_gene = 1
                     count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
                     if only_non_empty and count_of_covered > 0:
+                        """
                         file.write(
                             f"Gene Id: {gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''}"
                             f"\t Protein Id: {gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else ''}"
@@ -125,9 +127,11 @@ class Gene:
                             f"\t Percentage of not covered: {(size_of_gene - count_of_covered) / size_of_gene * 100} %"
                             f"\t From: {size_of_gene}"
                             f"\n")
+                        """
                         result.append(gene)
                         gene.covered_percents = count_of_covered / size_of_gene * 100
                     elif not only_non_empty:
+                        """
                         file.write(
                             f"Gene Id: {gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''}"
                             f"\t Protein Id: {gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else ''}"
@@ -136,6 +140,7 @@ class Gene:
                             f"\t Percentage of not covered: {(size_of_gene - count_of_covered) / size_of_gene * 100} %"
                             f"\t From: {size_of_gene}"
                             f"\n")
+                        """
                         gene.covered_percents = count_of_covered / size_of_gene * 100
                         result.append(gene)
 
@@ -149,6 +154,21 @@ class Gene:
                     result2[v_id] += genes
                 else:
                     result2[v_id] = genes
+
+            data_to_json = []
+            for v_id, genes in result2.items():
+                genes_formated = []
+                for gene in genes:
+                    genes_formated.append({"gene_id": gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else '',
+                                           "protein_id":gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else '',
+                                           "percentage_of_covered": gene.covered_percents, "from": gene.length_of_gene})
+
+                data_to_json.append({"virus_name": map[v_id], "virus_id": v_id, "genes": genes_formated})
+
+            with open(filename, "w") as file:
+                json_string = json.dumps(data_to_json)
+                file.write(f"genes_coverage = '{json_string}'")
+
             return result2
 
         except Exception as e:
@@ -157,8 +177,8 @@ class Gene:
             return {}
 
     @staticmethod
-    def write_to_file_virus_with_percents(genes: [Gene], only_non_empty: bool = False,
-                                          filename: str = "virus_coverage_output.txt") -> list[list[int, float, int]]:
+    def write_to_file_virus_with_percents(genes: [Gene], map: dict[str: str], only_non_empty: bool = False,
+                                          filename: str = "json/virus_coverage_output.json") -> list[list[int, float, int]]:
         try:
             # [Virus_id, %, count]
             result = []
@@ -174,7 +194,6 @@ class Gene:
                     if not any(s for s in result if s[0] == gene.virus_id):
                         size_of_gene = gene.length_of_gene
                         percentage_of_covered = (count_of_covered / size_of_gene) * 100
-
                         tmp = [gene.virus_id, percentage_of_covered, size_of_gene]
                         result.append(tmp)
                     else:
@@ -194,11 +213,17 @@ class Gene:
 
             result.sort(key=lambda virus: virus[1], reverse=True)
 
+            data_to_json = []
+            for res in result:
+                data_to_json.append({"virus_name": map[res[0]], "virus_id": res[0], "percentage_of_covered": res[1], "from": res[2]})
+
             with open(filename, "w") as file:
-                for res in result:
-                    file.write(f"Virus Id: {res[0]}\t"
-                               f"Percentage of covered: {res[1]} %\t"
-                               f"From: {res[2]}\n")
+                #for res in result:
+                #    file.write(f"Virus Id: {res[0]}\t"
+                #               f"Percentage of covered: {res[1]} %\t"
+                #               f"From: {res[2]}\n")
+                json_string = json.dumps(data_to_json)
+                file.write(f"virus_coverage = '{json_string}'")
 
             # [gene.virus_id, percentage_of_covered, size_of_gene]
             return result
