@@ -80,10 +80,10 @@ if __name__ == '__main__':
     interesting_results_from_api = BlastApi.analyze_results_from_blast(blast_results)
 
     # For each gene get % of mapped
-    genes_with_coverage = Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True)
+    genes_with_coverage = Gene.write_to_file_genes_with_percents(genes=genes, only_non_empty=True, map=map)
 
     # For each virus get % of mapped
-    virus_with_coverage = Gene.write_to_file_virus_with_percents(genes=genes, only_non_empty=True)
+    virus_with_coverage = Gene.write_to_file_virus_with_percents(genes=genes, only_non_empty=True, map=map)
 
     # sort it by count desc
     virus_with_count.sort(key=lambda virus: virus[1], reverse=True)
