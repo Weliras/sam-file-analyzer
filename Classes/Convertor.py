@@ -641,9 +641,15 @@ def create_html_output(data: DataForHTMLOutput):
 
     with doc.head:
         #link(rel='stylesheet', href='style.css')
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
-        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3", crossorigin="anonymous" )
+        script(src="https://cdn.jsdelivr.net/npm/chart.js")
+        #script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
+
+        #link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3", crossorigin="anonymous" )
         #script(type='text/javascript', src='script.js')
 
     with doc.body:
@@ -656,48 +662,91 @@ def create_html_output(data: DataForHTMLOutput):
             menu_link["data-toggle"] = "tab"
 
         with div(_class="tab-content"):
-            with div(id='VirusCoverage', _class="tab-pane active").add(table(_class="table")):
-                with thead():
-                    header = tr()
-                    header.add(th("#", _class="col"))
-                    header.add(th("Virus ID", _class="col"))
-                    header.add(th("Virus name", _class="col"))
-                    header.add(th("Percentage of covered", _class="col"))
-                    header.add(th("Total count of nucleotides (covered+not covered)", _class="col"))
-                with tbody():
-                    for i, c_v in enumerate(data.virus_coverage):
-                        row = tr()
-                        row.add(th(i+1, scope="row"))
-                        row.add(td(c_v[0]))
-                        row.add(td(data.map_virus_id_name[c_v[0]]))
-                        row.add(td(round(c_v[1], 2)))
-                        row.add(td(c_v[2]))
-            with div(id='GeneCoverage', _class="tab-pane").add(table(_class="table")):
-                with thead():
-                    header = tr()
-                    header.add(th("#", _class="col"))
-                    header.add(th("Gene ID", _class="col"))
-                    header.add(th("Protein ID", _class="col"))
-                    header.add(th("Virus ID", _class="col"))
-                    header.add(th("Virus name", _class="col"))
-                    header.add(th("Percentage of covered", _class="col"))
-                    header.add(th("Total count of nucleotides (covered+not covered)", _class="col"))
-                with tbody():
-                    c = 0
-                    for virus_id, genes in data.genes_coverage.items():
-                        for gene in genes:
-                            c += 1
-                            row = tr()
-                            row.add(th(c, scope="row"))
-                            row.add(td(gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''))
-                            row.add(td(gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else ''))
-                            row.add(td(virus_id))
-                            row.add(td(data.map_virus_id_name[virus_id]))
-                            row.add(td(gene.covered_percents))
-                            row.add(td(gene.length_of_gene))
+            with div(id='VirusCoverage', _class="tab-pane fade in active"):
+                with div(_class="container"):
+                    canvas(id="virusChart", style="width:100%;max-width:700px;margin:auto;")
+                    p("This graph shows only 10 viruses with heighest percent coverage value, all results are in table.",
+                      style="margin: 10px;")
+                    is_more = False
+                    with table(_class="table"):
+                        with thead():
+                            header = tr()
+                            header.add(th("#", _class="col"))
+                            header.add(th("Virus ID", _class="col"))
+                            header.add(th("Virus name", _class="col"))
+                            header.add(th("Percentage of covered", _class="col"))
+                            header.add(th("Total count of nucleotides (covered+not covered)", _class="col"))
+                        with tbody():
+                            for i, c_v in enumerate(data.virus_coverage):
+                                row = tr()
+                                if i > 9:
+                                    row["class"] = "virus_more"
+                                    row["style"] = "display:none;"
+                                    is_more = True
+
+                                row.add(th(i+1, scope="row"))
+                                row.add(td(c_v[0]))
+                                row.add(td(data.map_virus_id_name[c_v[0]]))
+                                row.add(td(round(c_v[1], 2)))
+                                row.add(td(c_v[2]))
+                    if is_more:
+                        button("Show all", type="button", _class="btn btn-primary", onclick="showMoreViruses()",
+                               id="virus_more", style="margin:3% 50% 3% 50%;")
+
+                        with div(_class="container"):
+                            for no in range(0, len(data.virus_coverage) + 2, 2):
+                                with div(_class="row"):
+                                    if no + 0 < len(data.virus_coverage):
+                                        with div(_class="col-sm-6"):
+                                            canvas(id=f"virus_{data.virus_coverage[no + 0][0]}", )
+                                    else:
+                                        break
+                                    if no + 1 < len(data.virus_coverage):
+                                        with div(_class="col-sm-6"):
+                                            canvas(id=f"virus_{data.virus_coverage[no + 1][0]}", )
+                                    else:
+                                        break
+
+
+            with div(id='GeneCoverage', _class="tab-pane fade"):
+                with div(_class="container"):
+                    is_more = False
+                    with table(_class="table"):
+                        with thead():
+                            header = tr()
+                            header.add(th("#", _class="col"))
+                            header.add(th("Gene ID", _class="col"))
+                            header.add(th("Protein ID", _class="col"))
+                            header.add(th("Virus ID", _class="col"))
+                            header.add(th("Virus name", _class="col"))
+                            header.add(th("Percentage of covered", _class="col"))
+                            header.add(th("Total count of nucleotides (covered+not covered)", _class="col"))
+                        with tbody():
+                            c = 0
+                            for virus_id, genes in data.genes_coverage.items():
+                                for gene in genes:
+                                    row = tr()
+                                    if c > 9:
+                                        row["class"] = "gene_more"
+                                        row["style"] = "display:none;"
+                                        is_more = True
+
+                                    c += 1
+                                    row.add(th(c, scope="row"))
+                                    row.add(td(gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''))
+                                    row.add(td(gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else ''))
+                                    row.add(td(virus_id))
+                                    row.add(td(data.map_virus_id_name[virus_id]))
+                                    row.add(td(gene.covered_percents))
+                                    row.add(td(gene.length_of_gene))
+                    if is_more:
+                        button("Show all", type="button", _class="btn btn-primary", onclick="showMoreGenes()",
+                                id="gene_more", style="margin:3% 50% 3% 50%;")
 
         #script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
-
+        script(type="text/javascript", src="json/virus_coverage_output.json")
+        script(type="text/javascript", src="json/genes_coverage_output.json")
+        script(type="text/javascript", src="js/functions.js")
 
     with open('output.html', 'w') as f:
         f.write(doc.render())
