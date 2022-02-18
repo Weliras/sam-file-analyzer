@@ -66,3 +66,7 @@
 * 16.02. 2022:
   * Modified result outputs from some functions
   * Main HTML output file was made. Contains Virus coverage table, Gene coverage table 
+* 18.02. 2022:
+  * Added graphs to html output using JS. Pie graphs show percentual coverage of each virus by its genes.
+  * Made tables more user friendly (Show more, sorted records, sorted graphs)
+  * .txt files with percentual coverage -> .json files, because of transfer of data to JS graphs.
