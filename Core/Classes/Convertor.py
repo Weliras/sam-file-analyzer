@@ -1,8 +1,10 @@
+import datetime
 import os
 import subprocess
 import sys
 import traceback
 from copy import deepcopy
+import dominate
 
 from Core.Classes.DataForHTMLOutput import DataForHTMLOutput
 from Core.Classes.Gene import Gene, GTF_File_Line
@@ -29,10 +31,11 @@ class Convertor:
         except Exception as e:
             print(e)
             traceback.print_exc(file=sys.stdout)
+            exit(-1)
         return virusSeq_to_name_map
 
     @staticmethod
-    def load_fasta_files(gtf_files, feature = "CDS"): # type: (list[Gene], str) -> list[FastaFile]
+    def load_fasta_files(gtf_files, directory_of_fastas, feature = "CDS"): # type: (list[Gene], str, str) -> list[FastaFile]
 
         # GTF File preformat
         virus_id_to_gtf = dict()
@@ -42,12 +45,12 @@ class Convertor:
             virus_id_to_gtf[gtf_file.virus_id].append(gtf_file)
 
         fasta_files = []
-        directory = "fasta_genomes_files"
+        directory = directory_of_fastas
 
         folders = [os.path.join(directory, o) for o in os.listdir(directory) if
                    os.path.isdir(os.path.join(directory, o))]
         for dir in folders:
-            virus_name = dir.split("\\")[1]
+            virus_name = dir.split("/")[2]
             fasta_file = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
             if len(fasta_file) <= 0:
                 print(f"Fasta file for virus_name: {virus_name} was not found.")
@@ -73,6 +76,7 @@ class Convertor:
             except Exception as e:
                 print(e)
                 traceback.print_exc(file=sys.stdout)
+                exit(-1)
 
             # Check for viruses that doesnt have gtf files or have but dont have records with feature CDS xor GENE
             if virus_id not in virus_id_to_gtf.keys():
@@ -113,7 +117,7 @@ class Convertor:
             virus_id = dir.split("/")[2].replace("-", "|")
             gtf_file = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
             if len(gtf_file) <= 0:
-                print(f"Gtf file for virus_id: {virus_id} was not found.")
+                print(f"[SAM Analyzer]: Gtf file for virus_id: {virus_id} was not found.")
                 viruse_ids_with_no_gtf.append(virus_id)
                 continue
             gtf_file = gtf_file[0]
@@ -138,8 +142,9 @@ class Convertor:
 
                         del gene
             except Exception as e:
-                print(e)
+                print(f"[SAM Analyzer]: {e}")
                 traceback.print_exc(file=sys.stdout)
+                exit(-1)
         return genes, viruse_ids_with_no_gtf
 
     @staticmethod
@@ -152,7 +157,7 @@ class Convertor:
             virus_id = dir.split("\\")[1].replace("-", "|")
             gtf_file = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
             if len(gtf_file) <= 0:
-                print(f"Gtf file for virus_id: {virus_id} was not found.")
+                print(f"[SAM Analyzer]: Gtf file for virus_id: {virus_id} was not found.")
                 continue
             gtf_file = gtf_file[0]
             try:
@@ -202,9 +207,9 @@ class Convertor:
                             prev_protein_id = gtf_line.attributes["protein_id"]
 
             except Exception as e:
-                print(e)
-                print(virus_id)
+                print(f"[SAM Analyzer]: {e}")
                 traceback.print_exc(file=sys.stdout)
+                exit(-1)
         return genes
 
     @staticmethod
@@ -248,17 +253,20 @@ class Convertor:
                             SamRecord(virus=Virus(virus_id=line_split[2], virus_name=map[line_split[2]],
                                                   genes=dynamic_programming[line_split[2]]),
                                       ambiguous_viruses=ambiguous_viruses, pos=line_split[3], cigar=line_split[5],
-                                      seq=line_split[9]))
+                                      seq=line_split[9], qname=line_split[0], flag=line_split[1], rname=line_split[2],
+                                      mapq=line_split[4]))
                         continue
                     g = [g for g in genes if g.virus_id == line_split[2]]
                     sam_records.append(
                         SamRecord(virus=Virus(virus_id=line_split[2], virus_name=map[line_split[2]], genes=g),
                                   ambiguous_viruses=ambiguous_viruses, pos=line_split[3], cigar=line_split[5],
-                                  seq=line_split[9]))
+                                  seq=line_split[9], qname=line_split[0], flag=line_split[1], rname=line_split[2],
+                                  mapq=line_split[4]))
                     dynamic_programming[line_split[2]] = g
         except Exception as e:
-            print(e)
+            print(f"[SAM Analyzer]: {e}")
             traceback.print_exc(file=sys.stdout)
+            exit(-1)
         return sam_records
 
     @staticmethod
@@ -381,9 +389,9 @@ class Convertor:
         return viruses_with_count, sam_records_long_ends_starts, sam_records_mapped_in, sam_records_mapped_out
 
     @staticmethod
-    def choose_best_candidates_for_blast(sam_records_not_mapped, filter_repeating=False, max_percent_limit=0.30, max_repeating_size=3,
+    def choose_best_candidates_for_blast(sam_records_not_mapped, directory_of_fastas, filter_repeating=False, max_percent_limit=0.30, max_repeating_size=3,
                                          filter_acgt_probability=False, deviation_for_filtering_probability=0.05, filter_acgt_probability_from_fasta=False,
-                                         gtf_files=None, feature="CDS", deviation_for_filtering_probability_from_fasta=0.05):  # type: (list[SamRecord], bool, float, int, bool, float, bool, list[Gene], str, float) -> list[SamRecord]
+                                         gtf_files=None, feature="CDS", deviation_for_filtering_probability_from_fasta=0.05):  # type: (list[SamRecord], str, bool, float, int, bool, float, bool, list[Gene], str, float) -> list[SamRecord]
         """
         :param filter_repeating: Filter repeating seqs or not. If true -> calculations will take more time
         :param max_percent_limit: If filter_repeating is True, this percent means if n % is covering the seq and is greater then this max limit, then is this record considered invalid and is filtered out.
@@ -394,7 +402,7 @@ class Convertor:
         # Load fasta files
         fasta_files = None
         if filter_acgt_probability_from_fasta:
-            fasta_files = Convertor.load_fasta_files(gtf_files, feature)
+            fasta_files = Convertor.load_fasta_files(gtf_files, directory_of_fastas, feature)
 
         count_of_filtered_out = 0
         candidates = []
@@ -536,7 +544,7 @@ def filter_seq_with_different_probability_of_nucleotides(sam_record, deviation=0
 
 def filter_seq_with_different_probability_of_nucleotides_from_fasta(sam_record, fasta_files, deviation=0.05):  # type:(SamRecord, list[FastaFile], float) -> (bool, list[str])
     if fasta_files is None:
-        print("ERROR: FASTA files are missing.")
+        print("[SAM Analyzer]: ERROR: FASTA files are missing.")
         return False
 
     # probability of nucleotides in sam_record
@@ -643,10 +651,9 @@ def LRS(sequence, max_size):  # type:(str, int) -> (str, int, int)
     return res, len(res), str.count(res)
 
 
-def create_html_output(data):  # type:(DataForHTMLOutput) -> None
-    cmd = "pip install dominate"
-    subprocess.call(cmd, shell=False)
-    import dominate
+def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
+    #cmd = "pip install dominate"
+    #subprocess.call(cmd, shell=False)
 
     doc = dominate.document(title='SAM file analyzer output')
 
@@ -666,6 +673,7 @@ def create_html_output(data):  # type:(DataForHTMLOutput) -> None
     with doc.body:
 
         with ul(_class="nav nav-tabs"):
+            # TAB WIDGET LINKS
             menu_link = li(_class="active nav-link").add(a("Summary", href="#Summary", _class="nav-link"))
             menu_link["data-toggle"] = "tab"
 
@@ -675,7 +683,16 @@ def create_html_output(data):  # type:(DataForHTMLOutput) -> None
             menu_link = li(_class="nav-link").add(a("Gene coverage", href="#GeneCoverage", _class="nav-link"))
             menu_link["data-toggle"] = "tab"
 
-        # TAB WIDGET
+            if data.find_sam_records_long_ends_starts:
+                menu_link = li(_class="nav-link").add(
+                    a("SAM records with long repeating end/start", href="#LongEndsStarts", _class="nav-link"))
+                menu_link["data-toggle"] = "tab"
+            if data.blast_is_set:
+                menu_link = li(_class="nav-link").add(
+                    a("Repeating results from blast api.", href="#BlastApi", _class="nav-link"))
+                menu_link["data-toggle"] = "tab"
+
+        # TAB WIDGET CONTENT
         with div(_class="tab-content"):
             # SUMMARY TAB
             with div(id="Summary", _class="tab-pane fade in active"):
@@ -693,11 +710,13 @@ def create_html_output(data):  # type:(DataForHTMLOutput) -> None
                             strong(data.count_of_mapped_in_sam_records)
                         with li(f"Count of records not mapped on some gtf file: ", _class="list-group-item"):
                             strong(data.count_of_not_mapped_records)
-                        with li(f"Count of candidates from not mapped results for Blast Api: ",
-                                _class="list-group-item"):
-                            strong(data.count_of_candidates_for_blast)
-                        with li(f"Count of filtered out candidates for Blast Api: ", _class="list-group-item"):
-                            strong(data.count_of_filtered_out_candidates)
+                        if data.blast_is_set:
+                            with li(f"Count of candidates from not mapped results for Blast Api: ",
+                                    _class="list-group-item"):
+                                strong(data.count_of_candidates_for_blast)
+                                span(f", only {len(data.best_candidates)} candidates were sent to api")
+                            with li(f"Count of filtered out candidates for Blast Api: ", _class="list-group-item"):
+                                strong(data.count_of_filtered_out_candidates)
                         # li()
                     with table(_class="table"):
                         caption("Summary of found viruses in SAM file")
@@ -729,7 +748,7 @@ def create_html_output(data):  # type:(DataForHTMLOutput) -> None
                     small(
                         "*(includes ambiguous occurrences, mapped and not mapped records but excludes records containing 'N')")
                     if is_more:
-                        button("Show all", type="button", _class="btn btn-primary", onclick="showMoreSummaryViruses()",
+                        button("Show all", type="button", _class="btn btn-primary", onclick="showMore(\'summary_virus_more\')",
                                id="summary_virus_more", style="margin:3% 50% 3% 50%;")
 
             # VIRUS COVERAGE TABLE + GRAPHS
@@ -762,22 +781,22 @@ def create_html_output(data):  # type:(DataForHTMLOutput) -> None
                                 row.add(td(round(c_v[1], 2)))
                                 row.add(td(c_v[2]))
                     if is_more:
-                        button("Show all", type="button", _class="btn btn-primary", onclick="showMoreViruses()",
+                        button("Show all", type="button", _class="btn btn-primary", onclick="showMore(\'virus_more\')",
                                id="virus_more", style="margin:3% 50% 3% 50%;")
 
-                        with div(_class="container"):
-                            for no in range(0, len(data.virus_coverage) + 2, 2):
-                                with div(_class="row"):
-                                    if no + 0 < len(data.virus_coverage):
-                                        with div(_class="col-sm-6"):
-                                            canvas(id=f"virus_{data.virus_coverage[no + 0][0]}", )
-                                    else:
-                                        break
-                                    if no + 1 < len(data.virus_coverage):
-                                        with div(_class="col-sm-6"):
-                                            canvas(id=f"virus_{data.virus_coverage[no + 1][0]}", )
-                                    else:
-                                        break
+                    with div(_class="container"):
+                        for no in range(0, len(data.virus_coverage) + 2, 2):
+                            with div(_class="row"):
+                                if no + 0 < len(data.virus_coverage):
+                                    with div(_class="col-sm-6"):
+                                        canvas(id=f"virus_{data.virus_coverage[no + 0][0]}", )
+                                else:
+                                    break
+                                if no + 1 < len(data.virus_coverage):
+                                    with div(_class="col-sm-6"):
+                                        canvas(id=f"virus_{data.virus_coverage[no + 1][0]}", )
+                                else:
+                                    break
 
             # GENES COVERAGE TABLE
             with div(id='GeneCoverage', _class="tab-pane fade"):
@@ -805,7 +824,7 @@ def create_html_output(data):  # type:(DataForHTMLOutput) -> None
                                         is_more = True
 
                                     c += 1
-                                    row.add(th(c, scope="row"))
+                                    row.add(td(c, scope="row"))
                                     row.add(td(gene.record.attributes[
                                                    'gene_id'] if 'gene_id' in gene.record.attributes.keys() else ''))
                                     row.add(td(gene.record.attributes[
@@ -815,13 +834,73 @@ def create_html_output(data):  # type:(DataForHTMLOutput) -> None
                                     row.add(td(gene.covered_percents))
                                     row.add(td(gene.length_of_gene))
                     if is_more:
-                        button("Show all", type="button", _class="btn btn-primary", onclick="showMoreGenes()",
+                        button("Show all", type="button", _class="btn btn-primary", onclick="showMore(\'gene_more\')",
                                id="gene_more", style="margin:3% 50% 3% 50%;")
 
-        # script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
-        script(type="text/javascript", src="json/virus_coverage_output.json")
-        script(type="text/javascript", src="json/genes_coverage_output.json")
-        script(type="text/javascript", src="js/functions.js")
+            # SAM RECORD WITH LONG ENDS/START
+            if data.find_sam_records_long_ends_starts:
+                with div(id="LongEndsStarts", _class="tab-pane fade"):
+                    with div(_class="container-fluid"):
+                        is_more = False
+                        with table(_class="table"):
+                            caption("SAM records with Long repeating ends or starts")
+                            with thead():
+                                header = tr()
+                                header.add(th("#", _class="col"))
+                                header.add(th("QNAME", _class="col"))
+                                header.add(th("RNAME", _class="col"))
+                                header.add(th("CIGAR", _class="col"))
+                                header.add(th("SEQ", _class="col"))
+                            with tbody():
+                                c = 0
+                                for sam_record in data.sam_records_long_ends_starts:
+                                    row = tr()
+                                    if c > 9:
+                                        row["class"] = "long_rep_more"
+                                        row["style"] = "display:none;"
+                                        is_more = True
 
-    with open(os.path.join("Output", 'output.html'), 'w') as f:
+                                    c += 1
+                                    row.add(td(c, scope="row"))
+                                    row.add(td(sam_record.QNAME))
+                                    row.add(td(sam_record.virus.virus_id))
+                                    row.add(td(sam_record.CIGAR))
+                                    row.add(td(sam_record.SEQ))
+                        if is_more:
+                            button("Show all", type="button", _class="btn btn-primary",
+                                   onclick="showMore(\'long_rep_more\')",
+                                   id="long_rep_more", style="margin:3% 50% 3% 50%;")
+
+            # INTERESTING RESULTS FROM BLAST API
+            if data.blast_is_set:
+                with div(id="BlastApi", _class="tab-pane fade"):
+                    with div(_class="container"):
+                        is_more = False
+                        with ul(_class="list-group"):
+                            li("Repeating results from Blast API", _class="list-group-item active")
+                            c = 0
+                            for res, count in data.interesting_results_from_api.items():
+                                row = li(f"Found {count}x {res}", _class="list-group-item")
+                                if c > 9:
+                                    row["class"] = "list-group-item blast_res"
+                                    row["style"] = "display:none;"
+                                    is_more = True
+
+                                c += 1
+                        if is_more:
+                            button("Show all", type="button", _class="btn btn-primary",
+                                   onclick="showMore(\'blast_res\')",
+                                   id="blast_res", style="margin:3% 50% 3% 50%;")
+
+        # script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
+        script(type="text/javascript", src=os.path.join("json", "virus_coverage_output.json"))
+        script(type="text/javascript", src=os.path.join("json", "genes_coverage_output.json"))
+        script(type="text/javascript", src=os.path.join("js", "functions.js"))
+
+    now = datetime.datetime.now()
+    file = f'{os.path.basename(filename).replace(".all.sam","")}_{now.month}-{now.day}-{now.hour}-{now.minute}.html'
+    with open(os.path.join("Output", file), 'w') as f:
         f.write(doc.render())
+    print("[SAM Analyzer]: -----------------------------------------------")
+    print(f"[SAM Analyzer]: Output was saved in file /Data/{file}")
+    print("[SAM Analyzer]: -----------------------------------------------")
