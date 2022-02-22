@@ -11,6 +11,7 @@ function RandomColor () {
 const virus_coverage_json = JSON.parse(virus_coverage)
 const genes_coverage_json = JSON.parse(genes_coverage)
 
+
 // Virus coverage graph
 
 let virus_coverage_labels = []
@@ -136,50 +137,15 @@ Array.prototype.forEach.call(genes_coverage_json, function (virus_with_genes){
 
 
 
+function showMore(id){
+    let button = document.getElementById(id)
+    let moreRecords = document.getElementsByClassName(id)
 
-function showMoreGenes(){
-    let button = document.getElementById("gene_more")
-    let moreGenes = document.getElementsByClassName("gene_more")
-
-    Array.prototype.forEach.call(moreGenes, function (gene){
-        if (gene.style.display === "none")
-            gene.style.display = "table-row"
+    Array.prototype.forEach.call(moreRecords, function (record){
+        if (record.style.display === "none")
+            record.style.display = "table-row"
         else
-            gene.style.display = "none"
-
-    })
-    if (button.innerHTML === "Show all")
-        button.innerHTML = "Show less"
-    else
-        button.innerHTML = "Show all"
-}
-
-function showMoreViruses(){
-    let button = document.getElementById("virus_more")
-    let moreGenes = document.getElementsByClassName("virus_more")
-
-    Array.prototype.forEach.call(moreGenes, function (virus){
-        if (virus.style.display === "none")
-            virus.style.display = "table-row"
-        else
-            virus.style.display = "none"
-
-    })
-    if (button.innerHTML === "Show all")
-        button.innerHTML = "Show less"
-    else
-        button.innerHTML = "Show all"
-}
-
-function showMoreSummaryViruses(){
-    let button = document.getElementById("summary_virus_more")
-    let moreSummaryVirus = document.getElementsByClassName("summary_virus_more")
-
-    Array.prototype.forEach.call(moreSummaryVirus, function (virus){
-        if (virus.style.display === "none")
-            virus.style.display = "table-row"
-        else
-            virus.style.display = "none"
+            record.style.display = "none"
 
     })
     if (button.innerHTML === "Show all")
