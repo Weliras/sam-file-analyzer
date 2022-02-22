@@ -91,9 +91,9 @@ class Gene:
     def record(self, value: GTF_File_Line):
         self._record = value
         self.coverage_array.clear()
-        self.length_of_gene = self._record.end - self._record.start
+        self.length_of_gene = self._record.end - self._record.start + 1
 
-        for i in range(self._record.start, self._record.end):                # Including upper and not Including lower bound
+        for i in range(self._record.start, self._record.end + 1):                # Including upper and Including lower bound
             self.coverage_array[i] = False
 
 
@@ -177,6 +177,7 @@ class Gene:
         except Exception as e:
             print(e)
             traceback.print_exc(file=sys.stdout)
+            exit(-1)
             return {}
 
     @staticmethod
@@ -252,4 +253,5 @@ class Gene:
         except Exception as e:
             print(e)
             traceback.print_exc(file=sys.stdout)
+            exit(-1)
             return []
