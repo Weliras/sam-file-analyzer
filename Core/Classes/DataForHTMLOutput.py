@@ -8,7 +8,8 @@ class DataForHTMLOutput:
     def __init__(self, viruses_with_counts,virus_coverage, genes_coverage, interesting_results_from_api,
                  total_count_of_sam_records, count_of_sam_records_with_no_gtf, count_of_sam_records_filtered_out_with_n,
                  count_of_mapped_in_sam_records, count_of_candidates_for_blast, count_of_filtered_out_candidates,
-                 sam_records_long_ends_starts, map_virus_id_name, count_of_not_mapped_records): # type: (list[list[Virus, int, int, int, int]],list[list[int, float, int]],dict[str, list[Gene]], list[str], int, int, int, int, int, int, list[SamRecord], dict[str: str], int) -> None
+                 sam_records_long_ends_starts, map_virus_id_name, count_of_not_mapped_records,
+                 find_sam_records_long_ends_starts, blast_is_set, best_candidates): # type: (list[list[Virus, int, int, int, int]],list[list[int, float, int]],dict[str, list[Gene]], dict[str, int], int, int, int, int, int, int, list[SamRecord], dict[str: str], int, bool, bool, list[SamRecord]) -> None
 
         self.virus_coverage = virus_coverage
         self.genes_coverage = genes_coverage
@@ -21,7 +22,9 @@ class DataForHTMLOutput:
         self.count_of_not_mapped_records = count_of_not_mapped_records
         self.count_of_candidates_for_blast = count_of_candidates_for_blast
         self.count_of_filtered_out_candidates = count_of_filtered_out_candidates
+        self.find_sam_records_long_ends_starts = find_sam_records_long_ends_starts
         self.sam_records_long_ends_starts = sam_records_long_ends_starts
         self.map_virus_id_name = map_virus_id_name
-
+        self.blast_is_set= blast_is_set
+        self.best_candidates= best_candidates
 
