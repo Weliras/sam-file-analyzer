@@ -1,7 +1,7 @@
 # sam-file-analyzer
 #### Dependencies
-- Python libraries: dominate (pip install dominate)
-- Ubuntu tools: bwa (apt install bwa), samtools (apt install samtools)
+- Python libraries: dominate (```pip install dominate```)
+- Ubuntu tools: bwa (```apt install bwa```), samtools (```apt install samtools```), gunzip (```apt install gunzip```)
 #### How to use + Examples
 - In ubuntu run ```python3 main.py -h``` to see all possible arguments with description
 - In ubuntu run ```python3 main.py inputFastQFile.fastq.gz``` for running tool with default parameters and without using Blast Api. Optimals Parameters are set.
