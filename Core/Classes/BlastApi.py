@@ -34,7 +34,7 @@ class BlastApi:
             t.join()
 
         end = time.time()
-        print(f"Time of Blast Api work: {end - start}")
+        print(f"[SAM Analyzer]: Time of Blast Api work: {end - start}")
         return blast_results
     @staticmethod
     def send_query(program, database, sam_record, no, time_limit):  # type:(str, str, SamRecord, int, int) -> bool
@@ -53,7 +53,7 @@ class BlastApi:
             headers = {'Content-type': 'application/x-www-form-urlencoded'}
             query_request = requests.post(url=url_base, headers=headers, params=params)
 
-            print(f"[Record no. {no}.]:{query_request.status_code}")
+            #print(f"[Record no. {no}.]:{query_request.status_code}")
 
             # parse out the estimated time to completion
             index_rtoe = query_request.content.index(str.encode("RTOE ="))
@@ -66,12 +66,18 @@ class BlastApi:
             start = time.time()
 
             # wait for search to complete
-            print(f"[Record no. {no}.]: Time to search {rtoe}")
+            print(f"[SAM Analyzer]: [Record no. {no}.]: Time to search {rtoe}")
             time.sleep(rtoe)
 
+            first_try = True
             # poll for results
             while True:
-                time.sleep(60)
+
+                if not first_try:
+                    time.sleep(60)
+
+                if first_try:
+                    first_try = False
 
                 url_base = "https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi"
                 params.clear()
@@ -81,14 +87,14 @@ class BlastApi:
 
                 index_status = result_ready_request.content.index(str.encode("Status="))
                 status = result_ready_request.content[index_status:].decode().split("\n")[0].split("=")[1].lstrip()
-                print(f"[Record no. {no}.]:{result_ready_request.status_code}, status: {status}")
+                print(f"[SAM Analyzer]: [Record no. {no}.]: {status}")
 
                 if status == "WAITING":
-                    print(f"[Record no. {no}.]: Searching...")
+                    print(f"[SAM Analyzer]: [Record no. {no}.]: Searching...")
                     spent_time = time.time()
                     # check if not waiting too long
                     if spent_time - start >= time_limit:
-                        print(f"[Record no. {no}.]: TIME_LIMIT_EXCEEDED. Time of search: {spent_time - start}")
+                        print(f"[SAM Analyzer]: [Record no. {no}.]: TIME_LIMIT_EXCEEDED. Time of search: {spent_time - start}")
                         blast_results.append(BlastResult(sam_record, "TIME_LIMIT_EXCEEDED", rid, no, None))
 
                         url_base = "https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi"
@@ -101,39 +107,40 @@ class BlastApi:
                     continue
                 elif status == "FAILED":
                     end = time.time()
-                    print(f"[Record no. {no}.]: FAILED. Time of search: {end - start}")
+                    print(f"[SAM Analyzer]: [Record no. {no}.]: FAILED. Time of search: {end - start}")
                     blast_results.append(BlastResult(sam_record, "FAILED", rid, no, None))
                     raise SystemError(f"[Record no. {no}.]: Search {rid} failed; please report to blast-help\\@ncbi.nlm.nih.gov.")
                 elif status == "UNKNOWN":
                     end = time.time()
-                    print(f"[Record no. {no}.]: UNKNOWN. Time of search: {end - start}")
+                    print(f"[SAM Analyzer]: [Record no. {no}.]: UNKNOWN. Time of search: {end - start}")
                     blast_results.append(BlastResult(sam_record, "UNKNOWN", rid, no, None))
                     raise SystemError(f"[Record no. {no}.]: Search {rid} expired.")
                 elif status == "READY":
                     end = time.time()
-                    print(f"[Record no. {no}.]: READY. Time of search: {end-start}")
+                    print(f"[SAM Analyzer]: [Record no. {no}.]: READY. Time of search: {end-start}")
 
                     index_hits = result_ready_request.content.index(str.encode("ThereAreHits="))
                     there_are_hits = result_ready_request.content[index_hits:].decode().split("\n")[0].split("=")[1].lstrip()
                     if there_are_hits == "yes":
-                        print(f"[Record no. {no}.]: Search is complete, retrieving results...")
+                        print(f"[SAM Analyzer]: [Record no. {no}.]: Search is complete, retrieving results...")
                         break
                     else:
-                        print(f"[Record no. {no}.]: No hits found.")
+                        print(f"[SAM Analyzer]: [Record no. {no}.]: No hits found.")
                         blast_results.append(BlastResult(sam_record, "NO_HITS", rid, no, None))
                         return False
                 else:
                     end = time.time()
-                    print(f"[Record no. {no}.]: UNEXPECTED. Time of search: {end - start}")
+                    print(f"[SAM Analyzer]: [Record no. {no}.]: UNEXPECTED. Time of search: {end - start}")
                     blast_results.append(BlastResult(sam_record, "UNEXPECTED", rid, no, None))
                     raise SystemError(f"[Record no. {no}.]: Something unexpected happened during search. Please try it later.")
+
 
             # retrieve and display results
             url_base = "https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi"
             params.clear()
             params = {"CMD": "Get", "FORMAT_TYPE": "XML", "RID": rid}
             result_request = requests.get(url=url_base, params=params)
-            print(f"[Record no. {no}.]:{result_request.status_code}")
+            #print(f"[Record no. {no}.]:{result_request.status_code}")
 
             blast_results.append(BlastResult(sam_record, "SUCCESS", rid, no, result_request.content.decode()))
 
@@ -143,11 +150,11 @@ class BlastApi:
             return True
 
         except Exception as e:
-            print(f"Oops, something bad happened : {repr(e)}")
+            print(f"[SAM Analyzer]: {e}")
             return False
 
     @staticmethod
-    def analyze_results_from_blast(blast_result_list):  # type:(list[BlastResult]) -> list[str]
+    def analyze_results_from_blast(blast_result_list):  # type:(list[BlastResult]) -> dict[str, int]
 
         found_viruses_with_count = {}
 
@@ -169,15 +176,18 @@ class BlastApi:
                                 else:
                                     found_viruses_with_count[hit_def.text] = 1
 
-            interesting_results = []
+            interesting_results = {}
             for hit_def, count in found_viruses_with_count.items():
                 if count > 1:
-                    interesting_results.append(hit_def)
+                    interesting_results[hit_def] = count
+                    #interesting_results.append(hit_def)
+            interesting_results = dict(sorted(interesting_results.items(), key=lambda item: item[1], reverse=True))
             return interesting_results
         except Exception as e:
-            print(e)
+            print(f"[SAM Analyzer]: {e}")
             traceback.print_exc(file=sys.stdout)
-            return []
+            exit(-1)
+            return {}
 
 
 
