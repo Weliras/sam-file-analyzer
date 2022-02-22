@@ -31,7 +31,7 @@ def filterUnmapped(sam_path):
         cmd = "samtools view -F 0x4 -o %s %s" % (sam_result_path, sam_path)
         subprocess.call(cmd, shell=True)
         os.remove(sam_path)
-    return sam_path.replace(".sam",".mapped.sam")
+    return sam_result_path
 
 
 def createReferenceGenome(viral_genomes_folder: str, DEFAULT_REF_GENOME: str) -> str:
@@ -56,7 +56,7 @@ def createReferenceGenome(viral_genomes_folder: str, DEFAULT_REF_GENOME: str) ->
                         all_genomes.write("\n")
 
         except Exception as e:
-            print(e)
+            print(f"[SAM Analyzer]: {e}")
             traceback.print_exc(file=sys.stdout)
 
     cmd = "bwa index %s" % DEFAULT_REF_GENOME
@@ -82,7 +82,7 @@ def preprocess(fastq_file: str, DEFAULT_FASTA_FOLDER: str, DEFAULT_REF_GENOME: s
 
         fastq_file = fastq_file.replace(".gz", "")
 
-        print("Fastq file gunzipped.")
+        print("[SAM Analyzer]: Fastq file gunzipped.")
 
 
     if fastq_file.endswith(".fastq"):
