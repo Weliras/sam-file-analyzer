@@ -26,6 +26,7 @@
 - !GTF file U21247.1 not found as assembly, only as Nucleotide
 - !GTF files gi|9626032|lcl|HPV2REF.1|, gi|397005|lcl|HPV3REF.1|, gi|333074|lcl|HPV8REF.1|, gi|396910|lcl|HPV12REF.1|, gi|60295|lcl|HPV13REF.1|, gi|396918|lcl|HPV14REF.1|, gi|333245|lcl|HPV39REF.1| not found as assembly
 - Problem when loading attributes which are delimited by ';' if semicolon is in value (...; note "Some words and; another words";... -> [..., 'note "Some words and', 'another words', ...]). Even when using csv.reader. Problem is that whole item isn't in " ", but only value ( key "value" -> to make it work -> "key value").
+- Only part which takes very long is work with blast api, standart response time during testing was between 1 minute to 6 minutes.
 
 ### Changelist:
 * 27.10. 2021:
