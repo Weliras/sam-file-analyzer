@@ -831,7 +831,7 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
                                                    'protein_id'] if 'protein_id' in gene.record.attributes.keys() else ''))
                                     row.add(td(virus_id))
                                     row.add(td(data.map_virus_id_name[virus_id]))
-                                    row.add(td(gene.covered_percents))
+                                    row.add(td(round(gene.covered_percents, 2)))
                                     row.add(td(gene.length_of_gene))
                     if is_more:
                         button("Show all", type="button", _class="btn btn-primary", onclick="showMore(\'gene_more\')",
