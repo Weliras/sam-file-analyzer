@@ -1,18 +1,19 @@
 # sam-file-analyzer
-#### TO-DO list
-- Loading SAM file and reading virus_id - Done
-- Mapping virus_id -> virus_name - Done
-- Getting output in format Virus, count - Done
-- Getting output in format Virus, count_of_all, count_of_amb - Done
-- Download GTF files - 90 % Done
-- Load GTF files to memory (new class, load files, check) - Done
-- Look at gene position, count of inside/outside - Done
-- Get percents of coverage - Done
-- Make code readible - Not done
-
-#### Current state
-- Got in memory all sam records with info about mapped virus and other ambiquous viruses. Every virus has associated genes (by virus_id).
-- Getting output in format Virus, count_of_all, count_of_amb, count_of_IN, count_of_OUT + Percentages of coverege in files
+#### Dependencies
+- Python libraries: dominate (```pip install dominate```)
+- Ubuntu tools: bwa (```apt install bwa```), samtools (```apt install samtools```), gunzip (```apt install gunzip```)
+#### How to use + Examples
+- In ubuntu run ```python3 main.py -h``` to see all possible arguments with description
+- In ubuntu run ```python3 main.py inputFastQFile.fastq.gz``` for running tool with default parameters and without using Blast Api. Optimals Parameters are set.
+- In ubuntu run ```python3 main.py inputFastQFile.fastq.gz -r``` if you want to recreate referential genome which will be in folder _Data/ref_genome/_ from all fasta files in folder _Data/dir_fasta_genomes_files/_
+- In ubuntu run ```python3 main.py inputFastQFile.fastq.gz -B -c 20``` for running tool with default parameters and using Blast Api without filtering to search max 20 candidate sam files. 
+- In ubuntu run ```python3 main.py inputFastQFile.fastq.gz -B -c 20 -R -P -O``` for running tool with using Blast api with all 3 filtering methodes with default parameters.
+- #### Filtering candidates for Blast API
+  - In ubuntu run ```python3 main.py inputFastQFile.fastq.gz -B -c 20 -R -x 0.3``` for filtering using only 1. filter methode (Filter repeating substring) with parameter -x 0.3 which means that SAM record that have atleast 30 % of their sequence covered by repeating substring will be filtred out of candidates for blast api. Parameter -x must be in range (0.0, 1.0)
+  - In ubuntu run ```python3 main.py inputFastQFile.fastq.gz -B -c 20 -P -p 0.05``` for filtering using only 2. filter methode (Filter SAM records that doesn't have similar probability of each nucleotide in sequence in range 0.25 - deviation < PROB(A/C/G/T) < 0.25 + deviation). Parameter -p is the deviation and must be positive number.
+  - In ubuntu run ```python3 main.py inputFastQFile.fastq.gz -B -c 20 -O -o 0.05``` for filtering using only 3. filter methode (Filter SAM records that doesn't have similar probability of nucleotides like atleast one genome in fasta files). Parameter -o is the deviation and must be positive number.
+- In ubuntu run ```python3 main.py inputFastQFile.fastq.gz -e``` for running tool with default parameters and without Blast Api and with showing all viruses and genes even if they are not even partly covered.
+- Main HTML output will be located in folder **Output/*.html**
 
 #### Problems or questions 
 - GTF files from NC_002016.1 to NC_002023.1 are same
@@ -25,9 +26,7 @@
 - !GTF file U21247.1 not found as assembly, only as Nucleotide
 - !GTF files gi|9626032|lcl|HPV2REF.1|, gi|397005|lcl|HPV3REF.1|, gi|333074|lcl|HPV8REF.1|, gi|396910|lcl|HPV12REF.1|, gi|60295|lcl|HPV13REF.1|, gi|396918|lcl|HPV14REF.1|, gi|333245|lcl|HPV39REF.1| not found as assembly
 - Problem when loading attributes which are delimited by ';' if semicolon is in value (...; note "Some words and; another words";... -> [..., 'note "Some words and', 'another words', ...]). Even when using csv.reader. Problem is that whole item isn't in " ", but only value ( key "value" -> to make it work -> "key value").
-
-#### Bugs
-- If any attribute while reading GTF has semicolon in value -> Value is wrong. 
+- Only part which takes very long is work with blast api, standart response time during testing was between 1 minute to 6 minutes.
 
 ### Changelist:
 * 27.10. 2021:
@@ -70,3 +69,6 @@
   * Added graphs to html output using JS. Pie graphs show percentual coverage of each virus by its genes.
   * Made tables more user friendly (Show more, sorted records, sorted graphs)
   * .txt files with percentual coverage -> .json files, because of transfer of data to JS graphs.
+* 22.02. 2022:
+  * Tool is in final state
+  * Tuned html output, Added preprocess part (Unzip, CreateRefGenome, Align, Filter), Added parameter parsing using argparse. 
