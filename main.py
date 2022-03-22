@@ -17,8 +17,9 @@ DEFAULT_VIRAL_ID = os.path.join("Data", "viral_id.csv")
 DEFAULT_GTF_FOLDER = os.path.join("Data", "dir_gtf_files")
 DEFAULT_FASTA_FOLDER = os.path.join("Data", "dir_fasta_genomes_files")
 DEFAULT_REF_GENOME = os.path.join("Data", "ref_genome", "virus_genomes.fasta")
-DEFAULT_JSON_VIRUSES = os.path.join("Output", "json", "virus_coverage_output.json")
-DEFAULT_JSON_GENES = os.path.join("Output", "json", "genes_coverage_output.json")
+DEFAULT_OUTPUT = os.path.join("Output")
+
+
 
 def is_valid_file(filepath:str) -> bool:
     if not os.path.exists(filepath):
@@ -31,7 +32,11 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description="SAM file analyzer")
     parser.add_argument(action="store", dest="fastq_file", help="Input FASTQ file to align, filter and then analyze SAM file.", type=str)
-
+    parser.add_argument("-i", "--viral_id_file", action="store", dest="viral_id_file", help="Path to viral ID file", type=str)
+    parser.add_argument("-q", "--gtf_files_folder", action="store", dest="gtf_files", help="Path to directory with gtf files.", type=str)
+    parser.add_argument("-f", "--fasta_folder", action="store", dest="fasta_files", help="Path to directory with FASTA files.", type=str)
+    parser.add_argument("-w", "--ref_genome_path", action="store", dest="ref_genome_path", help="Path to existing reference genome.", type=str)
+    parser.add_argument("-o", "--output", action="store", dest="output", help="Output folder.", type=str)
     #parser.add_argument(action="store", dest="")
 
     """
@@ -72,13 +77,46 @@ if __name__ == '__main__':
                         default=False)
     parser.add_argument("-p", "--filter_by_acgt_probability_deviation", action="store", dest="dev_f2", type=float, default=0.05,
                         help="Deviation for -f2 filter option. Default value is 0.05")
-    parser.add_argument("-O", "--filter_by_acgt_probability_from_fasta", action="store_true", dest="filter_acgt_probability_from_fasta",
+    parser.add_argument("-U", "--filter_by_acgt_probability_from_fasta", action="store_true", dest="filter_acgt_probability_from_fasta",
                         help="If set, program will filter SAM records for Blast api, that doesn't have similar nucleotides probability with atleast one genome from fasta files",
                         default=False)
-    parser.add_argument("-o", "--filter_by_acgt_probability_from_fasta_deviation", action="store", dest="dev_f3", default=0.05, type=float,
+    parser.add_argument("-u", "--filter_by_acgt_probability_from_fasta_deviation", action="store", dest="dev_f3", default=0.05, type=float,
                         help="Deviation for -f3 filter option. Default value is 0.05")
 
     arguments = parser.parse_args()
+
+    if arguments.gtf_files is not None and not is_valid_file(arguments.gtf_files):
+        print("The folder %s does not exist!" % arguments.gtf_files)
+        exit(-1)
+    if arguments.gtf_files is not None:
+        DEFAULT_GTF_FOLDER = arguments.gtf_files
+
+    if arguments.output is not None:
+        DEFAULT_OUTPUT = arguments.output
+        if not os.path.exists(DEFAULT_OUTPUT):
+            os.mkdir(DEFAULT_OUTPUT)
+        if not os.path.exists(os.path.join(DEFAULT_OUTPUT, "json")):
+            os.mkdir(os.path.join(DEFAULT_OUTPUT, "json"))
+        if not os.path.exists(os.path.join(DEFAULT_OUTPUT, "js")):
+            os.mkdir(os.path.join(DEFAULT_OUTPUT, "js"))
+
+    if arguments.viral_id_file is not None and not is_valid_file(arguments.viral_id_file):
+        print("The file %s does not exist!" % arguments.viral_id_file)
+        exit(-1)
+    if arguments.viral_id_file is not None:
+        DEFAULT_VIRAL_ID = arguments.viral_id_file
+
+    if arguments.fasta_files is not None and not is_valid_file(arguments.fasta_files):
+        print("The folder %s does not exist!" % arguments.fasta_files)
+        exit(-1)
+    if arguments.fasta_files is not None:
+        DEFAULT_FASTA_FOLDER = arguments.fasta_files
+
+    if arguments.ref_genome_path is not None and not is_valid_file(arguments.ref_genome_path):
+        print("The file %s does not exist!" % arguments.ref_genome_path)
+        exit(-1)
+    if arguments.ref_genome_path is not None:
+        DEFAULT_REF_GENOME = arguments.ref_genome_path
 
     if not is_valid_file(arguments.fastq_file):
         print("The file %s does not exist!" % arguments.fastq_file)
@@ -111,6 +149,10 @@ if __name__ == '__main__':
     if arguments.gtf_feature not in ["CDS", "gene"]:
         print("GTF feature must be 'CDS' or 'gene'.")
         exit(-1)
+
+    DEFAULT_JSON_VIRUSES = os.path.join(DEFAULT_OUTPUT, "json", "virus_coverage_output.json")
+    DEFAULT_JSON_GENES = os.path.join(DEFAULT_OUTPUT, "json", "genes_coverage_output.json")
+
 
     # Unzip, Align, Filter
     sam_file = preprocess(fastq_file=arguments.fastq_file, recreate_ref_genome=arguments.recreate_ref_genome,
@@ -203,6 +245,7 @@ if __name__ == '__main__':
                               count_of_candidates_for_blast=count_of_candidates, count_of_filtered_out_candidates=count_of_filtered_out_candidates,
                               count_of_mapped_in_sam_records=count_of_mapped_records, count_of_sam_records_with_no_gtf=count_of_sam_records_with_no_gtf,
                               sam_records_long_ends_starts= sam_records_long_ends_starts, find_sam_records_long_ends_starts=arguments.find_longs,
-                              map_virus_id_name=map, count_of_not_mapped_records=count_of_not_mapped_records)
+                              map_virus_id_name=map, count_of_not_mapped_records=count_of_not_mapped_records, default_json_v=DEFAULT_JSON_VIRUSES,
+                              defaul_json_g=DEFAULT_JSON_GENES, default_output=DEFAULT_OUTPUT)
 
     create_html_output(datas, sam_file)
