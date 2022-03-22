@@ -44,6 +44,10 @@ def createReferenceGenome(viral_genomes_folder: str, DEFAULT_REF_GENOME: str) ->
             if os.path.exists(all_genomes_file):
                 os.remove(all_genomes_file)
 
+            if not os.path.exists("Data"):
+                os.mkdir("Data")
+                os.mkdir(os.path.join("Data", "ref_genome"))
+
             with open(all_genomes_file, "a") as all_genomes:
                 for dir in folders:
                     #print(dir)
