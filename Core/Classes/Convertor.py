@@ -1,5 +1,6 @@
 import datetime
 import os
+import shutil
 import subprocess
 import sys
 import traceback
@@ -655,6 +656,8 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
     #cmd = "pip install dominate"
     #subprocess.call(cmd, shell=False)
 
+    shutil.copyfile(os.path.join("Core", "Classes", "functions.js"), os.path.join(data.default_output, "js", "functions.js"))
+
     doc = dominate.document(title='SAM file analyzer output')
 
     with doc.head:
@@ -893,14 +896,16 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
                                    id="blast_res", style="margin:3% 50% 3% 50%;")
 
         # script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
-        script(type="text/javascript", src=os.path.join("json", "virus_coverage_output.json"))
-        script(type="text/javascript", src=os.path.join("json", "genes_coverage_output.json"))
+        #script(type="text/javascript", src=os.path.join("json", "virus_coverage_output.json"))
+        #script(type="text/javascript", src=os.path.join("json", "genes_coverage_output.json"))
+        script(type="text/javascript", src=data.default_json_v)
+        script(type="text/javascript", src=data.defaul_json_g)
         script(type="text/javascript", src=os.path.join("js", "functions.js"))
 
     now = datetime.datetime.now()
     file = f'{os.path.basename(filename).replace(".all.sam","")}_{now.month}-{now.day}-{now.hour}-{now.minute}.html'
-    with open(os.path.join("Output", file), 'w') as f:
+    with open(os.path.join(data.default_output, file), 'w') as f:
         f.write(doc.render())
     print("[SAM Analyzer]: -----------------------------------------------")
-    print(f"[SAM Analyzer]: Output was saved in file /Data/{file}")
+    print(f"[SAM Analyzer]: Output was saved in file /{data.default_output}/{file}")
     print("[SAM Analyzer]: -----------------------------------------------")
