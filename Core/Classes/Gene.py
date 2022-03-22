@@ -1,5 +1,6 @@
 from __future__ import annotations
 import csv
+import os.path
 import sys
 import traceback
 from io import StringIO
@@ -112,6 +113,7 @@ class Gene:
                                           filename: str = "json/genes_coverage_output.json") -> dict[str, list[Gene]]:
         try:
             result = []
+
             with open(filename, "w") as file:
                 for gene in genes:
                     #size_of_gene = len(gene.coverage_array.values())  # Not including end
