@@ -481,6 +481,8 @@ def calc_coverage_array_for_gene(count_of_genes_in_which_is_record, count_of_gen
         cigar_list = decode_cigar_string(sam_record.CIGAR)
         if any(ch == "M" for ch in cigar_list):
             count_of_genes_in_which_is_record += 1
+            #if not sam_record in gene.hits:
+            gene.hits.append(sam_record)
             cigar_counter = 0
             for gene_pos in range(sam_record.POS, sam_record.POS + len(sam_record.SEQ)):
                 if gene_pos in gene.coverage_array.keys() and cigar_list[cigar_counter] == "M":
@@ -665,6 +667,12 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
         meta(name="viewport", content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+
+        #
+        script(src = "https://code.jquery.com/jquery-3.6.0.min.js", integrity = "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=", crossorigin = "anonymous")
+        script(src = "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js", integrity = "sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==",
+               crossorigin = "anonymous", referrerpolicy = "no-referrer")
+        #
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
 
         #script(src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js")
@@ -686,7 +694,7 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
             menu_link = li(_class="nav-link").add(a("Virus coverage", href="#VirusCoverage", _class="nav-link"))
             menu_link["data-toggle"] = "tab"
 
-            menu_link = li(_class="nav-link").add(a("Gene coverage", href="#GeneCoverage", _class="nav-link"))
+            menu_link = li(_class="nav-link").add(a("Gene coverage", href="#GeneCoverage", _class="nav-link", id="menu-GeneCoverage"))
             menu_link["data-toggle"] = "tab"
 
             if data.find_sam_records_long_ends_starts:
@@ -772,6 +780,8 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
                             header.add(th("Virus ID", _class="col"))
                             header.add(th("Virus name", _class="col"))
                             header.add(th("Percentage of covered", _class="col"))
+                            header.add(th("Hits", _class="col"))
+                            header.add(th("Count of covered nucleotides", _class="col"))
                             header.add(th("Total count of nucleotides (covered+not covered)", _class="col"))
                         with tbody():
                             for i, c_v in enumerate(data.virus_coverage):
@@ -783,8 +793,14 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
 
                                 row.add(th(i + 1, scope="row"))
                                 row.add(td(c_v[0]))
-                                row.add(td(data.map_virus_id_name[c_v[0]]))
+                                row.add(td(a(data.map_virus_id_name[c_v[0]],
+                                           onclick=f"hashchanged(\"#GeneCoverage_{c_v[0]}\")", _class="tab-link")))
+                                #menu_link = li(_class="nav-link").add(
+                                #    a("Virus coverage", href="#VirusCoverage", _class="nav-link"))
+                                #menu_link["data-toggle"] = "tab"
                                 row.add(td(round(c_v[1], 2)))
+                                row.add(td(len(c_v[4])))
+                                row.add(td(c_v[3]))
                                 row.add(td(c_v[2]))
                     if is_more:
                         button("Show all", type="button", _class="btn btn-primary", onclick="showMore(\'virus_more\')",
@@ -818,17 +834,19 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
                             header.add(th("Virus ID", _class="col"))
                             header.add(th("Virus name", _class="col"))
                             header.add(th("Percentage of covered", _class="col"))
+                            header.add(th("Hits", _class="col"))
+                            header.add(th("Count of covered nucleotides", _class="col"))
                             header.add(th("Total count of nucleotides (covered+not covered)", _class="col"))
                         with tbody():
                             c = 0
                             for virus_id, genes in data.genes_coverage.items():
                                 for gene in genes:
                                     row = tr()
+                                    row["class"] = ""
                                     if c > 9:
                                         row["class"] = "gene_more"
                                         row["style"] = "display:none;"
                                         is_more = True
-
                                     c += 1
                                     row.add(td(c, scope="row"))
                                     row.add(td(gene.record.attributes[
@@ -838,7 +856,12 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
                                     row.add(td(virus_id))
                                     row.add(td(data.map_virus_id_name[virus_id]))
                                     row.add(td(round(gene.covered_percents, 2)))
+                                    row.add(td(len(gene.hits)))
+                                    row.add(td(gene.count_of_covered_nucleotides))
                                     row.add(td(gene.length_of_gene))
+                                    row["class"] += " " + virus_id
+                                    row["class"] += " gene_record"
+
                     if is_more:
                         button("Show all", type="button", _class="btn btn-primary", onclick="showMore(\'gene_more\')",
                                id="gene_more", style="margin:3% 50% 3% 50%;")
@@ -897,6 +920,7 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
                             button("Show all", type="button", _class="btn btn-primary",
                                    onclick="showMore(\'blast_res\')",
                                    id="blast_res", style="margin:3% 50% 3% 50%;")
+
 
         # script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
         script(type="text/javascript", src=os.path.join("json", "virus_coverage_output.json"))
