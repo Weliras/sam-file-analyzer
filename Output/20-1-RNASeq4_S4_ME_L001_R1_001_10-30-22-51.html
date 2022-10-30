@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAM file analyzer output</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <ul class="nav nav-tabs">
+      <li class="active nav-link">
+        <a class="nav-link" data-toggle="tab" href="#Summary">Summary</a>
+      </li>
+      <li class="nav-link">
+        <a class="nav-link" data-toggle="tab" href="#VirusCoverage">Virus coverage</a>
+      </li>
+      <li class="nav-link">
+        <a class="nav-link" data-toggle="tab" href="#GeneCoverage" id="menu-GeneCoverage">Gene coverage</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="Summary">
+        <div class="container">
+          <ul class="list-group" style="margin:auto;width:60%;max-width:500px;min-width:400px;">
+            <li class="list-group-item active">Summary of SAM file records</li>
+            <li class="list-group-item">Total count of records: 
+              <strong>99</strong>
+            </li>
+            <li class="list-group-item">Count of records without gtf file: 
+              <strong>0</strong>
+            </li>
+            <li class="list-group-item">Count of records containing 'N': 
+              <strong>0</strong>
+            </li>
+            <li class="list-group-item">Count of records mapped on some gtf file: 
+              <strong>72</strong>
+            </li>
+            <li class="list-group-item">Count of records not mapped on some gtf file: 
+              <strong>27</strong>
+            </li>
+          </ul>
+          <table class="table">
+            <caption>Summary of found viruses in SAM file</caption>
+            <thead>
+              <tr>
+                <th class="col">#</th>
+                <th class="col">Virus ID</th>
+                <th class="col">Virus name</th>
+                <th class="col">*Count of all occurrences</th>
+                <th class="col">Count of ambiguous occurrences</th>
+                <th class="col">Count of mapped on any gtf file occurrences</th>
+                <th class="col">Count of not mapped on any gtf file occurrences</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>NC_001355.1</td>
+                <td>Human_papillomavirus_6</td>
+                <td>49</td>
+                <td>0</td>
+                <td>49</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>NC_004102.1</td>
+                <td>Hepatitis_C_virus</td>
+                <td>32</td>
+                <td>16</td>
+                <td>0</td>
+                <td>32</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>NC_002645.1</td>
+                <td>Human_coronovirus_229E</td>
+                <td>27</td>
+                <td>22</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>NC_039089.1</td>
+                <td>Human_papillomavirus_71</td>
+                <td>15</td>
+                <td>1</td>
+                <td>0</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>NC_045512.2</td>
+                <td>SARS-COV-2</td>
+                <td>14</td>
+                <td>11</td>
+                <td>9</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>NC_001731.1</td>
+                <td>Molluscum_contagiosum_virus</td>
+                <td>10</td>
+                <td>8</td>
+                <td>8</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>NC_000898.1</td>
+                <td>Human_herpesvirus_6</td>
+                <td>8</td>
+                <td>6</td>
+                <td>8</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>NC_001798.2</td>
+                <td>Human_herpesvirus_2</td>
+                <td>7</td>
+                <td>5</td>
+                <td>0</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>NC_001806.2</td>
+                <td>Human_herpesvirus_1</td>
+                <td>6</td>
+                <td>3</td>
+                <td>0</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>NC_001596.1</td>
+                <td>Human_papillomavirus_9</td>
+                <td>6</td>
+                <td>3</td>
+                <td>6</td>
+                <td>0</td>
+              </tr>
+              <tr class="summary_virus_more" style="display:none;">
+                <td>11</td>
+                <td>NC_006213.1</td>
+                <td>Human_coronavirus_OC43</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+          <small>*(includes ambiguous occurrences, mapped and not mapped records but excludes records containing 'N')</small>
+          <button class="btn btn-primary" id="summary_virus_more" onclick="showMore('summary_virus_more')" style="margin:3% 50% 3% 50%;" type="button">Show all</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="VirusCoverage">
+        <div class="container">
+          <canvas id="virusChart" style="width:100%;min-width:700px;max-width:800px;margin:auto;"></canvas>
+          <p style="margin: 10px;">This graph shows only 10 viruses with heighest percent coverage value, all results are in table.</p>
+          <table class="table">
+            <caption>Viruses and their coverage in percents of their all genes</caption>
+            <thead>
+              <tr>
+                <th class="col">#</th>
+                <th class="col">Virus ID</th>
+                <th class="col">Virus name</th>
+                <th class="col">Percentage of covered</th>
+                <th class="col">Hits</th>
+                <th class="col">Count of covered nucleotides</th>
+                <th class="col">Total count of nucleotides (covered+not covered)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>NC_001355.1</td>
+                <td>
+                  <a class="tab-link" onclick="hashchanged(&quot;#GeneCoverage_NC_001355.1&quot;)">Human_papillomavirus_6</a>
+                </td>
+                <td>34.5</td>
+                <td>49</td>
+                <td>1361</td>
+                <td>3945</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>NC_001596.1</td>
+                <td>
+                  <a class="tab-link" onclick="hashchanged(&quot;#GeneCoverage_NC_001596.1&quot;)">Human_papillomavirus_9</a>
+                </td>
+                <td>4.63</td>
+                <td>6</td>
+                <td>64</td>
+                <td>1383</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>NC_001731.1</td>
+                <td>
+                  <a class="tab-link" onclick="hashchanged(&quot;#GeneCoverage_NC_001731.1&quot;)">Molluscum_contagiosum_virus</a>
+                </td>
+                <td>2.85</td>
+                <td>8</td>
+                <td>38</td>
+                <td>1335</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>NC_000898.1</td>
+                <td>
+                  <a class="tab-link" onclick="hashchanged(&quot;#GeneCoverage_NC_000898.1&quot;)">Human_herpesvirus_6</a>
+                </td>
+                <td>1.91</td>
+                <td>8</td>
+                <td>50</td>
+                <td>2618</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>NC_045512.2</td>
+                <td>
+                  <a class="tab-link" onclick="hashchanged(&quot;#GeneCoverage_NC_045512.2&quot;)">SARS-COV-2</a>
+                </td>
+                <td>1.02</td>
+                <td>7</td>
+                <td>137</td>
+                <td>13386</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>NC_006213.1</td>
+                <td>
+                  <a class="tab-link" onclick="hashchanged(&quot;#GeneCoverage_NC_006213.1&quot;)">Human_coronavirus_OC43</a>
+                </td>
+                <td>0.86</td>
+                <td>1</td>
+                <td>35</td>
+                <td>4059</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>NC_002645.1</td>
+                <td>
+                  <a class="tab-link" onclick="hashchanged(&quot;#GeneCoverage_NC_002645.1&quot;)">Human_coronovirus_229E</a>
+                </td>
+                <td>0.57</td>
+                <td>14</td>
+                <td>140</td>
+                <td>24483</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <canvas id="virus_NC_001355.1"></canvas>
+              </div>
+              <div class="col-sm-6">
+                <canvas id="virus_NC_001596.1"></canvas>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <canvas id="virus_NC_001731.1"></canvas>
+              </div>
+              <div class="col-sm-6">
+                <canvas id="virus_NC_000898.1"></canvas>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <canvas id="virus_NC_045512.2"></canvas>
+              </div>
+              <div class="col-sm-6">
+                <canvas id="virus_NC_006213.1"></canvas>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <canvas id="virus_NC_002645.1"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="GeneCoverage">
+        <div class="container">
+          <table class="table">
+            <caption>Each gene coverage in percents</caption>
+            <thead>
+              <tr>
+                <th class="col">#</th>
+                <th class="col">Gene ID</th>
+                <th class="col">Protein ID</th>
+                <th class="col">Virus ID</th>
+                <th class="col">Virus name</th>
+                <th class="col">Percentage of covered</th>
+                <th class="col">Hits</th>
+                <th class="col">Count of covered nucleotides</th>
+                <th class="col">Total count of nucleotides (covered+not covered)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class=" NC_001355.1 gene_record">
+                <td scope="row">1</td>
+                <td>E4</td>
+                <td>CAA25022.1</td>
+                <td>NC_001355.1</td>
+                <td>Human_papillomavirus_6</td>
+                <td>75.54</td>
+                <td>19</td>
+                <td>247</td>
+                <td>327</td>
+              </tr>
+              <tr class=" NC_001355.1 gene_record">
+                <td scope="row">2</td>
+                <td>E7</td>
+                <td>CAA25019.1</td>
+                <td>NC_001355.1</td>
+                <td>Human_papillomavirus_6</td>
+                <td>67.69</td>
+                <td>49</td>
+                <td>199</td>
+                <td>294</td>
+              </tr>
+              <tr class=" NC_001355.1 gene_record">
+                <td scope="row">3</td>
+                <td>E2</td>
+                <td>CAA25021.1</td>
+                <td>NC_001355.1</td>
+                <td>Human_papillomavirus_6</td>
+                <td>45.74</td>
+                <td>22</td>
+                <td>505</td>
+                <td>1104</td>
+              </tr>
+              <tr class=" NC_001355.1 gene_record">
+                <td scope="row">4</td>
+                <td>E5a</td>
+                <td>CAA25023.1</td>
+                <td>NC_001355.1</td>
+                <td>Human_papillomavirus_6</td>
+                <td>26.74</td>
+                <td>1</td>
+                <td>73</td>
+                <td>273</td>
+              </tr>
+              <tr class=" NC_001355.1 gene_record">
+                <td scope="row">5</td>
+                <td>E1</td>
+                <td>CAA25020.1</td>
+                <td>NC_001355.1</td>
+                <td>Human_papillomavirus_6</td>
+                <td>17.31</td>
+                <td>21</td>
+                <td>337</td>
+                <td>1947</td>
+              </tr>
+              <tr class=" NC_045512.2 gene_record">
+                <td scope="row">6</td>
+                <td>ORF6</td>
+                <td>QHD43420.1</td>
+                <td>NC_045512.2</td>
+                <td>SARS-COV-2</td>
+                <td>37.16</td>
+                <td>5</td>
+                <td>68</td>
+                <td>183</td>
+              </tr>
+              <tr class=" NC_045512.2 gene_record">
+                <td scope="row">7</td>
+                <td>orf1ab</td>
+                <td>QHD43415.1</td>
+                <td>NC_045512.2</td>
+                <td>SARS-COV-2</td>
+                <td>0.52</td>
+                <td>7</td>
+                <td>69</td>
+                <td>13203</td>
+              </tr>
+              <tr class=" NC_001596.1 gene_record">
+                <td scope="row">8</td>
+                <td>E2</td>
+                <td>CAA52486.1</td>
+                <td>NC_001596.1</td>
+                <td>Human_papillomavirus_9</td>
+                <td>4.63</td>
+                <td>6</td>
+                <td>64</td>
+                <td>1383</td>
+              </tr>
+              <tr class=" NC_001731.1 gene_record">
+                <td scope="row">9</td>
+                <td>MC003L</td>
+                <td>AAC55131.1</td>
+                <td>NC_001731.1</td>
+                <td>Molluscum_contagiosum_virus</td>
+                <td>2.85</td>
+                <td>8</td>
+                <td>38</td>
+                <td>1335</td>
+              </tr>
+              <tr class=" NC_000898.1 gene_record">
+                <td scope="row">10</td>
+                <td>DR1_1</td>
+                <td>AAD49682.1</td>
+                <td>NC_000898.1</td>
+                <td>Human_herpesvirus_6</td>
+                <td>2.03</td>
+                <td>8</td>
+                <td>41</td>
+                <td>2018</td>
+              </tr>
+              <tr class="gene_more NC_000898.1 gene_record" style="display:none;">
+                <td scope="row">11</td>
+                <td>DR3_1</td>
+                <td>AAD49683.1</td>
+                <td>NC_000898.1</td>
+                <td>Human_herpesvirus_6</td>
+                <td>1.5</td>
+                <td>8</td>
+                <td>9</td>
+                <td>600</td>
+              </tr>
+              <tr class="gene_more NC_006213.1 gene_record" style="display:none;">
+                <td scope="row">12</td>
+                <td></td>
+                <td>AAT84354.1</td>
+                <td>NC_006213.1</td>
+                <td>Human_coronavirus_OC43</td>
+                <td>0.86</td>
+                <td>1</td>
+                <td>35</td>
+                <td>4059</td>
+              </tr>
+              <tr class="gene_more NC_002645.1 gene_record" style="display:none;">
+                <td scope="row">13</td>
+                <td></td>
+                <td>AAG48591.1</td>
+                <td>NC_002645.1</td>
+                <td>Human_coronovirus_229E</td>
+                <td>0.57</td>
+                <td>14</td>
+                <td>70</td>
+                <td>12228</td>
+              </tr>
+              <tr class="gene_more NC_002645.1 gene_record" style="display:none;">
+                <td scope="row">14</td>
+                <td></td>
+                <td>AAG48590.1</td>
+                <td>NC_002645.1</td>
+                <td>Human_coronovirus_229E</td>
+                <td>0.57</td>
+                <td>14</td>
+                <td>70</td>
+                <td>12255</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-primary" id="gene_more" onclick="showMore('gene_more')" style="margin:3% 50% 3% 50%;" type="button">Show all</button>
+        </div>
+      </div>
+    </div>
+    <script src="json/virus_coverage_output.json" type="text/javascript"></script>
+    <script src="json/genes_coverage_output.json" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+  </body>
+</html>
