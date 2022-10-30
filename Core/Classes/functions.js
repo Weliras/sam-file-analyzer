@@ -175,3 +175,43 @@ function showMore(id){
     else
         button.innerHTML = "Show all"
 }
+
+
+
+function hashchanged(hs){
+  let all_records = document.getElementsByClassName("gene_record");
+  for (let i = 0; i < all_records.length; i++)
+  {
+      all_records[i].classList.remove("success");
+      //console.log(arr_of_records[i].className);
+  }
+
+  var hash = hs.replace( /^#/, '' );
+  //$("#nav-tab")
+  //document.getElementById(hash).tab("show");
+ // Your code to have the proper tabs open, like
+// $(#profile-just).tab('show')...
+  let words = hash.split("_");
+  let id_of_tab = words[0];
+  let id_of_virus = words.slice(1).join("_");
+  console.log("Has changes");
+  console.log(hash);
+  console.log(id_of_virus);
+  $("#menu-"+id_of_tab).tab("show");
+  let arr_of_records = document.getElementsByClassName(id_of_virus);
+  arr_of_records[0].scrollIntoView();
+  let is_hidden = false;
+  for (let i = 0; i < arr_of_records.length; i++)
+  {
+      arr_of_records[i].classList.add("success");
+      if (window.getComputedStyle(arr_of_records[i]).display === "none")
+      {
+          is_hidden = true;
+      }
+  }
+  if (is_hidden){
+      showMore("gene_more");
+  }
+}
+
+//window.addEventListener("hashchange", hashchanged, false);
