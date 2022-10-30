@@ -1,5 +1,3 @@
-
-
 function RandomColor () {
     var r = Math.floor(Math.random() * 255);
     var g = Math.floor(Math.random() * 255);
@@ -49,6 +47,19 @@ const data = {
 const config = {
   type: 'bar',
   data: data,
+  options: {
+      plugins: {
+          tooltip: {
+            callbacks: {
+                label: function (context) {
+                    console.log(context);
+                    let value = context.formattedValue;
+                    return value + " %";
+                }
+            }
+          },
+      }
+  }
 };
 const virusChart = new Chart(ctx, config);
 
@@ -119,16 +130,27 @@ Array.prototype.forEach.call(genes_coverage_json, function (virus_with_genes){
       options: {
         responsive: true,
         plugins: {
+          tooltip: {
+            callbacks: {
+                label: function (context) {
+                    console.log(context);
+                    let label = context.label;
+                    let value = context.formattedValue;
+                    return label + ": " + value + " %";
+                }
+            }
+          },
           legend: {
             position: 'top',
           },
           title: {
             display: true,
             text: virus_name
-          }
-        },
-      },
+                }
+            }
+          },
     };
+    console.log("Test");
     const virusWithGenesChart = new Chart(ctx, config);
 
 })

@@ -657,7 +657,6 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
     #subprocess.call(cmd, shell=False)
 
     shutil.copyfile(os.path.join("Core", "Classes", "functions.js"), os.path.join(data.default_output, "js", "functions.js"))
-
     doc = dominate.document(title='SAM file analyzer output')
 
     with doc.head:
@@ -667,7 +666,11 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
         link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
-        script(src="https://cdn.jsdelivr.net/npm/chart.js")
+
+        #script(src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js")
+        #script(src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js")
+        #script(src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js")
+        #script(src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0")
         # script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
 
         # link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3", crossorigin="anonymous" )
@@ -896,10 +899,17 @@ def create_html_output(data, filename):  # type:(DataForHTMLOutput, str) -> None
                                    id="blast_res", style="margin:3% 50% 3% 50%;")
 
         # script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
-        #script(type="text/javascript", src=os.path.join("json", "virus_coverage_output.json"))
-        #script(type="text/javascript", src=os.path.join("json", "genes_coverage_output.json"))
-        script(type="text/javascript", src=data.default_json_v)
-        script(type="text/javascript", src=data.defaul_json_g)
+        script(type="text/javascript", src=os.path.join("json", "virus_coverage_output.json"))
+        script(type="text/javascript", src=os.path.join("json", "genes_coverage_output.json"))
+
+        #script(type="text/javascript", src=data.default_json_v)
+        #script(type="text/javascript", src=data.defaul_json_g)
+        #script(src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js")
+        #script(src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js")
+        #script(src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0")
+        #script(src=os.path.join("js", "chart.min.js"))
+        #script(src=os.path.join("js", "chartjs-pligin-datalabels.js"))
         script(type="text/javascript", src=os.path.join("js", "functions.js"))
 
     now = datetime.datetime.now()
