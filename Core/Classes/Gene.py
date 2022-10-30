@@ -9,20 +9,21 @@ from itertools import groupby
 
 
 class GTF_File_Line:
-    def __init__(self, seqname=None, source=None, feature=None, start=None, end=None, score=None, strand=None, frame=None,
+    def __init__(self, seqname=None, source=None, feature=None, start=None, end=None, score=None, strand=None,
+                 frame=None,
                  attributes=None):
 
         if attributes is None:
             attributes = dict()
-        self.seqname = seqname          # Sequence name
-        self.source = source            # Program
-        self.feature = feature          # CDS, start_codon, stop_codon
+        self.seqname = seqname  # Sequence name
+        self.source = source  # Program
+        self.feature = feature  # CDS, start_codon, stop_codon
         self.start = start
         self.end = end
         self.score = score
-        self.strand = strand            # forward / reverse
+        self.strand = strand  # forward / reverse
         self.frame = frame
-        self.attributes = attributes        # ; delimited attributes
+        self.attributes = attributes  # ; delimited attributes
 
     def load_from_line(self, line_split: [str]) -> None:
         self.seqname = line_split[0] if line_split[0] != "." else None
@@ -47,14 +48,15 @@ class GTF_File_Line:
                         continue
                     self.attributes[line2[0]] = line2[1]"""
         for attr in line_split[8].split(";"):
-                if len(attr.lstrip().split(" ", 1)) != 2:
-                    continue
-                key = attr.lstrip().split(" ")[0]
-                value = "".join(attr.lstrip().split(" ")[1:]).replace("\"", "")
-                self.attributes[key] = value
+            if len(attr.lstrip().split(" ", 1)) != 2:
+                continue
+            key = attr.lstrip().split(" ")[0]
+            value = "".join(attr.lstrip().split(" ")[1:]).replace("\"", "")
+            self.attributes[key] = value
+
 
 class Gene:
-    #def __init__(self, virus_id, GENE=None , CDS=[], start_codon=[], stop_codon=[], gene=[], transcript=[]):
+    # def __init__(self, virus_id, GENE=None , CDS=[], start_codon=[], stop_codon=[], gene=[], transcript=[]):
     def __init__(self, virus_id: str, records=[]):
         """if GENE != None:
             self.gene = GENE.gene.copy()
@@ -83,6 +85,8 @@ class Gene:
         self.length_of_gene = 0
 
         self.covered_percents = 0
+        self.count_of_covered_nucleotides = 0
+        self.hits = []
 
     @property
     def record(self):
@@ -94,10 +98,8 @@ class Gene:
         self.coverage_array.clear()
         self.length_of_gene = self._record.end - self._record.start + 1
 
-        for i in range(self._record.start, self._record.end + 1):                # Including upper and Including lower bound
+        for i in range(self._record.start, self._record.end + 1):  # Including upper and Including lower bound
             self.coverage_array[i] = False
-
-
 
     def __del__(self):
         """self.gene.clear()
@@ -116,9 +118,9 @@ class Gene:
 
             with open(filename, "w") as file:
                 for gene in genes:
-                    #size_of_gene = len(gene.coverage_array.values())  # Not including end
+                    # size_of_gene = len(gene.coverage_array.values())  # Not including end
                     size_of_gene = gene.length_of_gene
-                    #if size_of_gene <= 0:
+                    # if size_of_gene <= 0:
                     #    size_of_gene = 1
                     count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
                     if only_non_empty and count_of_covered > 0:
@@ -133,6 +135,7 @@ class Gene:
                             f"\n")
                         """
                         result.append(gene)
+                        gene.count_of_covered_nucleotides += count_of_covered
                         gene.covered_percents = count_of_covered / size_of_gene * 100
                     elif not only_non_empty:
                         """
@@ -145,6 +148,7 @@ class Gene:
                             f"\t From: {size_of_gene}"
                             f"\n")
                         """
+                        gene.count_of_covered_nucleotides += count_of_covered
                         gene.covered_percents = count_of_covered / size_of_gene * 100
                         result.append(gene)
 
@@ -164,9 +168,13 @@ class Gene:
             for v_id, genes in result2.items():
                 genes_formated = []
                 for gene in genes:
-                    genes_formated.append({"gene_id": gene.record.attributes['gene_id'] if 'gene_id' in gene.record.attributes.keys() else '',
-                                           "protein_id":gene.record.attributes['protein_id'] if 'protein_id' in gene.record.attributes.keys() else '',
-                                           "percentage_of_covered": gene.covered_percents, "from": gene.length_of_gene})
+                    genes_formated.append({"gene_id": gene.record.attributes[
+                        'gene_id'] if 'gene_id' in gene.record.attributes.keys() else '',
+                                           "protein_id": gene.record.attributes[
+                                               'protein_id'] if 'protein_id' in gene.record.attributes.keys() else '',
+                                           "percentage_of_covered": gene.covered_percents,
+                                           "from": gene.length_of_gene,
+                                           "count_of_covered_nucleotides": gene.count_of_covered_nucleotides})
 
                 data_to_json.append({"virus_name": map[v_id], "virus_id": v_id, "genes": genes_formated})
 
@@ -184,23 +192,26 @@ class Gene:
 
     @staticmethod
     def write_to_file_virus_with_percents(genes: [Gene], map: dict[str: str], only_non_empty: bool = False,
-                                          filename: str = "json/virus_coverage_output.json") -> list[list[int, float, int]]:
+                                          filename: str = "json/virus_coverage_output.json") -> list[
+        list[int, float, int]]:
         try:
             # [Virus_id, %, count]
             result = []
             for gene in genes:
 
-                #if gene.virus_id == "NC_001355.1":
+                # if gene.virus_id == "NC_001355.1":
                 #    print(end="")
                 #    print(end="")
 
                 # count of covered pos of this gene
                 count_of_covered = sum([1 for c in gene.coverage_array.values() if c == True])
+
                 if only_non_empty and count_of_covered > 0:
                     if not any(s for s in result if s[0] == gene.virus_id):
                         size_of_gene = gene.length_of_gene
                         percentage_of_covered = (count_of_covered / size_of_gene) * 100
-                        tmp = [gene.virus_id, percentage_of_covered, size_of_gene]
+                        hits = gene.hits
+                        tmp = [gene.virus_id, percentage_of_covered, size_of_gene, count_of_covered, hits]
                         result.append(tmp)
                     else:
                         ind = [result.index(item) for item in result if item[0] == gene.virus_id]
@@ -212,15 +223,22 @@ class Gene:
                         count_of_already_covered = (result[ind[0]][1] / 100) * result[ind[0]][2]
 
                         # Percentage of all covered
-                        percentage_of_covered = (count_of_covered + count_of_already_covered) / (result[ind[0]][2] + size_of_gene) * 100
+                        percentage_of_covered = (count_of_covered + count_of_already_covered) / (
+                                    result[ind[0]][2] + size_of_gene) * 100
 
                         result[ind[0]][2] += size_of_gene
                         result[ind[0]][1] = percentage_of_covered
+                        result[ind[0]][3] += count_of_covered
+                        for h in gene.hits:
+                            if not h in result[ind[0]][4]:
+                                result[ind[0]][4].append(h)
+
                 elif not only_non_empty:
                     if not any(s for s in result if s[0] == gene.virus_id):
                         size_of_gene = gene.length_of_gene
                         percentage_of_covered = (count_of_covered / size_of_gene) * 100
-                        tmp = [gene.virus_id, percentage_of_covered, size_of_gene]
+                        hits = gene.hits
+                        tmp = [gene.virus_id, percentage_of_covered, size_of_gene, count_of_covered, hits]
                         result.append(tmp)
                     else:
                         ind = [result.index(item) for item in result if item[0] == gene.virus_id]
@@ -232,18 +250,24 @@ class Gene:
                         count_of_already_covered = (result[ind[0]][1] / 100) * result[ind[0]][2]
 
                         # Percentage of all covered
-                        percentage_of_covered = (count_of_covered + count_of_already_covered) / (result[ind[0]][2] + size_of_gene) * 100
+                        percentage_of_covered = (count_of_covered + count_of_already_covered) / (
+                                    result[ind[0]][2] + size_of_gene) * 100
 
                         result[ind[0]][2] += size_of_gene
                         result[ind[0]][1] = percentage_of_covered
+                        result[ind[0]][3] += count_of_covered
+                        for h in gene.hits:
+                            if not h in result[ind[0]][4]:
+                                result[ind[0]][4].append(h)
             result.sort(key=lambda virus: virus[1], reverse=True)
 
             data_to_json = []
             for res in result:
-                data_to_json.append({"virus_name": map[res[0]], "virus_id": res[0], "percentage_of_covered": res[1], "from": res[2]})
+                data_to_json.append({"virus_name": map[res[0]], "virus_id": res[0], "percentage_of_covered": res[1],
+                                     "count_of_covered": res[3], "count_of_hits": len(res[4]), "from": res[2]})
 
             with open(filename, "w") as file:
-                #for res in result:
+                # for res in result:
                 #    file.write(f"Virus Id: {res[0]}\t"
                 #               f"Percentage of covered: {res[1]} %\t"
                 #               f"From: {res[2]}\n")
