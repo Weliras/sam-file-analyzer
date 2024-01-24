@@ -1,4 +1,8 @@
-# sam-file-analyzer
+# Bachelor thesis - Sam file analyzer
+## Introduction
+This work focuses on the development of software that can process and analyze genomic data in .fastq format. The software aligns this genomic data against reference viral sequences and detects, quantifies and analyses viral sequences in subsequent mappings (.sam files). The output of this software is an html file that visualizes the results in the form of graphs and tables. During its analysis, the software also communicates with an external database (Blast) and uses the information stored in it. The communication is done using HTTP protocol.
+
+Technologies used: python, bwa aligner, html, jss, json, HTTP requests.
 #### Dependencies
 - Python libraries: dominate (```pip install dominate```)
 - Ubuntu tools: bwa (```apt install bwa```), samtools (```apt install samtools```), gunzip (```apt install gunzip```)
